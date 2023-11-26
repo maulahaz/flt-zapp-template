@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../configs/x_configs.dart';
+// import '../../configs/x_configs.dart';
+import '../../widgets/x_widgets.dart';
 
 class ModulesView extends StatelessWidget {
   const ModulesView({super.key});
@@ -18,10 +19,7 @@ class ModulesView extends StatelessWidget {
         child: Column(
           children: [
             Text('Text me', style: _textTheme.titleSmall),
-            SliverPadding(
-              padding: EdgeInsets.all(kDefaultPadding),
-              sliver: SliverToBoxAdapter(child: Center(child: Text('ppp'),),),
-            ),
+            MyButtons.defaultBtn(context,'Test',100,(){}),
           ],
         ),
       ),
