@@ -1,14 +1,15 @@
-# Project : Flutter Exercise by Zapp.run
-*********************************************
- Some Flutter exercise collection made by Zapp.run
+# Project : xx 
+***************************************************************
+A Flutter project description 
 
-# Flutter app in Zapp!
-----
+# Notes:
+- Started at: Week-xx of MM-YY
+- Flutter using version xx (Zapp.run)
+- State Mgt: xx
+- Backend: xx
+- DB: xx
 
-> To learn how to use Zapp! check out the [documentation](https://docs.zapp.run)
-
-----
-
-# Modules : xx (dd-mmm-yy)
----
-- Src: [Link Text](https://www.youtube.com)
+# References:
+- [Colors](https://coolors.co/palettes/trending)
+- [SVG Icons](http://svgrepo.com)
+- [Food or Restaurant App UI - By The Flutter Way](https://www.youtube.com/watch?v=cvAw9wucmBc)
