@@ -1,3 +1,0 @@
-class ModulesController{
-  //--Code here
-}

@@ -1,3 +1,0 @@
-class ModulesService{
-  //--Code here
-}
