@@ -27,19 +27,23 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   const edge_insets = flutter_sdk.src__painting__edge_insets;
   const theme_data = flutter_sdk.src__material__theme_data;
   const scaffold = flutter_sdk.src__material__scaffold;
-  const scroll_view = flutter_sdk.src__widgets__scroll_view;
   const app_bar = flutter_sdk.src__material__app_bar;
-  const flexible_space_bar = flutter_sdk.src__material__flexible_space_bar;
-  const text = flutter_sdk.src__widgets__text;
-  const image = flutter_sdk.src__widgets__image;
-  const box_fit = flutter_sdk.src__painting__box_fit;
-  const sliver = flutter_sdk.src__widgets__sliver;
-  const list_tile = flutter_sdk.src__material__list_tile;
+  const text$ = flutter_sdk.src__widgets__text;
+  const basic = flutter_sdk.src__widgets__basic;
+  const material_button = flutter_sdk.src__material__material_button;
+  const container = flutter_sdk.src__widgets__container;
+  const box_decoration = flutter_sdk.src__painting__box_decoration;
+  const box_border = flutter_sdk.src__painting__box_border;
+  const elevated_button = flutter_sdk.src__material__elevated_button;
+  const rounded_rectangle_border = flutter_sdk.src__painting__rounded_rectangle_border;
+  const flex = flutter_sdk.src__rendering__flex;
+  const outlined_button = flutter_sdk.src__material__outlined_button;
+  const progress_indicator = flutter_sdk.src__material__progress_indicator;
   var $46zapp_entry = Object.create(dart.library);
   var main = Object.create(dart.library);
   var web_plugin_registrant = Object.create(dart.library);
   var x_configs = Object.create(dart.library);
-  var x_sliver_screens = Object.create(dart.library);
+  var x_homes = Object.create(dart.library);
   var colors$0 = Object.create(dart.library);
   var constants = Object.create(dart.library);
   var durations = Object.create(dart.library);
@@ -47,11 +51,20 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   var sizes = Object.create(dart.library);
   var styles = Object.create(dart.library);
   var themes = Object.create(dart.library);
-  var car_mdl = Object.create(dart.library);
-  var sliver_vw = Object.create(dart.library);
+  var home_pg = Object.create(dart.library);
+  var x_widgets = Object.create(dart.library);
+  var button_wdg = Object.create(dart.library);
+  var x_configs$ = Object.create(dart.library);
+  var x_helpers = Object.create(dart.library);
+  var colors$1 = Object.create(dart.library);
+  var constants$ = Object.create(dart.library);
+  var durations$ = Object.create(dart.library);
+  var keys$ = Object.create(dart.library);
+  var sizes$ = Object.create(dart.library);
+  var styles$ = Object.create(dart.library);
+  var themes$ = Object.create(dart.library);
+  var widgets_hlp = Object.create(dart.library);
   var $toString = dartx.toString;
-  var $_get = dartx._get;
-  var $length = dartx.length;
   dart._checkModuleNullSafetyMode(true);
   dart._checkModuleRuntimeTypes(false);
   var T = {
@@ -63,8 +76,6 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
     ObjectAndStackTraceTovoid: () => (T.ObjectAndStackTraceTovoid = dart.constFn(dart.fnType(dart.void, [core.Object, core.StackTrace])))(),
     ZoneAndZoneDelegateAndZone__Tovoid: () => (T.ZoneAndZoneDelegateAndZone__Tovoid = dart.constFn(dart.fnType(dart.void, [async.Zone, async.ZoneDelegate, async.Zone, core.String])))(),
-    JSArrayOfCarModel: () => (T.JSArrayOfCarModel = dart.constFn(_interceptors.JSArray$(car_mdl.CarModel)))(),
-    BuildContextAndintToListTile: () => (T.BuildContextAndintToListTile = dart.constFn(dart.fnType(list_tile.ListTile, [framework.BuildContext, core.int])))(),
     JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))()
   };
   const CT = Object.create({
@@ -83,407 +94,605 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     get C2() {
       return C[2] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4293471792
+        [Color_value]: 4294967295
       });
     },
     get C3() {
       return C[3] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4285186649
+        [Color_value]: 4278190080
       });
     },
-    get C6() {
-      return C[6] = dart.const({
+    get C4() {
+      return C[4] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4293128957
+        [Color_value]: 0
       });
     },
     get C7() {
       return C[7] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4290502395
+        [Color_value]: 4294962158
       });
     },
     get C8() {
       return C[8] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4287679225
+        [Color_value]: 4294954450
       });
     },
     get C9() {
       return C[9] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4284790262
+        [Color_value]: 4293892762
       });
     },
     get C10() {
       return C[10] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4282557941
+        [Color_value]: 4293227379
       });
     },
     get C11() {
       return C[11] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4280391411
+        [Color_value]: 4293874512
       });
     },
     get C12() {
       return C[12] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4280191205
+        [Color_value]: 4294198070
       });
     },
     get C13() {
       return C[13] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4279858898
+        [Color_value]: 4293212469
       });
     },
     get C14() {
       return C[14] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4279592384
+        [Color_value]: 4292030255
       });
     },
     get C15() {
       return C[15] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4279060385
+        [Color_value]: 4291176488
       });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290190364
+      });
+    },
+    get C6() {
+      return C[6] = dart.constMap(core.int, ui.Color, [50, C[7] || CT.C7, 100, C[8] || CT.C8, 200, C[9] || CT.C9, 300, C[10] || CT.C10, 400, C[11] || CT.C11, 500, C[12] || CT.C12, 600, C[13] || CT.C13, 700, C[14] || CT.C14, 800, C[15] || CT.C15, 900, C[16] || CT.C16]);
     },
     get C5() {
-      return C[5] = dart.constMap(core.int, ui.Color, [50, C[6] || CT.C6, 100, C[7] || CT.C7, 200, C[8] || CT.C8, 300, C[9] || CT.C9, 400, C[10] || CT.C10, 500, C[11] || CT.C11, 600, C[12] || CT.C12, 700, C[13] || CT.C13, 800, C[14] || CT.C14, 900, C[15] || CT.C15]);
-    },
-    get C4() {
-      return C[4] = dart.const({
+      return C[5] = dart.const({
         __proto__: colors.MaterialColor.prototype,
-        [Color_value]: 4280391411,
-        [ColorSwatch__swatch]: C[5] || CT.C5
-      });
-    },
-    get C18() {
-      return C[18] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294966759
+        [Color_value]: 4294198070,
+        [ColorSwatch__swatch]: C[6] || CT.C6
       });
     },
     get C19() {
       return C[19] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294965700
+        [Color_value]: 4293457385
       });
     },
     get C20() {
       return C[20] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294964637
+        [Color_value]: 4291356361
       });
     },
     get C21() {
       return C[21] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294963574
+        [Color_value]: 4289058471
       });
     },
     get C22() {
       return C[22] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294962776
+        [Color_value]: 4286695300
       });
     },
     get C23() {
       return C[23] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294961979
+        [Color_value]: 4284922730
       });
     },
     get C24() {
       return C[24] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294826037
+        [Color_value]: 4283215696
       });
     },
     get C25() {
       return C[25] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294688813
+        [Color_value]: 4282622023
       });
     },
     get C26() {
       return C[26] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294551589
+        [Color_value]: 4281896508
       });
     },
     get C27() {
       return C[27] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294278935
-      });
-    },
-    get C17() {
-      return C[17] = dart.constMap(core.int, ui.Color, [50, C[18] || CT.C18, 100, C[19] || CT.C19, 200, C[20] || CT.C20, 300, C[21] || CT.C21, 400, C[22] || CT.C22, 500, C[23] || CT.C23, 600, C[24] || CT.C24, 700, C[25] || CT.C25, 800, C[26] || CT.C26, 900, C[27] || CT.C27]);
-    },
-    get C16() {
-      return C[16] = dart.const({
-        __proto__: colors.MaterialColor.prototype,
-        [Color_value]: 4294961979,
-        [ColorSwatch__swatch]: C[17] || CT.C17
+        [Color_value]: 4281236786
       });
     },
     get C28() {
       return C[28] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4290888129
+        [Color_value]: 4279983648
       });
     },
-    get C29() {
-      return C[29] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294967295
-      });
+    get C18() {
+      return C[18] = dart.constMap(core.int, ui.Color, [50, C[19] || CT.C19, 100, C[20] || CT.C20, 200, C[21] || CT.C21, 300, C[22] || CT.C22, 400, C[23] || CT.C23, 500, C[24] || CT.C24, 600, C[25] || CT.C25, 700, C[26] || CT.C26, 800, C[27] || CT.C27, 900, C[28] || CT.C28]);
     },
-    get C30() {
-      return C[30] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4279242768
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: colors.MaterialColor.prototype,
+        [Color_value]: 4283215696,
+        [ColorSwatch__swatch]: C[18] || CT.C18
       });
     },
     get C31() {
       return C[31] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 0
+        [Color_value]: 4293128957
       });
     },
     get C32() {
       return C[32] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4288860927
+        [Color_value]: 4290502395
       });
     },
     get C33() {
       return C[33] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4291671259
+        [Color_value]: 4287679225
       });
     },
     get C34() {
       return C[34] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4290633982
+        [Color_value]: 4284790262
       });
     },
     get C35() {
       return C[35] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 16756684
+        [Color_value]: 4282557941
       });
     },
     get C36() {
       return C[36] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 16763101
+        [Color_value]: 4280391411
       });
     },
     get C37() {
       return C[37] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4278223271
+        [Color_value]: 4280191205
       });
     },
     get C38() {
       return C[38] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294835420
+        [Color_value]: 4279858898
       });
     },
     get C39() {
       return C[39] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294891959
+        [Color_value]: 4279592384
       });
     },
     get C40() {
       return C[40] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4293947751
+        [Color_value]: 4279060385
       });
     },
-    get C41() {
-      return C[41] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293848814
-      });
+    get C30() {
+      return C[30] = dart.constMap(core.int, ui.Color, [50, C[31] || CT.C31, 100, C[32] || CT.C32, 200, C[33] || CT.C33, 300, C[34] || CT.C34, 400, C[35] || CT.C35, 500, C[36] || CT.C36, 600, C[37] || CT.C37, 700, C[38] || CT.C38, 800, C[39] || CT.C39, 900, C[40] || CT.C40]);
     },
-    get C42() {
-      return C[42] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278221823
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: colors.MaterialColor.prototype,
+        [Color_value]: 4280391411,
+        [ColorSwatch__swatch]: C[30] || CT.C30
       });
     },
     get C43() {
       return C[43] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4285298045
+        [Color_value]: 4294966759
       });
     },
     get C44() {
       return C[44] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4280854341
+        [Color_value]: 4294965700
       });
     },
     get C45() {
       return C[45] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4292621637
+        [Color_value]: 4294964637
       });
     },
     get C46() {
       return C[46] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294951175
+        [Color_value]: 4294963574
       });
     },
     get C47() {
       return C[47] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4279739064
+        [Color_value]: 4294962776
       });
     },
     get C48() {
       return C[48] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4294507002
+        [Color_value]: 4294961979
       });
     },
     get C49() {
       return C[49] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4281612864
+        [Color_value]: 4294826037
       });
     },
     get C50() {
       return C[50] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 4292927712
-      });
-    },
-    get C52() {
-      return C[52] = dart.constList([C[16] || CT.C16, C[29] || CT.C29, C[32] || CT.C32], ui.Color);
-    },
-    get C53() {
-      return C[53] = dart.const({
-        __proto__: ui.TileMode.prototype,
-        [_Enum__name]: "clamp",
-        [_Enum_index]: 0
-      });
-    },
-    get C54() {
-      return C[54] = dart.const({
-        __proto__: alignment.Alignment.prototype,
-        [Alignment_y]: 1,
-        [Alignment_x]: 1
-      });
-    },
-    get C55() {
-      return C[55] = dart.const({
-        __proto__: alignment.Alignment.prototype,
-        [Alignment_y]: -1,
-        [Alignment_x]: -1
+        [Color_value]: 4294688813
       });
     },
     get C51() {
       return C[51] = dart.const({
-        __proto__: gradient.LinearGradient.prototype,
-        [Gradient_transform]: null,
-        [Gradient_stops]: null,
-        [Gradient_colors]: C[52] || CT.C52,
-        [LinearGradient_tileMode]: C[53] || CT.C53,
-        [LinearGradient_end]: C[54] || CT.C54,
-        [LinearGradient_begin]: C[55] || CT.C55
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294551589
       });
     },
-    get C57() {
-      return C[57] = dart.constList([C[16] || CT.C16, C[29] || CT.C29], ui.Color);
-    },
-    get C58() {
-      return C[58] = dart.const({
-        __proto__: alignment.Alignment.prototype,
-        [Alignment_y]: 1,
-        [Alignment_x]: 0
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294278935
       });
     },
-    get C59() {
-      return C[59] = dart.const({
-        __proto__: alignment.Alignment.prototype,
-        [Alignment_y]: -1,
-        [Alignment_x]: 0
+    get C42() {
+      return C[42] = dart.constMap(core.int, ui.Color, [50, C[43] || CT.C43, 100, C[44] || CT.C44, 200, C[45] || CT.C45, 300, C[46] || CT.C46, 400, C[47] || CT.C47, 500, C[48] || CT.C48, 600, C[49] || CT.C49, 700, C[50] || CT.C50, 800, C[51] || CT.C51, 900, C[52] || CT.C52]);
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: colors.MaterialColor.prototype,
+        [Color_value]: 4294961979,
+        [ColorSwatch__swatch]: C[42] || CT.C42
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294638330
       });
     },
     get C56() {
       return C[56] = dart.const({
-        __proto__: gradient.LinearGradient.prototype,
-        [Gradient_transform]: null,
-        [Gradient_stops]: null,
-        [Gradient_colors]: C[57] || CT.C57,
-        [LinearGradient_tileMode]: C[53] || CT.C53,
-        [LinearGradient_end]: C[58] || CT.C58,
-        [LinearGradient_begin]: C[59] || CT.C59
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294309365
+      });
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293848814
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292927712
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292269782
       });
     },
     get C60() {
       return C[60] = dart.const({
-        __proto__: core.Duration.prototype,
-        [Duration__duration]: 200000
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290624957
       });
     },
     get C61() {
       return C[61] = dart.const({
-        __proto__: core.Duration.prototype,
-        [Duration__duration]: 250000
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4288585374
+      });
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4285887861
       });
     },
     get C63() {
       return C[63] = dart.const({
-        __proto__: ui.Offset.prototype,
-        [OffsetBase__dy]: 15,
-        [OffsetBase__dx]: 0
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284572001
       });
     },
     get C64() {
       return C[64] = dart.const({
         __proto__: ui.Color.prototype,
-        [Color_value]: 520093696
+        [Color_value]: 4282532418
       });
     },
     get C65() {
       return C[65] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281348144
+      });
+    },
+    get C66() {
+      return C[66] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280361249
+      });
+    },
+    get C54() {
+      return C[54] = dart.constMap(core.int, ui.Color, [50, C[55] || CT.C55, 100, C[56] || CT.C56, 200, C[57] || CT.C57, 300, C[58] || CT.C58, 350, C[59] || CT.C59, 400, C[60] || CT.C60, 500, C[61] || CT.C61, 600, C[62] || CT.C62, 700, C[63] || CT.C63, 800, C[64] || CT.C64, 850, C[65] || CT.C65, 900, C[66] || CT.C66]);
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: colors.MaterialColor.prototype,
+        [Color_value]: 4288585374,
+        [ColorSwatch__swatch]: C[54] || CT.C54
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294961418
+      });
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4288860927
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291671259
+      });
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290633982
+      });
+    },
+    get C71() {
+      return C[71] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 16756684
+      });
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 16763101
+      });
+    },
+    get C73() {
+      return C[73] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278223271
+      });
+    },
+    get C74() {
+      return C[74] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294835420
+      });
+    },
+    get C75() {
+      return C[75] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294891959
+      });
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293947751
+      });
+    },
+    get C77() {
+      return C[77] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278221823
+      });
+    },
+    get C78() {
+      return C[78] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4285298045
+      });
+    },
+    get C79() {
+      return C[79] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280854341
+      });
+    },
+    get C80() {
+      return C[80] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292621637
+      });
+    },
+    get C81() {
+      return C[81] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294951175
+      });
+    },
+    get C82() {
+      return C[82] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4279739064
+      });
+    },
+    get C83() {
+      return C[83] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294507002
+      });
+    },
+    get C84() {
+      return C[84] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281612864
+      });
+    },
+    get C86() {
+      return C[86] = dart.constList([C[67] || CT.C67, C[2] || CT.C2, C[68] || CT.C68], ui.Color);
+    },
+    get C87() {
+      return C[87] = dart.const({
+        __proto__: ui.TileMode.prototype,
+        [_Enum__name]: "clamp",
+        [_Enum_index]: 0
+      });
+    },
+    get C88() {
+      return C[88] = dart.const({
+        __proto__: alignment.Alignment.prototype,
+        [Alignment_y]: 1,
+        [Alignment_x]: 1
+      });
+    },
+    get C89() {
+      return C[89] = dart.const({
+        __proto__: alignment.Alignment.prototype,
+        [Alignment_y]: -1,
+        [Alignment_x]: -1
+      });
+    },
+    get C85() {
+      return C[85] = dart.const({
+        __proto__: gradient.LinearGradient.prototype,
+        [Gradient_transform]: null,
+        [Gradient_stops]: null,
+        [Gradient_colors]: C[86] || CT.C86,
+        [LinearGradient_tileMode]: C[87] || CT.C87,
+        [LinearGradient_end]: C[88] || CT.C88,
+        [LinearGradient_begin]: C[89] || CT.C89
+      });
+    },
+    get C91() {
+      return C[91] = dart.constList([C[67] || CT.C67, C[2] || CT.C2], ui.Color);
+    },
+    get C92() {
+      return C[92] = dart.const({
+        __proto__: alignment.Alignment.prototype,
+        [Alignment_y]: 1,
+        [Alignment_x]: 0
+      });
+    },
+    get C93() {
+      return C[93] = dart.const({
+        __proto__: alignment.Alignment.prototype,
+        [Alignment_y]: -1,
+        [Alignment_x]: 0
+      });
+    },
+    get C90() {
+      return C[90] = dart.const({
+        __proto__: gradient.LinearGradient.prototype,
+        [Gradient_transform]: null,
+        [Gradient_stops]: null,
+        [Gradient_colors]: C[91] || CT.C91,
+        [LinearGradient_tileMode]: C[87] || CT.C87,
+        [LinearGradient_end]: C[92] || CT.C92,
+        [LinearGradient_begin]: C[93] || CT.C93
+      });
+    },
+    get C94() {
+      return C[94] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 200000
+      });
+    },
+    get C95() {
+      return C[95] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 250000
+      });
+    },
+    get C97() {
+      return C[97] = dart.const({
+        __proto__: ui.Offset.prototype,
+        [OffsetBase__dy]: 15,
+        [OffsetBase__dx]: 0
+      });
+    },
+    get C98() {
+      return C[98] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 520093696
+      });
+    },
+    get C99() {
+      return C[99] = dart.const({
         __proto__: ui.BlurStyle.prototype,
         [_Enum__name]: "normal",
         [_Enum_index]: 0
       });
     },
-    get C62() {
-      return C[62] = dart.const({
+    get C96() {
+      return C[96] = dart.const({
         __proto__: box_shadow.BoxShadow.prototype,
         [Shadow_blurRadius]: 27,
-        [Shadow_offset]: C[63] || CT.C63,
-        [Shadow_color]: C[64] || CT.C64,
-        [BoxShadow_blurStyle]: C[65] || CT.C65,
+        [Shadow_offset]: C[97] || CT.C97,
+        [Shadow_color]: C[98] || CT.C98,
+        [BoxShadow_blurStyle]: C[99] || CT.C99,
         [BoxShadow_spreadRadius]: 0
       });
     },
-    get C67() {
-      return C[67] = dart.const({
+    get C101() {
+      return C[101] = dart.const({
         __proto__: ui.FontWeight.prototype,
         [FontWeight_value]: 700,
         [FontWeight_index]: 6
       });
     },
-    get C66() {
-      return C[66] = dart.const({
+    get C100() {
+      return C[100] = dart.const({
         __proto__: text_style.TextStyle.prototype,
         [TextStyle_overflow]: null,
         [TextStyle_fontVariations]: null,
@@ -503,7 +712,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [TextStyle_wordSpacing]: null,
         [TextStyle_letterSpacing]: 1.2,
         [TextStyle_fontStyle]: null,
-        [TextStyle_fontWeight]: C[67] || CT.C67,
+        [TextStyle_fontWeight]: C[101] || CT.C101,
         [TextStyle_fontSize]: 21,
         [TextStyle__package]: null,
         [TextStyle__fontFamilyFallback]: null,
@@ -512,14 +721,75 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         [TextStyle_color]: null,
         [TextStyle_inherit]: true
       });
+    },
+    get C102() {
+      return C[102] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 12,
+        [EdgeInsets_right]: 12,
+        [EdgeInsets_top]: 12,
+        [EdgeInsets_left]: 12
+      });
+    },
+    get C103() {
+      return C[103] = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: null,
+        [SizedBox_width]: 10
+      });
+    },
+    get C105() {
+      return C[105] = dart.const({
+        __proto__: borders.BorderStyle.prototype,
+        [_Enum__name]: "solid",
+        [_Enum_index]: 1
+      });
+    },
+    get C104() {
+      return C[104] = dart.const({
+        __proto__: borders.BorderSide.prototype,
+        [BorderSide_strokeAlign]: -1,
+        [BorderSide_style]: C[105] || CT.C105,
+        [BorderSide_width]: 1,
+        [BorderSide_color]: C[53] || CT.C53
+      });
+    },
+    get C106() {
+      return C[106] = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: 0,
+        [SizedBox_width]: 0
+      });
+    },
+    get C108() {
+      return C[108] = dart.const({
+        __proto__: button_wdg.ButtonStyle.prototype,
+        [_Enum__name]: "filled",
+        [_Enum_index]: 0
+      });
+    },
+    get C109() {
+      return C[109] = dart.const({
+        __proto__: button_wdg.ButtonStyle.prototype,
+        [_Enum__name]: "outlined",
+        [_Enum_index]: 1
+      });
+    },
+    get C107() {
+      return C[107] = dart.constList([C[108] || CT.C108, C[109] || CT.C109], button_wdg.ButtonStyle);
     }
   }, false);
-  var C = Array(68).fill(void 0);
+  var C = Array(110).fill(void 0);
   var I = [
     "file:///zapp/project/lib/main.dart",
     "file:///zapp/project/lib/configs/themes.dart",
-    "file:///zapp/project/lib/modules/sliver_screen/models/car_mdl.dart",
-    "file:///zapp/project/lib/modules/sliver_screen/views/sliver_vw.dart"
+    "file:///zapp/project/lib/modules/home/pages/home_pg.dart",
+    "package:flutter_app/widgets/button_wdg.dart",
+    "package:flutter_app/configs/themes.dart"
   ];
   $46zapp_entry.runAppGuarded = function runAppGuarded() {
     async.runZonedGuarded(core.Null, dart.fn(() => {
@@ -558,7 +828,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
       return new main.MyApp.new({key: key});
     }
     build(context) {
-      return new app.MaterialApp.new({debugShowCheckedModeBanner: false, title: "Flutter App!!", theme: themes.MyThemes.lightMode, darkTheme: themes.MyThemes.darkMode, home: new sliver_vw.SliverView.new()});
+      return new app.MaterialApp.new({debugShowCheckedModeBanner: false, title: "Flutter App!!", theme: themes.MyThemes.lightMode, darkTheme: themes.MyThemes.darkMode, home: new home_pg.HomePage.new()});
     }
   };
   (main.MyApp.new = function(opts) {
@@ -592,98 +862,95 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   var LinearGradient_end = dart.privateName(gradient, "LinearGradient.end");
   var LinearGradient_begin = dart.privateName(gradient, "LinearGradient.begin");
   dart.defineLazy(colors$0, {
-    /*colors$0.kRed*/get kRed() {
+    /*colors$0.kWhite*/get kWhite() {
       return C[2] || CT.C2;
     },
-    /*colors$0.kGreen*/get kGreen() {
+    /*colors$0.kBlack*/get kBlack() {
       return C[3] || CT.C3;
     },
-    /*colors$0.kBlue*/get kBlue() {
+    /*colors$0.kTransparent*/get kTransparent() {
       return C[4] || CT.C4;
     },
-    /*colors$0.kYellow*/get kYellow() {
-      return C[16] || CT.C16;
+    /*colors$0.kRed*/get kRed() {
+      return C[5] || CT.C5;
     },
-    /*colors$0.kGrey*/get kGrey() {
-      return C[28] || CT.C28;
+    /*colors$0.kGreen*/get kGreen() {
+      return C[17] || CT.C17;
     },
-    /*colors$0.kWhite*/get kWhite() {
+    /*colors$0.kBlue*/get kBlue() {
       return C[29] || CT.C29;
     },
-    /*colors$0.kBlack*/get kBlack() {
-      return C[30] || CT.C30;
+    /*colors$0.kYellow*/get kYellow() {
+      return C[41] || CT.C41;
     },
-    /*colors$0.kTransparent*/get kTransparent() {
-      return C[31] || CT.C31;
+    /*colors$0.kGrey*/get kGrey() {
+      return C[53] || CT.C53;
     },
     /*colors$0.kAppPrimary*/get kAppPrimary() {
-      return C[16] || CT.C16;
+      return C[67] || CT.C67;
     },
     /*colors$0.kAppPrimaryDark*/get kAppPrimaryDark() {
-      return C[32] || CT.C32;
+      return C[68] || CT.C68;
     },
     /*colors$0.kAppPrimaryDark2*/get kAppPrimaryDark2() {
-      return C[33] || CT.C33;
+      return C[69] || CT.C69;
     },
     /*colors$0.kAppPrimaryLight*/get kAppPrimaryLight() {
-      return C[34] || CT.C34;
+      return C[70] || CT.C70;
     },
     /*colors$0.kAppSecondary*/get kAppSecondary() {
-      return C[35] || CT.C35;
+      return C[71] || CT.C71;
     },
     /*colors$0.kAppSecondaryLight*/get kAppSecondaryLight() {
-      return C[36] || CT.C36;
+      return C[72] || CT.C72;
     },
     /*colors$0.kAppBiruDark*/get kAppBiruDark() {
-      return C[37] || CT.C37;
+      return C[73] || CT.C73;
     },
     /*colors$0.kAppBiruLight*/get kAppBiruLight() {
       return new ui.Color.new(4278235065);
     },
     /*colors$0.kAppKuning*/get kAppKuning() {
-      return C[38] || CT.C38;
+      return C[74] || CT.C74;
     },
     /*colors$0.kAppCoklat*/get kAppCoklat() {
-      return C[39] || CT.C39;
+      return C[75] || CT.C75;
     },
     /*colors$0.kAppMerah*/get kAppMerah() {
-      return C[40] || CT.C40;
+      return C[76] || CT.C76;
     },
     /*colors$0.kAppGrey*/get kAppGrey() {
-      return C[41] || CT.C41;
+      return C[57] || CT.C57;
     },
     /*colors$0.kBgPrimary*/get kBgPrimary() {
-      return C[42] || CT.C42;
+      return C[77] || CT.C77;
     },
     /*colors$0.kBgSecondary*/get kBgSecondary() {
-      return C[43] || CT.C43;
+      return C[78] || CT.C78;
     },
     /*colors$0.kBgSuccess*/get kBgSuccess() {
-      return C[44] || CT.C44;
+      return C[79] || CT.C79;
     },
     /*colors$0.kBgDanger*/get kBgDanger() {
-      return C[45] || CT.C45;
+      return C[80] || CT.C80;
     },
     /*colors$0.kBgWarning*/get kBgWarning() {
-      return C[46] || CT.C46;
+      return C[81] || CT.C81;
     },
     /*colors$0.kBgInfo*/get kBgInfo() {
-      return C[47] || CT.C47;
+      return C[82] || CT.C82;
     },
     /*colors$0.kBgLight*/get kBgLight() {
-      return C[48] || CT.C48;
+      return C[83] || CT.C83;
     },
     /*colors$0.kBgDark*/get kBgDark() {
-      return C[49] || CT.C49;
-    },
-    /*colors$0.bgDefault*/get bgDefault() {
-      return C[50] || CT.C50;
+      return C[84] || CT.C84;
     },
     /*colors$0.kAppGradientPrim*/get kAppGradientPrim() {
-      return C[51] || CT.C51;
+      return C[85] || CT.C85;
     },
     /*colors$0.kPrimaryGradient*/get kPrimaryGradient() {
-      return C[56] || CT.C56;
+      return C[90] || CT.C90;
     }
   }, false);
   dart.defineLazy(constants, {
@@ -829,10 +1096,10 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   var Duration__duration = dart.privateName(core, "Duration._duration");
   dart.defineLazy(durations, {
     /*durations.kAnimationDuration*/get kAnimationDuration() {
-      return C[60] || CT.C60;
+      return C[94] || CT.C94;
     },
     /*durations.kDefaultDuration*/get kDefaultDuration() {
-      return C[61] || CT.C61;
+      return C[95] || CT.C95;
     }
   }, false);
   dart.defineLazy(keys, {
@@ -903,10 +1170,10 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   var TextStyle_inherit = dart.privateName(text_style, "TextStyle.inherit");
   dart.defineLazy(styles, {
     /*styles.kDefaultShadow*/get kDefaultShadow() {
-      return C[62] || CT.C62;
+      return C[96] || CT.C96;
     },
     /*styles.kTextStyle*/get kTextStyle() {
-      return C[66] || CT.C66;
+      return C[100] || CT.C100;
     },
     /*styles.kHeadingStyle*/get kHeadingStyle() {
       return new text_style.TextStyle.new({fontSize: 21, fontWeight: ui.FontWeight.bold, color: colors.Colors.black, height: 1.5});
@@ -929,110 +1196,635 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   dart.setStaticFieldSignature(themes.MyThemes, () => ['lightMode', 'darkMode']);
   dart.defineLazy(themes.MyThemes, {
     /*themes.MyThemes.lightMode*/get lightMode() {
-      return theme_data.ThemeData.new({primarySwatch: colors$0.kAppPrimary, primaryColor: colors$0.kAppPrimary, brightness: ui.Brightness.light, fontFamily: "Poppins", inputDecorationTheme: new input_decorator.InputDecorationTheme.new({border: new input_border.OutlineInputBorder.new({borderRadius: new border_radius.BorderRadius.circular(20), borderSide: borders.BorderSide.none}), filled: true, fillColor: colors.Colors.grey.withOpacity(0.1)})});
+      return theme_data.ThemeData.new({primarySwatch: colors$0.kYellow, primaryColor: colors$0.kAppPrimary, brightness: ui.Brightness.light, fontFamily: "Poppins", inputDecorationTheme: new input_decorator.InputDecorationTheme.new({border: new input_border.OutlineInputBorder.new({borderRadius: new border_radius.BorderRadius.circular(20), borderSide: borders.BorderSide.none}), filled: true, fillColor: colors.Colors.grey.withOpacity(0.1)})});
     },
     /*themes.MyThemes.darkMode*/get darkMode() {
       return theme_data.ThemeData.new({primarySwatch: colors.Colors.red, primaryColor: new ui.Color.new(4293947751), brightness: ui.Brightness.dark, fontFamily: "Poppins", inputDecorationTheme: new input_decorator.InputDecorationTheme.new({border: new input_border.OutlineInputBorder.new({borderRadius: new border_radius.BorderRadius.circular(20), borderSide: borders.BorderSide.none}), filled: true, fillColor: colors.Colors.grey.withOpacity(0.1)})});
     }
   }, false);
-  var id$ = dart.privateName(car_mdl, "CarModel.id");
-  var yearModel$ = dart.privateName(car_mdl, "CarModel.yearModel");
-  var type$ = dart.privateName(car_mdl, "CarModel.type");
-  var pictureUrl$ = dart.privateName(car_mdl, "CarModel.pictureUrl");
-  car_mdl.CarModel = class CarModel extends core.Object {
-    get id() {
-      return this[id$];
-    }
-    set id(value) {
-      super.id = value;
-    }
-    get yearModel() {
-      return this[yearModel$];
-    }
-    set yearModel(value) {
-      super.yearModel = value;
-    }
-    get type() {
-      return this[type$];
-    }
-    set type(value) {
-      super.type = value;
-    }
-    get pictureUrl() {
-      return this[pictureUrl$];
-    }
-    set pictureUrl(value) {
-      super.pictureUrl = value;
-    }
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  home_pg.HomePage = class HomePage extends framework.StatelessWidget {
     static ['_#new#tearOff'](opts) {
-      let id = opts && 'id' in opts ? opts.id : null;
-      let yearModel = opts && 'yearModel' in opts ? opts.yearModel : null;
-      let type = opts && 'type' in opts ? opts.type : null;
-      let pictureUrl = opts && 'pictureUrl' in opts ? opts.pictureUrl : null;
-      return new car_mdl.CarModel.new({id: id, yearModel: yearModel, type: type, pictureUrl: pictureUrl});
-    }
-  };
-  (car_mdl.CarModel.new = function(opts) {
-    let id = opts && 'id' in opts ? opts.id : null;
-    let yearModel = opts && 'yearModel' in opts ? opts.yearModel : null;
-    let type = opts && 'type' in opts ? opts.type : null;
-    let pictureUrl = opts && 'pictureUrl' in opts ? opts.pictureUrl : null;
-    this[id$] = id;
-    this[yearModel$] = yearModel;
-    this[type$] = type;
-    this[pictureUrl$] = pictureUrl;
-    ;
-  }).prototype = car_mdl.CarModel.prototype;
-  dart.addTypeTests(car_mdl.CarModel);
-  dart.addTypeCaches(car_mdl.CarModel);
-  dart.setLibraryUri(car_mdl.CarModel, I[2]);
-  dart.setFieldSignature(car_mdl.CarModel, () => ({
-    __proto__: dart.getFields(car_mdl.CarModel.__proto__),
-    id: dart.finalFieldType(core.int),
-    yearModel: dart.finalFieldType(core.String),
-    type: dart.finalFieldType(core.String),
-    pictureUrl: dart.finalFieldType(core.String)
-  }));
-  var carModels = dart.privateName(sliver_vw, "SliverView.carModels");
-  sliver_vw.SliverView = class SliverView extends framework.StatelessWidget {
-    get carModels() {
-      return this[carModels];
-    }
-    set carModels(value) {
-      super.carModels = value;
+      let key = opts && 'key' in opts ? opts.key : null;
+      return new home_pg.HomePage.new({key: key});
     }
     build(context) {
-      return new app.MaterialApp.new({debugShowCheckedModeBanner: false, home: new scaffold.Scaffold.new({body: new scroll_view.CustomScrollView.new({slivers: T.JSArrayOfWidget().of([new app_bar.SliverAppBar.new({expandedHeight: 200, floating: false, pinned: true, flexibleSpace: new flexible_space_bar.FlexibleSpaceBar.new({title: new text.Text.new("Car Models"), background: new image.Image.network("https://picsum.photos/200", {fit: box_fit.BoxFit.cover})})}), new sliver.SliverList.new({delegate: new sliver.SliverChildBuilderDelegate.new(dart.fn((context, index) => {
-                  let car = this.carModels[$_get](index);
-                  return new list_tile.ListTile.new({title: new text.Text.new(car.yearModel + " " + car.type), subtitle: new text.Text.new("ID: " + dart.str(car.id)), leading: new image.Image.network(car.pictureUrl, {width: 50, height: 50, fit: box_fit.BoxFit.cover})});
-                }, T.BuildContextAndintToListTile()), {childCount: this.carModels[$length]})})])})})});
-    }
-    static ['_#new#tearOff']() {
-      return new sliver_vw.SliverView.new();
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({elevation: 0, title: new text$.Text.new("Home Page")}), body: new basic.Padding.new({padding: C[102] || CT.C102, child: new basic.Column.new({children: T.JSArrayOfWidget().of([new text$.Text.new("Tombol Biasa type Filled"), new button_wdg.MyButtons.filled({onPressed: dart.fn(() => core.print("MyButtons.filled: Pressed"), T.VoidTovoid()), label: "MyButtons.filled"}), new basic.SizedBox.new({height: 5}), new text$.Text.new("Tombol Biasa type outlined"), new button_wdg.MyButtons.outlined({onPressed: dart.fn(() => core.print("MyButtons.outlined: Pressed"), T.VoidTovoid()), label: "MyButtons.outlined"}), new basic.SizedBox.new({height: 5}), new text$.Text.new("Tombol XX type outlined"), button_wdg.MyButtonsXX.outlined(context, {label: "Tombol XX type outlined", function: dart.fn(() => core.print("MyButtons xx.outlined: Pressed"), T.VoidTovoid())})])})})});
     }
   };
-  (sliver_vw.SliverView.new = function() {
-    this[carModels] = T.JSArrayOfCarModel().of([new car_mdl.CarModel.new({id: 1, yearModel: "2022", type: "Sedan", pictureUrl: "https://picsum.photos/200"}), new car_mdl.CarModel.new({id: 2, yearModel: "2023", type: "SUV", pictureUrl: "https://picsum.photos/200"})]);
-    sliver_vw.SliverView.__proto__.new.call(this);
+  (home_pg.HomePage.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    home_pg.HomePage.__proto__.new.call(this, {key: key});
     ;
-  }).prototype = sliver_vw.SliverView.prototype;
-  dart.addTypeTests(sliver_vw.SliverView);
-  dart.addTypeCaches(sliver_vw.SliverView);
-  dart.setMethodSignature(sliver_vw.SliverView, () => ({
-    __proto__: dart.getMethods(sliver_vw.SliverView.__proto__),
+  }).prototype = home_pg.HomePage.prototype;
+  dart.addTypeTests(home_pg.HomePage);
+  dart.addTypeCaches(home_pg.HomePage);
+  dart.setMethodSignature(home_pg.HomePage, () => ({
+    __proto__: dart.getMethods(home_pg.HomePage.__proto__),
     build: dart.fnType(framework.Widget, [framework.BuildContext])
   }));
-  dart.setLibraryUri(sliver_vw.SliverView, I[3]);
-  dart.setFieldSignature(sliver_vw.SliverView, () => ({
-    __proto__: dart.getFields(sliver_vw.SliverView.__proto__),
-    carModels: dart.finalFieldType(core.List$(car_mdl.CarModel))
+  dart.setLibraryUri(home_pg.HomePage, I[2]);
+  var SingleChildRenderObjectWidget_child = dart.privateName(framework, "SingleChildRenderObjectWidget.child");
+  var SizedBox_height = dart.privateName(basic, "SizedBox.height");
+  var SizedBox_width = dart.privateName(basic, "SizedBox.width");
+  var BorderSide_strokeAlign = dart.privateName(borders, "BorderSide.strokeAlign");
+  var BorderSide_style = dart.privateName(borders, "BorderSide.style");
+  var BorderSide_width = dart.privateName(borders, "BorderSide.width");
+  var BorderSide_color = dart.privateName(borders, "BorderSide.color");
+  button_wdg.MyButtonsXX = class MyButtonsXX extends core.Object {
+    static appPrimary(context, title, width, $function) {
+      return new material_button.MaterialButton.new({minWidth: width, onPressed: $function, child: new container.Container.new({width: width, alignment: alignment.Alignment.center, padding: new edge_insets.EdgeInsets.all(16 * 0.5), decoration: new box_decoration.BoxDecoration.new({gradient: colors$1.kAppGradientPrim, borderRadius: new border_radius.BorderRadius.all(new ui.Radius.circular(10)), border: box_border.Border.all({color: colors$1.kAppPrimaryDark, width: 2})}), child: new text$.Text.new(title, {style: widgets_hlp.getFont(16, {color: colors$1.kBlack})})})});
+    }
+    static defaultBtn(context, text, width, $function) {
+      return new material_button.MaterialButton.new({minWidth: width, padding: new edge_insets.EdgeInsets.all(20), onPressed: $function, child: new text$.Text.new(text, {textAlign: ui.TextAlign.center, style: new text_style.TextStyle.new({fontSize: 20}).copyWith({color: colors$1.kBlack, fontWeight: ui.FontWeight.bold})})});
+    }
+    static filledBtn(context, label, icon, $function) {
+      let t0, t1;
+      return new elevated_button.ElevatedButton.new({onPressed: (t0 = $function, t0 == null ? null : t0), style: elevated_button.ElevatedButton.styleFrom({backgroundColor: colors$1.kAppPrimary, shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.circular(6)})}), child: new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: (() => {
+            let t0 = T.JSArrayOfWidget().of([(t1 = icon, t1 == null ? new basic.SizedBox.shrink() : t1)]);
+            if (icon != null) t0.push(C[103] || CT.C103);
+            t0.push(new text$.Text.new(label, {style: new text_style.TextStyle.new({color: colors$1.kWhite, fontSize: 16, fontWeight: ui.FontWeight.w600})}));
+            return t0;
+          })()})});
+    }
+    static outlined(context, opts) {
+      let t1, t2;
+      let label = opts && 'label' in opts ? opts.label : null;
+      let icon = opts && 'icon' in opts ? opts.icon : null;
+      let $function = opts && 'function' in opts ? opts.function : null;
+      return new outlined_button.OutlinedButton.new({onPressed: (t1 = $function, t1 == null ? null : t1), style: outlined_button.OutlinedButton.styleFrom({backgroundColor: colors$1.kWhite, side: C[104] || CT.C104, shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.circular(6)})}), child: new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: (() => {
+            let t1 = T.JSArrayOfWidget().of([(t2 = icon, t2 == null ? C[106] || CT.C106 : t2)]);
+            if (icon != null) t1.push(C[103] || CT.C103);
+            t1.push(new text$.Text.new(label, {style: new text_style.TextStyle.new({color: colors$1.kBlack, fontSize: 16, fontWeight: ui.FontWeight.w600})}));
+            return t1;
+          })()})});
+    }
+    static successBtn(context, text, width, $function) {
+      return new material_button.MaterialButton.new({minWidth: width, padding: new edge_insets.EdgeInsets.all(20), onPressed: $function, child: new text$.Text.new(text, {textAlign: ui.TextAlign.center, style: new text_style.TextStyle.new({fontSize: 20}).copyWith({color: colors$1.kBlack, fontWeight: ui.FontWeight.bold})})});
+    }
+    static ['_#new#tearOff']() {
+      return new button_wdg.MyButtonsXX.new();
+    }
+  };
+  (button_wdg.MyButtonsXX.new = function() {
+    ;
+  }).prototype = button_wdg.MyButtonsXX.prototype;
+  dart.addTypeTests(button_wdg.MyButtonsXX);
+  dart.addTypeCaches(button_wdg.MyButtonsXX);
+  dart.setStaticMethodSignature(button_wdg.MyButtonsXX, () => ['appPrimary', 'defaultBtn', 'filledBtn', 'outlined', 'successBtn']);
+  dart.setLibraryUri(button_wdg.MyButtonsXX, I[3]);
+  var _name = dart.privateName(core, "_name");
+  var _enumToString = dart.privateName(core, "_enumToString");
+  button_wdg.ButtonStyle = class ButtonStyle extends core._Enum {
+    [_enumToString]() {
+      return "ButtonStyle." + this[_name];
+    }
+  };
+  (button_wdg.ButtonStyle.new = function(index, name) {
+    button_wdg.ButtonStyle.__proto__.new.call(this, index, name);
+    ;
+  }).prototype = button_wdg.ButtonStyle.prototype;
+  dart.addTypeTests(button_wdg.ButtonStyle);
+  dart.addTypeCaches(button_wdg.ButtonStyle);
+  dart.setMethodSignature(button_wdg.ButtonStyle, () => ({
+    __proto__: dart.getMethods(button_wdg.ButtonStyle.__proto__),
+    [_enumToString]: dart.fnType(core.String, [])
   }));
+  dart.setLibraryUri(button_wdg.ButtonStyle, I[3]);
+  dart.setStaticFieldSignature(button_wdg.ButtonStyle, () => ['values', 'filled', 'outlined']);
+  dart.defineLazy(button_wdg.ButtonStyle, {
+    /*button_wdg.ButtonStyle.values*/get values() {
+      return C[107] || CT.C107;
+    },
+    /*button_wdg.ButtonStyle.filled*/get filled() {
+      return C[108] || CT.C108;
+    },
+    /*button_wdg.ButtonStyle.outlined*/get outlined() {
+      return C[109] || CT.C109;
+    }
+  }, false);
+  var onPressed$ = dart.privateName(button_wdg, "MyButtons.onPressed");
+  var label$ = dart.privateName(button_wdg, "MyButtons.label");
+  var style$ = dart.privateName(button_wdg, "MyButtons.style");
+  var color$ = dart.privateName(button_wdg, "MyButtons.color");
+  var textColor$ = dart.privateName(button_wdg, "MyButtons.textColor");
+  var width$ = dart.privateName(button_wdg, "MyButtons.width");
+  var height$ = dart.privateName(button_wdg, "MyButtons.height");
+  var borderRadius$ = dart.privateName(button_wdg, "MyButtons.borderRadius");
+  var icon$ = dart.privateName(button_wdg, "MyButtons.icon");
+  var disabled$ = dart.privateName(button_wdg, "MyButtons.disabled");
+  var fontSize$ = dart.privateName(button_wdg, "MyButtons.fontSize");
+  button_wdg.MyButtons = class MyButtons extends framework.StatelessWidget {
+    get onPressed() {
+      return this[onPressed$];
+    }
+    set onPressed(value) {
+      super.onPressed = value;
+    }
+    get label() {
+      return this[label$];
+    }
+    set label(value) {
+      super.label = value;
+    }
+    get style() {
+      return this[style$];
+    }
+    set style(value) {
+      super.style = value;
+    }
+    get color() {
+      return this[color$];
+    }
+    set color(value) {
+      super.color = value;
+    }
+    get textColor() {
+      return this[textColor$];
+    }
+    set textColor(value) {
+      super.textColor = value;
+    }
+    get width() {
+      return this[width$];
+    }
+    set width(value) {
+      super.width = value;
+    }
+    get height() {
+      return this[height$];
+    }
+    set height(value) {
+      super.height = value;
+    }
+    get borderRadius() {
+      return this[borderRadius$];
+    }
+    set borderRadius(value) {
+      super.borderRadius = value;
+    }
+    get icon() {
+      return this[icon$];
+    }
+    set icon(value) {
+      super.icon = value;
+    }
+    get disabled() {
+      return this[disabled$];
+    }
+    set disabled(value) {
+      super.disabled = value;
+    }
+    get fontSize() {
+      return this[fontSize$];
+    }
+    set fontSize(value) {
+      super.fontSize = value;
+    }
+    static ['_#filled#tearOff'](opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let onPressed = opts && 'onPressed' in opts ? opts.onPressed : null;
+      let label = opts && 'label' in opts ? opts.label : null;
+      let style = opts && 'style' in opts ? opts.style : C[108] || CT.C108;
+      let color = opts && 'color' in opts ? opts.color : C[67] || CT.C67;
+      let textColor = opts && 'textColor' in opts ? opts.textColor : C[2] || CT.C2;
+      let width = opts && 'width' in opts ? opts.width : 1 / 0;
+      let height = opts && 'height' in opts ? opts.height : 50;
+      let borderRadius = opts && 'borderRadius' in opts ? opts.borderRadius : 6;
+      let icon = opts && 'icon' in opts ? opts.icon : null;
+      let disabled = opts && 'disabled' in opts ? opts.disabled : false;
+      let fontSize = opts && 'fontSize' in opts ? opts.fontSize : 16;
+      return new button_wdg.MyButtons.filled({key: key, onPressed: onPressed, label: label, style: style, color: color, textColor: textColor, width: width, height: height, borderRadius: borderRadius, icon: icon, disabled: disabled, fontSize: fontSize});
+    }
+    static ['_#outlined#tearOff'](opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let onPressed = opts && 'onPressed' in opts ? opts.onPressed : null;
+      let label = opts && 'label' in opts ? opts.label : null;
+      let style = opts && 'style' in opts ? opts.style : C[109] || CT.C109;
+      let color = opts && 'color' in opts ? opts.color : C[2] || CT.C2;
+      let textColor = opts && 'textColor' in opts ? opts.textColor : C[3] || CT.C3;
+      let width = opts && 'width' in opts ? opts.width : 1 / 0;
+      let height = opts && 'height' in opts ? opts.height : 50;
+      let borderRadius = opts && 'borderRadius' in opts ? opts.borderRadius : 6;
+      let icon = opts && 'icon' in opts ? opts.icon : null;
+      let disabled = opts && 'disabled' in opts ? opts.disabled : false;
+      let fontSize = opts && 'fontSize' in opts ? opts.fontSize : 16;
+      return new button_wdg.MyButtons.outlined({key: key, onPressed: onPressed, label: label, style: style, color: color, textColor: textColor, width: width, height: height, borderRadius: borderRadius, icon: icon, disabled: disabled, fontSize: fontSize});
+    }
+    build(context) {
+      let t5, t6;
+      return new basic.SizedBox.new({height: this.height, width: this.width, child: this.style === button_wdg.ButtonStyle.filled ? new elevated_button.ElevatedButton.new({onPressed: this.disabled ? null : this.onPressed, style: elevated_button.ElevatedButton.styleFrom({backgroundColor: this.color, shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.circular(this.borderRadius)})}), child: new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: (() => {
+              let t4 = T.JSArrayOfWidget().of([(t5 = this.icon, t5 == null ? C[106] || CT.C106 : t5)]);
+              if (this.icon != null) t4.push(C[103] || CT.C103);
+              t4.push(new text$.Text.new(this.label, {style: new text_style.TextStyle.new({color: this.textColor, fontSize: this.fontSize, fontWeight: ui.FontWeight.w600})}));
+              return t4;
+            })()})}) : new outlined_button.OutlinedButton.new({onPressed: this.disabled ? null : this.onPressed, style: outlined_button.OutlinedButton.styleFrom({backgroundColor: this.color, side: C[104] || CT.C104, shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.circular(6)})}), child: new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: (() => {
+              let t5 = T.JSArrayOfWidget().of([(t6 = this.icon, t6 == null ? C[106] || CT.C106 : t6)]);
+              if (this.icon != null) t5.push(C[103] || CT.C103);
+              t5.push(new text$.Text.new(this.label, {style: new text_style.TextStyle.new({color: this.textColor, fontSize: this.fontSize, fontWeight: ui.FontWeight.w600})}));
+              return t5;
+            })()})})});
+    }
+  };
+  (button_wdg.MyButtons.filled = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let onPressed = opts && 'onPressed' in opts ? opts.onPressed : null;
+    let label = opts && 'label' in opts ? opts.label : null;
+    let style = opts && 'style' in opts ? opts.style : C[108] || CT.C108;
+    let color = opts && 'color' in opts ? opts.color : C[67] || CT.C67;
+    let textColor = opts && 'textColor' in opts ? opts.textColor : C[2] || CT.C2;
+    let width = opts && 'width' in opts ? opts.width : 1 / 0;
+    let height = opts && 'height' in opts ? opts.height : 50;
+    let borderRadius = opts && 'borderRadius' in opts ? opts.borderRadius : 6;
+    let icon = opts && 'icon' in opts ? opts.icon : null;
+    let disabled = opts && 'disabled' in opts ? opts.disabled : false;
+    let fontSize = opts && 'fontSize' in opts ? opts.fontSize : 16;
+    this[onPressed$] = onPressed;
+    this[label$] = label;
+    this[style$] = style;
+    this[color$] = color;
+    this[textColor$] = textColor;
+    this[width$] = width;
+    this[height$] = height;
+    this[borderRadius$] = borderRadius;
+    this[icon$] = icon;
+    this[disabled$] = disabled;
+    this[fontSize$] = fontSize;
+    button_wdg.MyButtons.__proto__.new.call(this, {key: key});
+    ;
+  }).prototype = button_wdg.MyButtons.prototype;
+  (button_wdg.MyButtons.outlined = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let onPressed = opts && 'onPressed' in opts ? opts.onPressed : null;
+    let label = opts && 'label' in opts ? opts.label : null;
+    let style = opts && 'style' in opts ? opts.style : C[109] || CT.C109;
+    let color = opts && 'color' in opts ? opts.color : C[2] || CT.C2;
+    let textColor = opts && 'textColor' in opts ? opts.textColor : C[3] || CT.C3;
+    let width = opts && 'width' in opts ? opts.width : 1 / 0;
+    let height = opts && 'height' in opts ? opts.height : 50;
+    let borderRadius = opts && 'borderRadius' in opts ? opts.borderRadius : 6;
+    let icon = opts && 'icon' in opts ? opts.icon : null;
+    let disabled = opts && 'disabled' in opts ? opts.disabled : false;
+    let fontSize = opts && 'fontSize' in opts ? opts.fontSize : 16;
+    this[onPressed$] = onPressed;
+    this[label$] = label;
+    this[style$] = style;
+    this[color$] = color;
+    this[textColor$] = textColor;
+    this[width$] = width;
+    this[height$] = height;
+    this[borderRadius$] = borderRadius;
+    this[icon$] = icon;
+    this[disabled$] = disabled;
+    this[fontSize$] = fontSize;
+    button_wdg.MyButtons.__proto__.new.call(this, {key: key});
+    ;
+  }).prototype = button_wdg.MyButtons.prototype;
+  dart.addTypeTests(button_wdg.MyButtons);
+  dart.addTypeCaches(button_wdg.MyButtons);
+  dart.setMethodSignature(button_wdg.MyButtons, () => ({
+    __proto__: dart.getMethods(button_wdg.MyButtons.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(button_wdg.MyButtons, I[3]);
+  dart.setFieldSignature(button_wdg.MyButtons, () => ({
+    __proto__: dart.getFields(button_wdg.MyButtons.__proto__),
+    onPressed: dart.finalFieldType(dart.fnType(dart.dynamic, [])),
+    label: dart.finalFieldType(core.String),
+    style: dart.finalFieldType(button_wdg.ButtonStyle),
+    color: dart.finalFieldType(ui.Color),
+    textColor: dart.finalFieldType(ui.Color),
+    width: dart.finalFieldType(core.double),
+    height: dart.finalFieldType(core.double),
+    borderRadius: dart.finalFieldType(core.double),
+    icon: dart.finalFieldType(dart.nullable(framework.Widget)),
+    disabled: dart.finalFieldType(core.bool),
+    fontSize: dart.finalFieldType(core.double)
+  }));
+  dart.defineLazy(colors$1, {
+    /*colors$1.kWhite*/get kWhite() {
+      return C[2] || CT.C2;
+    },
+    /*colors$1.kBlack*/get kBlack() {
+      return C[3] || CT.C3;
+    },
+    /*colors$1.kTransparent*/get kTransparent() {
+      return C[4] || CT.C4;
+    },
+    /*colors$1.kRed*/get kRed() {
+      return C[5] || CT.C5;
+    },
+    /*colors$1.kGreen*/get kGreen() {
+      return C[17] || CT.C17;
+    },
+    /*colors$1.kBlue*/get kBlue() {
+      return C[29] || CT.C29;
+    },
+    /*colors$1.kYellow*/get kYellow() {
+      return C[41] || CT.C41;
+    },
+    /*colors$1.kGrey*/get kGrey() {
+      return C[53] || CT.C53;
+    },
+    /*colors$1.kAppPrimary*/get kAppPrimary() {
+      return C[67] || CT.C67;
+    },
+    /*colors$1.kAppPrimaryDark*/get kAppPrimaryDark() {
+      return C[68] || CT.C68;
+    },
+    /*colors$1.kAppPrimaryDark2*/get kAppPrimaryDark2() {
+      return C[69] || CT.C69;
+    },
+    /*colors$1.kAppPrimaryLight*/get kAppPrimaryLight() {
+      return C[70] || CT.C70;
+    },
+    /*colors$1.kAppSecondary*/get kAppSecondary() {
+      return C[71] || CT.C71;
+    },
+    /*colors$1.kAppSecondaryLight*/get kAppSecondaryLight() {
+      return C[72] || CT.C72;
+    },
+    /*colors$1.kAppBiruDark*/get kAppBiruDark() {
+      return C[73] || CT.C73;
+    },
+    /*colors$1.kAppBiruLight*/get kAppBiruLight() {
+      return new ui.Color.new(4278235065);
+    },
+    /*colors$1.kAppKuning*/get kAppKuning() {
+      return C[74] || CT.C74;
+    },
+    /*colors$1.kAppCoklat*/get kAppCoklat() {
+      return C[75] || CT.C75;
+    },
+    /*colors$1.kAppMerah*/get kAppMerah() {
+      return C[76] || CT.C76;
+    },
+    /*colors$1.kAppGrey*/get kAppGrey() {
+      return C[57] || CT.C57;
+    },
+    /*colors$1.kBgPrimary*/get kBgPrimary() {
+      return C[77] || CT.C77;
+    },
+    /*colors$1.kBgSecondary*/get kBgSecondary() {
+      return C[78] || CT.C78;
+    },
+    /*colors$1.kBgSuccess*/get kBgSuccess() {
+      return C[79] || CT.C79;
+    },
+    /*colors$1.kBgDanger*/get kBgDanger() {
+      return C[80] || CT.C80;
+    },
+    /*colors$1.kBgWarning*/get kBgWarning() {
+      return C[81] || CT.C81;
+    },
+    /*colors$1.kBgInfo*/get kBgInfo() {
+      return C[82] || CT.C82;
+    },
+    /*colors$1.kBgLight*/get kBgLight() {
+      return C[83] || CT.C83;
+    },
+    /*colors$1.kBgDark*/get kBgDark() {
+      return C[84] || CT.C84;
+    },
+    /*colors$1.kAppGradientPrim*/get kAppGradientPrim() {
+      return C[85] || CT.C85;
+    },
+    /*colors$1.kPrimaryGradient*/get kPrimaryGradient() {
+      return C[90] || CT.C90;
+    }
+  }, false);
+  dart.defineLazy(constants$, {
+    /*constants$.dbName*/get dbName() {
+      return "dbName.db";
+    },
+    /*constants$.APP_NAME*/get APP_NAME() {
+      return "V-Log";
+    },
+    /*constants$.APP_DESC*/get APP_DESC() {
+      return "Visitor Log";
+    },
+    /*constants$.TAG_LINE*/get TAG_LINE() {
+      return "Will never miss";
+    },
+    /*constants$.WA_ADMIN*/get WA_ADMIN() {
+      return "971562681844";
+    },
+    /*constants$.APP_VERSI*/get APP_VERSI() {
+      return "2.2111.6";
+    },
+    /*constants$.BASE_URL*/get BASE_URL() {
+      return "https://study-alone.000webhostapp.com/";
+    },
+    /*constants$.TIME_OUT_DURATION*/get TIME_OUT_DURATION() {
+      return 30;
+    },
+    /*constants$.tableCategoryName*/get tableCategoryName() {
+      return "Category";
+    },
+    /*constants$.colMainCategoryId*/get colMainCategoryId() {
+      return "ID";
+    },
+    /*constants$.colMainCategoryName*/get colMainCategoryName() {
+      return "Name";
+    },
+    /*constants$.colMainCategoryImage*/get colMainCategoryImage() {
+      return "Image";
+    },
+    /*constants$.tableQuestionName*/get tableQuestionName() {
+      return "Question";
+    },
+    /*constants$.colQuestionId*/get colQuestionId() {
+      return "ID";
+    },
+    /*constants$.colQuestionText*/get colQuestionText() {
+      return "QuestionText";
+    },
+    /*constants$.colQuestionIsImage*/get colQuestionIsImage() {
+      return "IsImageQuestion";
+    },
+    /*constants$.colQuestionImage*/get colQuestionImage() {
+      return "QuestionImage";
+    },
+    /*constants$.colQuestionAnswerA*/get colQuestionAnswerA() {
+      return "AnswerA";
+    },
+    /*constants$.colQuestionAnswerB*/get colQuestionAnswerB() {
+      return "AnswerB";
+    },
+    /*constants$.colQuestionAnswerC*/get colQuestionAnswerC() {
+      return "AnswerC";
+    },
+    /*constants$.colQuestionAnswerD*/get colQuestionAnswerD() {
+      return "AnswerD";
+    },
+    /*constants$.colQuestionCorrectAnswer*/get colQuestionCorrectAnswer() {
+      return "CorrectAnswer";
+    },
+    /*constants$.colQuestionCategoryId*/get colQuestionCategoryId() {
+      return "CategoryID";
+    },
+    /*constants$.sSuccess*/get sSuccess() {
+      return "Great";
+    },
+    /*constants$.sFail*/get sFail() {
+      return "Failed";
+    },
+    /*constants$.sError*/get sError() {
+      return "Eror";
+    },
+    /*constants$.sMsgSuccessExecution*/get sMsgSuccessExecution() {
+      return "Process sucessfully executed";
+    },
+    /*constants$.sMsgSuccessAddData*/get sMsgSuccessAddData() {
+      return "New data sucessfully added";
+    },
+    /*constants$.sMsgSuccessUpdateData*/get sMsgSuccessUpdateData() {
+      return "Data sucessfully updated";
+    },
+    /*constants$.sMsgSuccessDeleteData*/get sMsgSuccessDeleteData() {
+      return "Data sucessfully deleted";
+    },
+    /*constants$.sMsgFailExecution*/get sMsgFailExecution() {
+      return "Process failed to be executed";
+    },
+    /*constants$.sMsgFailAddData*/get sMsgFailAddData() {
+      return "New data failed to be added";
+    },
+    /*constants$.sMsgFailUpdateData*/get sMsgFailUpdateData() {
+      return "Data failed to be updated";
+    },
+    /*constants$.sMsgFailDeleteData*/get sMsgFailDeleteData() {
+      return "Data failed to be deleted";
+    },
+    /*constants$.sAuthFail*/get sAuthFail() {
+      return "User ID is not registered, or Wrong Password!";
+    },
+    /*constants$.kEmailValidatorRegExp*/get kEmailValidatorRegExp() {
+      return core.RegExp.new("^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[a-zA-Z]+");
+    },
+    /*constants$.kUserNullError*/get kUserNullError() {
+      return "Please Enter your User ID";
+    },
+    /*constants$.kPassNullError*/get kPassNullError() {
+      return "Please Enter your Password";
+    },
+    /*constants$.kEmailNullError*/get kEmailNullError() {
+      return "Please Enter Valid Email";
+    },
+    /*constants$.kInvalidEmailError*/get kInvalidEmailError() {
+      return "Please Enter Valid Email";
+    },
+    /*constants$.kFieldNullError*/get kFieldNullError() {
+      return "The field cannot be empty";
+    },
+    /*constants$.kShortPassError*/get kShortPassError() {
+      return "Password is too short";
+    },
+    /*constants$.kMatchPassError*/get kMatchPassError() {
+      return "Passwords doesn't match";
+    },
+    /*constants$.kNamelNullError*/get kNamelNullError() {
+      return "Please Enter your name";
+    },
+    /*constants$.kPhoneNumberNullError*/get kPhoneNumberNullError() {
+      return "Please Enter your phone number";
+    },
+    /*constants$.kAddressNullError*/get kAddressNullError() {
+      return "Please Enter your address";
+    }
+  }, false);
+  dart.defineLazy(durations$, {
+    /*durations$.kAnimationDuration*/get kAnimationDuration() {
+      return C[94] || CT.C94;
+    },
+    /*durations$.kDefaultDuration*/get kDefaultDuration() {
+      return C[95] || CT.C95;
+    }
+  }, false);
+  dart.defineLazy(keys$, {
+    /*keys$.API_KEY*/get API_KEY() {
+      return "AIzaSyClb4GDpsXDFSvWumM4vyFj7dMT2ShTWak";
+    }
+  }, false);
+  dart.defineLazy(sizes$, {
+    /*sizes$.kDefaultPadding*/get kDefaultPadding() {
+      return 16;
+    },
+    /*sizes$.kMobileWidth*/get kMobileWidth() {
+      return 600;
+    },
+    /*sizes$.kTabletWidth*/get kTabletWidth() {
+      return 1200;
+    },
+    /*sizes$.kTabletBreakpointWidth*/get kTabletBreakpointWidth() {
+      return 768;
+    },
+    /*sizes$.kDesktopBreakpointWidth*/get kDesktopBreakpointWidth() {
+      return 1440;
+    },
+    /*sizes$.kSideMenuWidth*/get kSideMenuWidth() {
+      return 300;
+    },
+    /*sizes$.kNavigationRailWidth*/get kNavigationRailWidth() {
+      return 72;
+    }
+  }, false);
+  styles$.outlineInputBorder = function outlineInputBorder$() {
+    return new input_border.OutlineInputBorder.new({borderRadius: new border_radius.BorderRadius.circular(15), borderSide: new borders.BorderSide.new({color: colors$1.kAppPrimary})});
+  };
+  dart.defineLazy(styles$, {
+    /*styles$.kDefaultShadow*/get kDefaultShadow() {
+      return C[96] || CT.C96;
+    },
+    /*styles$.kTextStyle*/get kTextStyle() {
+      return C[100] || CT.C100;
+    },
+    /*styles$.kHeadingStyle*/get kHeadingStyle() {
+      return new text_style.TextStyle.new({fontSize: 21, fontWeight: ui.FontWeight.bold, color: colors.Colors.black, height: 1.5});
+    },
+    /*styles$.otpInputDecoration*/get otpInputDecoration() {
+      return new input_decorator.InputDecoration.new({contentPadding: new edge_insets.EdgeInsets.symmetric({vertical: 15}), border: styles$.outlineInputBorder(), focusedBorder: styles$.outlineInputBorder(), enabledBorder: styles$.outlineInputBorder()});
+    }
+  }, false);
+  themes$.MyThemes = class MyThemes extends core.Object {
+    static ['_#new#tearOff']() {
+      return new themes$.MyThemes.new();
+    }
+  };
+  (themes$.MyThemes.new = function() {
+    ;
+  }).prototype = themes$.MyThemes.prototype;
+  dart.addTypeTests(themes$.MyThemes);
+  dart.addTypeCaches(themes$.MyThemes);
+  dart.setLibraryUri(themes$.MyThemes, I[4]);
+  dart.setStaticFieldSignature(themes$.MyThemes, () => ['lightMode', 'darkMode']);
+  dart.defineLazy(themes$.MyThemes, {
+    /*themes$.MyThemes.lightMode*/get lightMode() {
+      return theme_data.ThemeData.new({primarySwatch: colors$1.kYellow, primaryColor: colors$1.kAppPrimary, brightness: ui.Brightness.light, fontFamily: "Poppins", inputDecorationTheme: new input_decorator.InputDecorationTheme.new({border: new input_border.OutlineInputBorder.new({borderRadius: new border_radius.BorderRadius.circular(20), borderSide: borders.BorderSide.none}), filled: true, fillColor: colors.Colors.grey.withOpacity(0.1)})});
+    },
+    /*themes$.MyThemes.darkMode*/get darkMode() {
+      return theme_data.ThemeData.new({primarySwatch: colors.Colors.red, primaryColor: new ui.Color.new(4293947751), brightness: ui.Brightness.dark, fontFamily: "Poppins", inputDecorationTheme: new input_decorator.InputDecorationTheme.new({border: new input_border.OutlineInputBorder.new({borderRadius: new border_radius.BorderRadius.circular(20), borderSide: borders.BorderSide.none}), filled: true, fillColor: colors.Colors.grey.withOpacity(0.1)})});
+    }
+  }, false);
+  widgets_hlp.getFont = function getFont(fontSize, opts) {
+    let t6;
+    let color = opts && 'color' in opts ? opts.color : null;
+    let isBold = opts && 'isBold' in opts ? opts.isBold : false;
+    let fontName = opts && 'fontName' in opts ? opts.fontName : null;
+    return new text_style.TextStyle.new({fontSize: fontSize, color: (t6 = color, t6 == null ? colors$1.kBlack : t6), fontWeight: isBold ? ui.FontWeight.bold : ui.FontWeight.normal, fontFamily: fontName});
+  };
+  widgets_hlp.buildLoading = function buildLoading() {
+    return new basic.Center.new({child: new progress_indicator.CircularProgressIndicator.new()});
+  };
   dart.trackLibraries("zapp_user_main", {
     "file:///zapp/project/.zapp_entry.dart": $46zapp_entry,
     "file:///zapp/project/lib/main.dart": main,
     "file:///zapp/project/.dart_tool/dartpad/web_plugin_registrant.dart": web_plugin_registrant,
     "file:///zapp/project/lib/configs/x_configs.dart": x_configs,
-    "file:///zapp/project/lib/modules/sliver_screen/x_sliver_screens.dart": x_sliver_screens,
+    "file:///zapp/project/lib/modules/home/x_homes.dart": x_homes,
     "file:///zapp/project/lib/configs/colors.dart": colors$0,
     "file:///zapp/project/lib/configs/constants.dart": constants,
     "file:///zapp/project/lib/configs/durations.dart": durations,
@@ -1040,17 +1832,28 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     "file:///zapp/project/lib/configs/sizes.dart": sizes,
     "file:///zapp/project/lib/configs/styles.dart": styles,
     "file:///zapp/project/lib/configs/themes.dart": themes,
-    "file:///zapp/project/lib/modules/sliver_screen/models/car_mdl.dart": car_mdl,
-    "file:///zapp/project/lib/modules/sliver_screen/views/sliver_vw.dart": sliver_vw
+    "file:///zapp/project/lib/modules/home/pages/home_pg.dart": home_pg,
+    "package:flutter_app/widgets/x_widgets.dart": x_widgets,
+    "package:flutter_app/widgets/button_wdg.dart": button_wdg,
+    "package:flutter_app/configs/x_configs.dart": x_configs$,
+    "package:flutter_app/helpers/x_helpers.dart": x_helpers,
+    "package:flutter_app/configs/colors.dart": colors$1,
+    "package:flutter_app/configs/constants.dart": constants$,
+    "package:flutter_app/configs/durations.dart": durations$,
+    "package:flutter_app/configs/keys.dart": keys$,
+    "package:flutter_app/configs/sizes.dart": sizes$,
+    "package:flutter_app/configs/styles.dart": styles$,
+    "package:flutter_app/configs/themes.dart": themes$,
+    "package:flutter_app/helpers/widgets_hlp.dart": widgets_hlp
   }, {
-  }, '{"version":3,"sourceRoot":"","sources":["/zapp/project/.zapp_entry.dart","/zapp/project/lib/main.dart","/zapp/project/.dart_tool/dartpad/web_plugin_registrant.dart","/zapp/project/lib/configs/colors.dart","/zapp/project/lib/configs/constants.dart","/zapp/project/lib/configs/durations.dart","/zapp/project/lib/configs/keys.dart","/zapp/project/lib/configs/sizes.dart","/zapp/project/lib/configs/styles.dart","/zapp/project/lib/configs/themes.dart","/zapp/project/lib/modules/sliver_screen/models/car_mdl.dart","/zapp/project/lib/modules/sliver_screen/views/sliver_vw.dart"],"names":[],"mappings":"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","file":"main.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["/zapp/project/.zapp_entry.dart","/zapp/project/lib/main.dart","/zapp/project/.dart_tool/dartpad/web_plugin_registrant.dart","/zapp/project/lib/configs/colors.dart","/zapp/project/lib/configs/constants.dart","/zapp/project/lib/configs/durations.dart","/zapp/project/lib/configs/keys.dart","/zapp/project/lib/configs/sizes.dart","/zapp/project/lib/configs/styles.dart","/zapp/project/lib/configs/themes.dart","/zapp/project/lib/modules/home/pages/home_pg.dart","/zapp/project/lib/widgets/button_wdg.dart","/zapp/project/lib/helpers/widgets_hlp.dart"],"names":[],"mappings":"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","file":"main.js"}');
   // Exports:
   return {
     zapp__project__$46zapp_entry: $46zapp_entry,
     zapp__project__lib__main: main,
     zapp__project__$46dart_tool__dartpad__web_plugin_registrant: web_plugin_registrant,
     zapp__project__lib__configs__x_configs: x_configs,
-    zapp__project__lib__modules__sliver_screen__x_sliver_screens: x_sliver_screens,
+    zapp__project__lib__modules__home__x_homes: x_homes,
     zapp__project__lib__configs__colors: colors$0,
     zapp__project__lib__configs__constants: constants,
     zapp__project__lib__configs__durations: durations,
@@ -1058,8 +1861,19 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     zapp__project__lib__configs__sizes: sizes,
     zapp__project__lib__configs__styles: styles,
     zapp__project__lib__configs__themes: themes,
-    zapp__project__lib__modules__sliver_screen__models__car_mdl: car_mdl,
-    zapp__project__lib__modules__sliver_screen__views__sliver_vw: sliver_vw
+    zapp__project__lib__modules__home__pages__home_pg: home_pg,
+    widgets__x_widgets: x_widgets,
+    widgets__button_wdg: button_wdg,
+    configs__x_configs: x_configs$,
+    helpers__x_helpers: x_helpers,
+    configs__colors: colors$1,
+    configs__constants: constants$,
+    configs__durations: durations$,
+    configs__keys: keys$,
+    configs__sizes: sizes$,
+    configs__styles: styles$,
+    configs__themes: themes$,
+    helpers__widgets_hlp: widgets_hlp
   };
 }));
 

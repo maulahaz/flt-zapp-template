@@ -4,7 +4,7 @@ import 'x_configs.dart';
 
 class MyThemes {
   static final lightMode = ThemeData(
-      primarySwatch: kAppPrimary,
+      primarySwatch: kYellow,
       primaryColor: kAppPrimary,
       brightness: Brightness.light,
       fontFamily: 'Poppins',
