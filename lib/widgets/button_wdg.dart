@@ -3,222 +3,100 @@ import 'package:flutter/material.dart';
 import '../configs/x_configs.dart';
 import '../helpers/x_helpers.dart';
 
-class MyButtonsXX {
-  //--App Button Using Gradient
-  static MaterialButton appPrimary(
-      BuildContext context, String title, double width, Function() function) {
-    return MaterialButton(
-      minWidth: width,
-      onPressed: function,
-      child: Container(
-        width: width,
-        alignment: Alignment.center,
-        padding: EdgeInsets.all(kDefaultPadding * 0.5), // 15
-        decoration: BoxDecoration(
-            gradient: kAppGradientPrim,
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            border: Border.all(color: kAppPrimaryDark, width: 2)),
-        child: Text(title, style: getFont(16, color: kBlack)),
-      ),
-    );
-  }
-
-  //--CommonButton.defaultBtn
-  static MaterialButton defaultBtn(
-      BuildContext context, String text, double width, Function() function) {
-    return MaterialButton(
-      minWidth: width,
-      padding: EdgeInsets.all(20),
-      onPressed: function,
-      child: Text(text,
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 20)
-              .copyWith(color: kBlack, fontWeight: FontWeight.bold)),
-    );
-  }
-
-  //--CommonButton.filledBtn
-  static ElevatedButton filledBtn(
+class MyButtons {
+  static Widget showMyButtons(
     BuildContext context,
     String label,
-    Widget? icon,
-    Function()? function,
-  ) {
-    return ElevatedButton(
-      onPressed: function ?? null,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: kAppPrimary,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(6),
-        ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          icon ?? SizedBox.shrink(),
-          if (icon != null) const SizedBox(width: 10.0),
-          Text(
-            label,
-            style: TextStyle(
-              color: kWhite,
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+    Color txColor,
+    Color bgColor,
+    Function() function, {
+    required bool outlined,
+    required bool gradiented,
+  }) {
+    //--USING ELEVATED BUTTON v.1:
+    //----------------------------------------------------------------
+    // return ElevatedButton(
+    //   onPressed: function,
+    //   child: Text(label, style: getFont(16, color: kBlack)),
+    //   style: ElevatedButton.styleFrom(
+    //     backgroundColor: outlined ? kTransparent : color,
+    //     side: outlined ? BorderSide(width:2, color:color) : null,
+    //     shape: RoundedRectangleBorder(
+    //       borderRadius: BorderRadius.circular(12),
+    //     ),
+    //   ),
+    // );
 
-  //--CommonButton.outlined
-  static OutlinedButton outlined(
-    BuildContext context,
-    {required String label,
-    Widget? icon,
-    Function()? function}
-  ) {
-    return OutlinedButton(
-              onPressed: function ?? null,
-              style: OutlinedButton.styleFrom(
-                backgroundColor: kWhite,
-                side: const BorderSide(color: kGrey),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(6.0),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  icon ?? const SizedBox.shrink(),
-                  if (icon != null) const SizedBox(width: 10.0),
-                  Text(
-                    label,
-                    style: TextStyle(
-                      color: kBlack,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
-              ),
-            );
-  }
+    //--USING ELEVATED BUTTON v.2:
+    //----------------------------------------------------------------    
+    // return ElevatedButton(
+    //   onPressed: function,
+    //   style: ElevatedButton.styleFrom(
+    //     padding: const EdgeInsets.all(0.0),
+    //     elevation: 5,
+    //   ),
+    //   child: Container(
+    //     padding: EdgeInsets.all(10),
+    //     constraints: BoxConstraints(minWidth: 88.0),
+    //     decoration: BoxDecoration(
+    //         color: outlined ? kTransparent : color,
+    //         gradient: gradiented ? kAppGradientPrim : null,
+    //         borderRadius: BorderRadius.all(Radius.circular(10)),
+    //         border: outlined ? Border.all(color: color, width: 2) : null),
+    //     child: Text(label, style: getFont(16, color: kBlack)),
+    //   ),
+    // );
 
-  //--CommonButton.successBtn
-  static MaterialButton successBtn(
-      BuildContext context, String text, double width, Function() function) {
+    //--USING MATERIAL BUTTON (will take all Width):
+    //----------------------------------------------------------------    
     return MaterialButton(
-      minWidth: width,
-      padding: EdgeInsets.all(20),
       onPressed: function,
-      child: Text(text,
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 20)
-              .copyWith(color: kBlack, fontWeight: FontWeight.bold)),
+      child: Container(
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(kDefaultPadding * 0.5),
+        decoration: BoxDecoration(
+            color: outlined ? kTransparent : bgColor,
+            gradient: gradiented ? kAppGradientPrim : null,
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            border: outlined ? Border.all(color: bgColor, width: 2) : null),
+        child: Text(label, style: getFont(16, color: txColor)),
+      ),
     );
   }
-}
 
-enum ButtonStyle { filled, outlined }
+  static Widget primary(
+      BuildContext context, String label, Function() function) {
+    return showMyButtons(context, label, kBlack, kAppPrimary, function,
+        outlined: false, gradiented: false);
+  }
 
-class MyButtons extends StatelessWidget {
-  const MyButtons.filled({
-    super.key,
-    required this.onPressed,
-    required this.label,
-    this.style = ButtonStyle.filled,
-    this.color = kAppPrimary,
-    this.textColor = Colors.white,
-    this.width = double.infinity,
-    this.height = 50.0,
-    this.borderRadius = 6.0,
-    this.icon,
-    this.disabled = false,
-    this.fontSize = 16.0,
-  });
+  static Widget warning(
+      BuildContext context, String label, Function() function) {
+    return showMyButtons(context, label, kBlack, kBgWarning, function,
+        outlined: false, gradiented: false);
+  }
 
-  const MyButtons.outlined({
-    super.key,
-    required this.onPressed,
-    required this.label,
-    this.style = ButtonStyle.outlined,
-    this.color = kWhite,
-    this.textColor = kBlack,
-    this.width = double.infinity,
-    this.height = 50.0,
-    this.borderRadius = 6.0,
-    this.icon,
-    this.disabled = false,
-    this.fontSize = 16.0,
-  });
+  static Widget danger(
+      BuildContext context, String label, Function() function) {
+    return showMyButtons(context, label, kWhite, kRed, function,
+        outlined: false, gradiented: false);
+  }
 
-  final Function() onPressed;
-  final String label;
-  final ButtonStyle style;
-  final Color color;
-  final Color textColor;
-  final double width;
-  final double height;
-  final double borderRadius;
-  final Widget? icon;
-  final bool disabled;
-  final double fontSize;
+  static Widget primaryOutlined(
+      BuildContext context, String label, Function() function) {
+    return showMyButtons(context, label, kBlack, kAppPrimary, function,
+        outlined: true, gradiented: false);
+  }
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: height,
-      width: width,
-      child: style == ButtonStyle.filled
-          ? ElevatedButton(
-              onPressed: disabled ? null : onPressed,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: color,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(borderRadius),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  icon ?? const SizedBox.shrink(),
-                  if (icon != null) const SizedBox(width: 10.0),
-                  Text(
-                    label,
-                    style: TextStyle(
-                      color: textColor,
-                      fontSize: fontSize,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
-              ),
-            )
-          : OutlinedButton(
-              onPressed: disabled ? null : onPressed,
-              style: OutlinedButton.styleFrom(
-                backgroundColor: color,
-                side: const BorderSide(color: Colors.grey),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(6.0),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  icon ?? const SizedBox.shrink(),
-                  if (icon != null) const SizedBox(width: 10.0),
-                  Text(
-                    label,
-                    style: TextStyle(
-                      color: textColor,
-                      fontSize: fontSize,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-    );
+  static Widget dangerOutlined(
+      BuildContext context, String label, Function() function) {
+    return showMyButtons(context, label, kRed, kRed, function,
+        outlined: true, gradiented: false);
+  }
+
+  static Widget primaryGradiented(
+      BuildContext context, String label, Function() function) {
+    return showMyButtons(context, label, kBlack, kAppPrimary, function,
+        outlined: false, gradiented: true);
   }
 }

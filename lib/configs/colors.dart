@@ -12,7 +12,7 @@ const kYellow = Colors.yellow;
 const kGrey = Colors.grey;
 
 //--App Colors Pallets:
-const kAppPrimary = Color(0xffFFE90A);
+const kAppPrimary = Color.fromARGB(255, 90, 189, 255);
 const kAppPrimaryDark = Color(0xffa2d2ff);
 const kAppPrimaryDark2 = Color(0xffcdb4db);
 const kAppPrimaryLight = Color(0xffbde0fe);

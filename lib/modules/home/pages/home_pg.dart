@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter_app/extensions/x_extensions.dart';
 import 'package:flutter_app/widgets/x_widgets.dart';
 // import 'package:flutter_app/configs/x_configs.dart';
 
@@ -7,6 +8,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -17,24 +19,21 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         child: Column(
           children: [
-            Text('Tombol Biasa type Filled'),
-            MyButtons.filled(
-              onPressed: () => print('MyButtons.filled: Pressed'),
-              label: 'MyButtons.filled',
-            ),
+            SizedBox(
+              width: size.width*0.5,
+              child: MyButtons.primary(context, 'Primary with SizedBox', ()=>print('Primary'))),
             SizedBox(height: 5),
-            Text('Tombol Biasa type outlined'),
-            MyButtons.outlined(
-              onPressed: () => print('MyButtons.outlined: Pressed'),
-              label: 'MyButtons.outlined',
-            ),
+            MyButtons.primary(context, 'Primary', ()=>print('Primary')),
             SizedBox(height: 5),
-            Text('Tombol XX type outlined'),
-            MyButtonsXX.outlined(context,
-                label: 'Tombol XX type outlined',
-                function: () => print(
-                      'MyButtons xx.outlined: Pressed',
-                    ))
+            MyButtons.warning(context, 'Warning', ()=>print('Warning')),
+            SizedBox(height: 5),
+            MyButtons.danger(context, 'Danger', ()=>print('Danger')),
+            SizedBox(height: 5),
+            MyButtons.primaryOutlined(context, 'Primary Outlined', ()=>print('Primary Outlined')),
+            SizedBox(height: 5),
+            MyButtons.dangerOutlined(context, 'Danger Outlined', ()=>print('Danger Outlined')),
+            SizedBox(height: 5),
+            MyButtons.primaryGradiented(context, 'Primary Gradiented', ()=>print('Primary Gradiented')),
           ],
         ),
       ),
