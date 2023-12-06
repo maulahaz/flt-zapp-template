@@ -1,6 +1,12 @@
 # Project : xx 
 ***************************************************************
-A Flutter project description 
+A Flutter project description <br><br>
+
+Includes in this template:
+- Packages: intl, shared_preferences
+- Button with Bootstrap style
+- Snackbar with Bootstrap style
+- Helpers: Responsive,Session,Utils,Extensions,Widgets
 
 # Notes:
 - Started at: Week-xx of MM-YY
@@ -14,4 +20,5 @@ A Flutter project description
 - Random Images: [https://picsum.photos/200](https://picsum.photos/200)
 - [Colors](https://coolors.co/palettes/trending)
 - [SVG Icons](http://svgrepo.com)
-- [Food or Restaurant App UI - By The Flutter Way](https://www.youtube.com/watch?v=cvAw9wucmBc)
+- [Ytb: Title - By Creator](https://www.youtube.com)
+- [Github: Creator/Repository](https://www.Github.com)

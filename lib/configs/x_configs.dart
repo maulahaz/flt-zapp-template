@@ -1,7 +1,8 @@
 export 'colors.dart';
-export 'constants.dart';
-export 'durations.dart';
 export 'keys.dart';
-export 'sizes.dart';
 export 'styles.dart';
 export 'themes.dart';
+export 'variables.dart';
+export 'constants.dart';//<--Clubbed to variables.dart
+export 'durations.dart';//<--Clubbed to variables.dart
+export 'sizes.dart';//<--Clubbed to variables.dart

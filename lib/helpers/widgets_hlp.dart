@@ -16,8 +16,8 @@ TextStyle getFont(double fontSize,
 
 //--Build Loading Indicator
 // ========================================================================
-  Widget buildLoading() {
-    return Center(
-      child: CircularProgressIndicator(),
-    );
-  }
+Widget buildLoading() {
+  return Center(
+    child: CircularProgressIndicator(),
+  );
+}

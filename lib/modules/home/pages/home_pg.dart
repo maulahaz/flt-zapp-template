@@ -20,20 +20,34 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              width: size.width*0.5,
-              child: MyButtons.primary(context, 'Primary with SizedBox', ()=>print('Primary'))),
+                width: size.width * 0.5,
+                child: MyButtons.primary(
+                    context, 'Primary with SizedBox', () => print('Primary'))),
             SizedBox(height: 5),
-            MyButtons.primary(context, 'Primary', ()=>print('Primary')),
+            MyButtons.primary(context, 'Primary', () => print('Primary')),
             SizedBox(height: 5),
-            MyButtons.warning(context, 'Warning', ()=>print('Warning')),
+            MyButtons.warning(context, 'Warning', () => print('Warning')),
             SizedBox(height: 5),
-            MyButtons.danger(context, 'Danger', ()=>print('Danger')),
+            MyButtons.danger(context, 'Danger', () => print('Danger')),
             SizedBox(height: 5),
-            MyButtons.primaryOutlined(context, 'Primary Outlined', ()=>print('Primary Outlined')),
+            MyButtons.primaryOutlined(
+                context, 'Primary Outlined', () => print('Primary Outlined')),
             SizedBox(height: 5),
-            MyButtons.dangerOutlined(context, 'Danger Outlined', ()=>print('Danger Outlined')),
+            MyButtons.dangerOutlined(
+                context, 'Danger Outlined', () => print('Danger Outlined')),
+            MyButtons.primaryGradiented(context, 'Primary Gradiented', () {
+              print('Primary Gradiented');
+            }),
             SizedBox(height: 5),
-            MyButtons.primaryGradiented(context, 'Primary Gradiented', ()=>print('Primary Gradiented')),
+            MyButtons.primary(context, 'Show Primary Snackbar', () {
+              print('--Clicked: Show Snackbar');
+              MySnackbar.primary(context, 'Hello', 'Mabroook');
+            }),
+            SizedBox(height: 5),
+            MyButtons.danger(context, 'Show Danger Snackbar', () {
+              print('--Clicked: Show Snackbar');
+              MySnackbar.danger(context, 'Upps', 'Error Detected');
+            }),
           ],
         ),
       ),
