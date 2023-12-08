@@ -2,6 +2,7 @@
 // export 'appbar.dart';
 
 //--MY USEABLE CUSTOMS WIDGET:
+export 'dialog_wdg.dart';
 export 'button_wdg.dart';
 export 'snackbar_wdg.dart';
 // export 'mybuttons_wdgt.dart';

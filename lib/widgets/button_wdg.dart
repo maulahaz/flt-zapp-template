@@ -51,6 +51,7 @@ class MyButtons {
     //----------------------------------------------------------------    
     return MaterialButton(
       onPressed: function,
+      hoverColor: kTransparent,
       child: Container(
         alignment: Alignment.center,
         padding: EdgeInsets.all(kDefaultPadding * 0.5),
