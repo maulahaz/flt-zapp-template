@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'configs/x_configs.dart';
+import 'modules/features/x_features.dart';
 import 'modules/home/x_homes.dart';
-// import 'modules/sliver_screen/x_sliver_screens.dart';
-// import 'modules/x_modules.dart';
+import 'modules/sliver_screen/x_sliver_screens.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,17 +12,21 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter App!!',
       theme: MyThemes.lightMode,
       darkTheme: MyThemes.darkMode,
-      // home: const ModulesView(),
       // home: SliverView(),
-      home: HomePage(),
+      routes: {
+        '/': (context) => HomePage(),
+        // '/signin': (context) => SigninPage(),
+        // '/signup': (context) => SignupPage(),
+        '/home': (context) => HomePage(),
+        '/button': (context) => ButtonPage(),
+        '/sliver': (context) => SliverView(),
+      },
     );
   }
 }

@@ -12,6 +12,7 @@ class MyButtons {
     Function() function, {
     required bool outlined,
     required bool gradiented,
+    bool isLoading = false,
   }) {
     //--USING ELEVATED BUTTON v.1:
     //----------------------------------------------------------------
@@ -28,7 +29,7 @@ class MyButtons {
     // );
 
     //--USING ELEVATED BUTTON v.2:
-    //----------------------------------------------------------------    
+    //----------------------------------------------------------------
     // return ElevatedButton(
     //   onPressed: function,
     //   style: ElevatedButton.styleFrom(
@@ -48,7 +49,7 @@ class MyButtons {
     // );
 
     //--USING MATERIAL BUTTON (will take all Width):
-    //----------------------------------------------------------------    
+    //----------------------------------------------------------------
     return MaterialButton(
       onPressed: function,
       hoverColor: kTransparent,
@@ -60,14 +61,26 @@ class MyButtons {
             gradient: gradiented ? kAppGradientPrim : null,
             borderRadius: BorderRadius.all(Radius.circular(10)),
             border: outlined ? Border.all(color: bgColor, width: 2) : null),
-        child: Text(label, style: getFont(16, color: txColor)),
+        child: isLoading
+            ? Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                      width: 24,
+                      height: 24,
+                      child: CircularProgressIndicator(color: kAppPrimary)),
+                  SizedBox(width: 10),
+                  Text(label, style: getFont(16, color: txColor)),
+                ],
+              )
+            : Text(label, style: getFont(16, color: txColor)),
       ),
     );
   }
 
   static Widget primary(
       BuildContext context, String label, Function() function) {
-    return showMyButtons(context, label, kBlack, kAppPrimary, function,
+    return showMyButtons(context, label, kWhite, kAppPrimary, function,
         outlined: false, gradiented: false);
   }
 
@@ -81,6 +94,16 @@ class MyButtons {
       BuildContext context, String label, Function() function) {
     return showMyButtons(context, label, kWhite, kRed, function,
         outlined: false, gradiented: false);
+  }
+
+  static Widget disabled(BuildContext context, String label) {
+    return showMyButtons(context, label, kWhite, kGrey, () {},
+        outlined: false, gradiented: false);
+  }
+
+  static Widget isLoading(BuildContext context, String label) {
+    return showMyButtons(context, label, kWhite, kGrey, () {},
+        outlined: false, gradiented: false, isLoading: true);
   }
 
   static Widget primaryOutlined(

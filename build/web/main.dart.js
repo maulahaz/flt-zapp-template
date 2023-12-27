@@ -9,8 +9,8 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   const _interceptors = dart_sdk._interceptors;
   const js = dart_sdk.js;
   const ui = dart_sdk.ui;
-  const html = dart_sdk.html;
   const _js_helper = dart_sdk._js_helper;
+  const html = dart_sdk.html;
   const convert = dart_sdk.convert;
   const collection = dart_sdk.collection;
   const dart = dart_sdk.dart;
@@ -37,19 +37,29 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   const text = flutter_sdk.src__widgets__text;
   const single_child_scroll_view = flutter_sdk.src__widgets__single_child_scroll_view;
   const basic = flutter_sdk.src__widgets__basic;
+  const navigator = flutter_sdk.src__widgets__navigator;
+  const scroll_view = flutter_sdk.src__widgets__scroll_view;
+  const flexible_space_bar = flutter_sdk.src__material__flexible_space_bar;
+  const image = flutter_sdk.src__widgets__image;
+  const box_fit = flutter_sdk.src__painting__box_fit;
+  const sliver = flutter_sdk.src__widgets__sliver;
+  const list_tile = flutter_sdk.src__material__list_tile;
   const platform_channel = flutter_sdk.src__services__platform_channel;
   const message_codecs = flutter_sdk.src__services__message_codecs;
-  const dialog = flutter_sdk.src__material__dialog;
+  const material_button = flutter_sdk.src__material__material_button;
   const container = flutter_sdk.src__widgets__container;
   const box_decoration = flutter_sdk.src__painting__box_decoration;
+  const box_border = flutter_sdk.src__painting__box_border;
   const flex = flutter_sdk.src__rendering__flex;
+  const progress_indicator = flutter_sdk.src__material__progress_indicator;
+  const dialog = flutter_sdk.src__material__dialog;
   const icon = flutter_sdk.src__widgets__icon;
   const icons = flutter_sdk.src__material__icons;
-  const progress_indicator = flutter_sdk.src__material__progress_indicator;
-  const material_button = flutter_sdk.src__material__material_button;
-  const box_border = flutter_sdk.src__painting__box_border;
+  const text_form_field = flutter_sdk.src__material__text_form_field;
+  const editable_text = flutter_sdk.src__widgets__editable_text;
+  const icon_data = flutter_sdk.src__widgets__icon_data;
   const snack_bar = flutter_sdk.src__material__snack_bar;
-  const navigator = flutter_sdk.src__widgets__navigator;
+  const text_field = flutter_sdk.src__material__text_field;
   const page = flutter_sdk.src__material__page;
   const layout_builder = flutter_sdk.src__widgets__layout_builder;
   const box = flutter_sdk.src__rendering__box;
@@ -59,41 +69,57 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   var main = Object.create(dart.library);
   var web_plugin_registrant = Object.create(dart.library);
   var x_configs = Object.create(dart.library);
+  var x_features = Object.create(dart.library);
   var x_homes = Object.create(dart.library);
+  var x_sliver_screens = Object.create(dart.library);
   var shared_preferences_web = Object.create(dart.library);
   var colors$0 = Object.create(dart.library);
   var keys = Object.create(dart.library);
   var styles = Object.create(dart.library);
   var themes = Object.create(dart.library);
   var variables = Object.create(dart.library);
-  var constants = Object.create(dart.library);
-  var durations = Object.create(dart.library);
-  var sizes = Object.create(dart.library);
+  var button_pg = Object.create(dart.library);
   var home_pg = Object.create(dart.library);
+  var car_mdl = Object.create(dart.library);
+  var sliver_vw = Object.create(dart.library);
   var shared_preferences_platform_interface = Object.create(dart.library);
   var types = Object.create(dart.library);
   var x_widgets = Object.create(dart.library);
+  var x_widgets$ = Object.create(dart.library);
   var plugin_platform_interface = Object.create(dart.library);
   var method_channel_shared_preferences = Object.create(dart.library);
-  var dialog_wdg = Object.create(dart.library);
   var button_wdg = Object.create(dart.library);
+  var dialog_wdg = Object.create(dart.library);
+  var icon_textfield_wdg = Object.create(dart.library);
   var snackbar_wdg = Object.create(dart.library);
-  var x_configs$ = Object.create(dart.library);
-  var build_context_ext = Object.create(dart.library);
+  var textfield_wdg = Object.create(dart.library);
+  var button_wdg$ = Object.create(dart.library);
+  var dialog_wdg$ = Object.create(dart.library);
+  var icon_textfield_wdg$ = Object.create(dart.library);
+  var snackbar_wdg$ = Object.create(dart.library);
+  var textfield_wdg$ = Object.create(dart.library);
   var x_helpers = Object.create(dart.library);
+  var x_configs$ = Object.create(dart.library);
+  var x_helpers$ = Object.create(dart.library);
+  var build_context_extension_hlp = Object.create(dart.library);
+  var dialog_hlp = Object.create(dart.library);
+  var material_color_hlp = Object.create(dart.library);
+  var responsive_hlp = Object.create(dart.library);
+  var session_hlp = Object.create(dart.library);
+  var utils_hlp = Object.create(dart.library);
+  var widgets_hlp = Object.create(dart.library);
   var colors$1 = Object.create(dart.library);
   var keys$ = Object.create(dart.library);
   var styles$ = Object.create(dart.library);
   var themes$ = Object.create(dart.library);
   var variables$ = Object.create(dart.library);
-  var constants$ = Object.create(dart.library);
-  var durations$ = Object.create(dart.library);
-  var sizes$ = Object.create(dart.library);
-  var dialog_hlp = Object.create(dart.library);
-  var responsive_hlp = Object.create(dart.library);
-  var session_hlp = Object.create(dart.library);
-  var utils_hlp = Object.create(dart.library);
-  var widgets_hlp = Object.create(dart.library);
+  var build_context_extension_hlp$ = Object.create(dart.library);
+  var dialog_hlp$ = Object.create(dart.library);
+  var material_color_hlp$ = Object.create(dart.library);
+  var responsive_hlp$ = Object.create(dart.library);
+  var session_hlp$ = Object.create(dart.library);
+  var utils_hlp$ = Object.create(dart.library);
+  var widgets_hlp$ = Object.create(dart.library);
   var shared_preferences = Object.create(dart.library);
   var $toString = dartx.toString;
   var $remove = dartx.remove;
@@ -105,6 +131,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   var $startsWith = dartx.startsWith;
   var $where = dartx.where;
   var $cast = dartx.cast;
+  var $length = dartx.length;
   var $removeWhere = dartx.removeWhere;
   var $toList = dartx.toList;
   var $containsKey = dartx.containsKey;
@@ -124,12 +151,20 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     VoidToNull: () => (T$.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
     ObjectAndStackTraceTovoid: () => (T$.ObjectAndStackTraceTovoid = dart.constFn(dart.fnType(dart.void, [core.Object, core.StackTrace])))(),
     ZoneAndZoneDelegateAndZone__Tovoid: () => (T$.ZoneAndZoneDelegateAndZone__Tovoid = dart.constFn(dart.fnType(dart.void, [async.Zone, async.ZoneDelegate, async.Zone, core.String])))(),
+    BuildContextToHomePage: () => (T$.BuildContextToHomePage = dart.constFn(dart.fnType(home_pg.HomePage, [framework.BuildContext])))(),
+    BuildContextToButtonPage: () => (T$.BuildContextToButtonPage = dart.constFn(dart.fnType(button_pg.ButtonPage, [framework.BuildContext])))(),
+    BuildContextToSliverView: () => (T$.BuildContextToSliverView = dart.constFn(dart.fnType(sliver_vw.SliverView, [framework.BuildContext])))(),
+    BuildContextToWidget: () => (T$.BuildContextToWidget = dart.constFn(dart.fnType(framework.Widget, [framework.BuildContext])))(),
+    IdentityMapOfString$BuildContextToWidget: () => (T$.IdentityMapOfString$BuildContextToWidget = dart.constFn(_js_helper.IdentityMap$(core.String, T$.BuildContextToWidget())))(),
     MapOfString$Object: () => (T$.MapOfString$Object = dart.constFn(core.Map$(core.String, core.Object)))(),
     IdentityMapOfString$Object: () => (T$.IdentityMapOfString$Object = dart.constFn(_js_helper.IdentityMap$(core.String, core.Object)))(),
     StringTobool: () => (T$.StringTobool = dart.constFn(dart.fnType(core.bool, [core.String])))(),
     VoidTobool: () => (T$.VoidTobool = dart.constFn(dart.fnType(core.bool, [])))(),
     ExpandoOfObject: () => (T$.ExpandoOfObject = dart.constFn(core.Expando$(core.Object)))(),
     JSArrayOfWidget: () => (T$.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))(),
+    ObjectN: () => (T$.ObjectN = dart.constFn(dart.nullable(core.Object)))(),
+    JSArrayOfCarModel: () => (T$.JSArrayOfCarModel = dart.constFn(_interceptors.JSArray$(car_mdl.CarModel)))(),
+    BuildContextAndintToListTile: () => (T$.BuildContextAndintToListTile = dart.constFn(dart.fnType(list_tile.ListTile, [framework.BuildContext, core.int])))(),
     LinkedHashMapOfString$Object: () => (T$.LinkedHashMapOfString$Object = dart.constFn(collection.LinkedHashMap$(core.String, core.Object)))(),
     StringAndObjectTobool: () => (T$.StringAndObjectTobool = dart.constFn(dart.fnType(core.bool, [core.String, core.Object])))(),
     IdentityMapOfString$dynamic: () => (T$.IdentityMapOfString$dynamic = dart.constFn(_js_helper.IdentityMap$(core.String, dart.dynamic)))(),
@@ -144,7 +179,6 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     })))(),
     RouteTobool: () => (T$.RouteTobool = dart.constFn(dart.fnType(core.bool, [navigator.Route])))(),
     VoidTovoid$1: () => (T$.VoidTovoid$1 = dart.constFn(dart.gFnType(T => [dart.void, []], T => [core.Object])))(),
-    BuildContextToWidget: () => (T$.BuildContextToWidget = dart.constFn(dart.fnType(framework.Widget, [framework.BuildContext])))(),
     StringN: () => (T$.StringN = dart.constFn(dart.nullable(core.String)))(),
     WidgetAndStringNToFutureOfTN: () => (T$.WidgetAndStringNToFutureOfTN = dart.constFn(dart.gFnType(T => {
       var __t$TN = () => (__t$TN = dart.constFn(dart.nullable(T)))();
@@ -173,6 +207,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
       var __t$FutureOfTN = () => (__t$FutureOfTN = dart.constFn(async.Future$(__t$TN())))();
       return [core.Object];
     })))(),
+    IdentityMapOfint$Color: () => (T$.IdentityMapOfint$Color = dart.constFn(_js_helper.IdentityMap$(core.int, ui.Color)))(),
     BuildContextAndBoxConstraintsToWidget: () => (T$.BuildContextAndBoxConstraintsToWidget = dart.constFn(dart.fnType(framework.Widget, [framework.BuildContext, box.BoxConstraints])))(),
     CompleterOfSharedPreferences: () => (T$.CompleterOfSharedPreferences = dart.constFn(async.Completer$(shared_preferences.SharedPreferences)))(),
     LinkedHashSetOfString: () => (T$.LinkedHashSetOfString = dart.constFn(collection.LinkedHashSet$(core.String)))(),
@@ -877,12 +912,26 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     "package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart",
     "package:shared_preferences_web/shared_preferences_web.dart",
     "file:///zapp/project/lib/configs/themes.dart",
+    "file:///zapp/project/lib/modules/features/pages/button_pg.dart",
     "file:///zapp/project/lib/modules/home/pages/home_pg.dart",
+    "file:///zapp/project/lib/modules/sliver_screen/models/car_mdl.dart",
+    "file:///zapp/project/lib/modules/sliver_screen/views/sliver_vw.dart",
     "package:shared_preferences_platform_interface/types.dart",
     "package:shared_preferences_platform_interface/method_channel_shared_preferences.dart",
-    "package:flutter_app/widgets/dialog_wdg.dart",
+    "file:///zapp/project/lib/widgets/button_wdg.dart",
+    "file:///zapp/project/lib/widgets/dialog_wdg.dart",
+    "file:///zapp/project/lib/widgets/icon_textfield_wdg.dart",
+    "file:///zapp/project/lib/widgets/snackbar_wdg.dart",
+    "file:///zapp/project/lib/widgets/textfield_wdg.dart",
     "package:flutter_app/widgets/button_wdg.dart",
+    "package:flutter_app/widgets/dialog_wdg.dart",
+    "package:flutter_app/widgets/icon_textfield_wdg.dart",
     "package:flutter_app/widgets/snackbar_wdg.dart",
+    "package:flutter_app/widgets/textfield_wdg.dart",
+    "file:///zapp/project/lib/helpers/dialog_hlp.dart",
+    "file:///zapp/project/lib/helpers/responsive_hlp.dart",
+    "file:///zapp/project/lib/helpers/session_hlp.dart",
+    "file:///zapp/project/lib/helpers/utils_hlp.dart",
     "package:flutter_app/configs/themes.dart",
     "package:flutter_app/helpers/dialog_hlp.dart",
     "package:flutter_app/helpers/responsive_hlp.dart",
@@ -928,7 +977,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
       return new main.MyApp.new({key: key});
     }
     build(context) {
-      return new app.MaterialApp.new({debugShowCheckedModeBanner: false, title: "Flutter App!!", theme: themes.MyThemes.lightMode, darkTheme: themes.MyThemes.darkMode, home: new home_pg.HomePage.new()});
+      return new app.MaterialApp.new({debugShowCheckedModeBanner: false, theme: themes.MyThemes.lightMode, darkTheme: themes.MyThemes.darkMode, routes: new (T$.IdentityMapOfString$BuildContextToWidget()).from(["/", dart.fn(context => new home_pg.HomePage.new(), T$.BuildContextToHomePage()), "/home", dart.fn(context => new home_pg.HomePage.new(), T$.BuildContextToHomePage()), "/button", dart.fn(context => new button_pg.ButtonPage.new(), T$.BuildContextToButtonPage()), "/sliver", dart.fn(context => new sliver_vw.SliverView.new(), T$.BuildContextToSliverView())])});
     }
   };
   (main.MyApp.new = function(opts) {
@@ -1508,14 +1557,14 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
   var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
   var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
-  home_pg.HomePage = class HomePage extends framework.StatelessWidget {
+  button_pg.ButtonPage = class ButtonPage extends framework.StatelessWidget {
     static ['_#new#tearOff'](opts) {
       let key = opts && 'key' in opts ? opts.key : null;
-      return new home_pg.HomePage.new({key: key});
+      return new button_pg.ButtonPage.new({key: key});
     }
     build(context) {
       let size = media_query.MediaQuery.of(context).size;
-      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({elevation: 0, title: new text.Text.new("Home Page")}), body: new single_child_scroll_view.SingleChildScrollView.new({child: new basic.Padding.new({padding: C[103] || CT.C103, child: new basic.Column.new({children: T$.JSArrayOfWidget().of([new basic.SizedBox.new({width: size.width * 0.5, child: button_wdg.MyButtons.primary(context, "Primary with SizedBox", dart.fn(() => core.print("Primary"), T$.VoidTovoid()))}), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.primary(context, "Primary", dart.fn(() => core.print("Primary"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.warning(context, "Warning", dart.fn(() => core.print("Warning"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.danger(context, "Danger", dart.fn(() => core.print("Danger"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.primaryOutlined(context, "Primary Outlined", dart.fn(() => core.print("Primary Outlined"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.dangerOutlined(context, "Danger Outlined", dart.fn(() => core.print("Danger Outlined"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.primaryGradiented(context, "Primary Gradiented", dart.fn(() => {
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({elevation: 0, centerTitle: true, title: new text.Text.new("Button Page")}), body: new single_child_scroll_view.SingleChildScrollView.new({child: new basic.Padding.new({padding: C[103] || CT.C103, child: new basic.Column.new({children: T$.JSArrayOfWidget().of([new basic.SizedBox.new({width: size.width * 0.5, child: button_wdg.MyButtons.primary(context, "Primary with SizedBox", dart.fn(() => core.print("Primary"), T$.VoidTovoid()))}), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.primary(context, "Primary", dart.fn(() => core.print("Primary"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.warning(context, "Warning", dart.fn(() => core.print("Warning"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.danger(context, "Danger", dart.fn(() => core.print("Danger"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.disabled(context, "Disabled"), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.isLoading(context, "Loading..."), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.primaryOutlined(context, "Primary Outlined", dart.fn(() => core.print("Primary Outlined"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.dangerOutlined(context, "Danger Outlined", dart.fn(() => core.print("Danger Outlined"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.primaryGradiented(context, "Primary Gradiented", dart.fn(() => {
                   core.print("Primary Gradiented");
                 }, T$.VoidToNull())), new basic.SizedBox.new({height: 5}), button_wdg.MyButtons.primary(context, "Show Primary Snackbar", dart.fn(() => {
                   core.print("--Clicked: Show Snackbar");
@@ -1535,6 +1584,49 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
                 }, T$.VoidToNull()))])})})})});
     }
   };
+  (button_pg.ButtonPage.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    button_pg.ButtonPage.__proto__.new.call(this, {key: key});
+    ;
+  }).prototype = button_pg.ButtonPage.prototype;
+  dart.addTypeTests(button_pg.ButtonPage);
+  dart.addTypeCaches(button_pg.ButtonPage);
+  dart.setMethodSignature(button_pg.ButtonPage, () => ({
+    __proto__: dart.getMethods(button_pg.ButtonPage.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(button_pg.ButtonPage, I[6]);
+  home_pg.HomePage = class HomePage extends framework.StatelessWidget {
+    static ['_#new#tearOff'](opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      return new home_pg.HomePage.new({key: key});
+    }
+    build(context) {
+      let size = media_query.MediaQuery.of(context).size;
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({elevation: 0, title: new text.Text.new("Home Page")}), body: new single_child_scroll_view.SingleChildScrollView.new({child: new basic.Padding.new({padding: C[103] || CT.C103, child: new basic.Column.new({children: T$.JSArrayOfWidget().of([new basic.SizedBox.new({width: size.width * 0.5, child: button_wdg$.MyButtons.primary(context, "Primary with SizedBox", dart.fn(() => {
+                    core.print("Primary");
+                    navigator.Navigator.pushNamed(T$.ObjectN(), context, "/button");
+                    ;
+                  }, T$.VoidToNull()))}), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.primary(context, "Primary", dart.fn(() => core.print("Primary"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.warning(context, "Warning", dart.fn(() => core.print("Warning"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.danger(context, "Danger", dart.fn(() => core.print("Danger"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.disabled(context, "Disabled"), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.isLoading(context, "Loading..."), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.primaryOutlined(context, "Primary Outlined", dart.fn(() => core.print("Primary Outlined"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.dangerOutlined(context, "Danger Outlined", dart.fn(() => core.print("Danger Outlined"), T$.VoidTovoid())), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.primaryGradiented(context, "Primary Gradiented", dart.fn(() => {
+                  core.print("Primary Gradiented");
+                }, T$.VoidToNull())), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.primary(context, "Show Primary Snackbar", dart.fn(() => {
+                  core.print("--Clicked: Show Snackbar");
+                  snackbar_wdg$.MySnackbar.primary(context, "Hello", "Mabroook");
+                }, T$.VoidToNull())), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.danger(context, "Show Danger Snackbar", dart.fn(() => {
+                  core.print("--Clicked: Show Snackbar");
+                  snackbar_wdg$.MySnackbar.danger(context, "Upps", "Error Detected");
+                }, T$.VoidToNull())), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.primaryOutlined(context, "Show Dialog", dart.fn(() => {
+                  core.print("Show Dialog");
+                  dialog_wdg$.MyDialogs.alert(context, "Dialog", "How are you Dialog?");
+                }, T$.VoidToNull())), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.primaryOutlined(context, "Show Alert Dialog", dart.fn(() => {
+                  core.print("Show Alert Dialog");
+                  dialog_wdg$.MyDialogs.alert2(context, "AlertDialog", "How are you AlertDialog?");
+                }, T$.VoidToNull())), new basic.SizedBox.new({height: 5}), button_wdg$.MyButtons.primaryGradiented(context, "Show Loading", dart.fn(() => {
+                  core.print("Show Loading");
+                  dialog_wdg$.MyDialogs.loading(context);
+                }, T$.VoidToNull()))])})})})});
+    }
+  };
   (home_pg.HomePage.new = function(opts) {
     let key = opts && 'key' in opts ? opts.key : null;
     home_pg.HomePage.__proto__.new.call(this, {key: key});
@@ -1546,7 +1638,99 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     __proto__: dart.getMethods(home_pg.HomePage.__proto__),
     build: dart.fnType(framework.Widget, [framework.BuildContext])
   }));
-  dart.setLibraryUri(home_pg.HomePage, I[6]);
+  dart.setLibraryUri(home_pg.HomePage, I[7]);
+  var id$ = dart.privateName(car_mdl, "CarModel.id");
+  var yearModel$ = dart.privateName(car_mdl, "CarModel.yearModel");
+  var type$ = dart.privateName(car_mdl, "CarModel.type");
+  var pictureUrl$ = dart.privateName(car_mdl, "CarModel.pictureUrl");
+  car_mdl.CarModel = class CarModel extends core.Object {
+    get id() {
+      return this[id$];
+    }
+    set id(value) {
+      super.id = value;
+    }
+    get yearModel() {
+      return this[yearModel$];
+    }
+    set yearModel(value) {
+      super.yearModel = value;
+    }
+    get type() {
+      return this[type$];
+    }
+    set type(value) {
+      super.type = value;
+    }
+    get pictureUrl() {
+      return this[pictureUrl$];
+    }
+    set pictureUrl(value) {
+      super.pictureUrl = value;
+    }
+    static ['_#new#tearOff'](opts) {
+      let id = opts && 'id' in opts ? opts.id : null;
+      let yearModel = opts && 'yearModel' in opts ? opts.yearModel : null;
+      let type = opts && 'type' in opts ? opts.type : null;
+      let pictureUrl = opts && 'pictureUrl' in opts ? opts.pictureUrl : null;
+      return new car_mdl.CarModel.new({id: id, yearModel: yearModel, type: type, pictureUrl: pictureUrl});
+    }
+  };
+  (car_mdl.CarModel.new = function(opts) {
+    let id = opts && 'id' in opts ? opts.id : null;
+    let yearModel = opts && 'yearModel' in opts ? opts.yearModel : null;
+    let type = opts && 'type' in opts ? opts.type : null;
+    let pictureUrl = opts && 'pictureUrl' in opts ? opts.pictureUrl : null;
+    this[id$] = id;
+    this[yearModel$] = yearModel;
+    this[type$] = type;
+    this[pictureUrl$] = pictureUrl;
+    ;
+  }).prototype = car_mdl.CarModel.prototype;
+  dart.addTypeTests(car_mdl.CarModel);
+  dart.addTypeCaches(car_mdl.CarModel);
+  dart.setLibraryUri(car_mdl.CarModel, I[8]);
+  dart.setFieldSignature(car_mdl.CarModel, () => ({
+    __proto__: dart.getFields(car_mdl.CarModel.__proto__),
+    id: dart.finalFieldType(core.int),
+    yearModel: dart.finalFieldType(core.String),
+    type: dart.finalFieldType(core.String),
+    pictureUrl: dart.finalFieldType(core.String)
+  }));
+  var carModels = dart.privateName(sliver_vw, "SliverView.carModels");
+  sliver_vw.SliverView = class SliverView extends framework.StatelessWidget {
+    get carModels() {
+      return this[carModels];
+    }
+    set carModels(value) {
+      super.carModels = value;
+    }
+    build(context) {
+      return new app.MaterialApp.new({debugShowCheckedModeBanner: false, home: new scaffold.Scaffold.new({body: new scroll_view.CustomScrollView.new({slivers: T$.JSArrayOfWidget().of([new app_bar.SliverAppBar.new({expandedHeight: 200, floating: false, pinned: true, flexibleSpace: new flexible_space_bar.FlexibleSpaceBar.new({title: new text.Text.new("Car Models"), background: new image.Image.network("https://picsum.photos/200", {fit: box_fit.BoxFit.cover})})}), new sliver.SliverList.new({delegate: new sliver.SliverChildBuilderDelegate.new(dart.fn((context, index) => {
+                  let car = this.carModels[$_get](index);
+                  return new list_tile.ListTile.new({title: new text.Text.new(car.yearModel + " " + car.type), subtitle: new text.Text.new("ID: " + dart.str(car.id)), leading: new image.Image.network(car.pictureUrl, {width: 50, height: 50, fit: box_fit.BoxFit.cover})});
+                }, T$.BuildContextAndintToListTile()), {childCount: this.carModels[$length]})})])})})});
+    }
+    static ['_#new#tearOff']() {
+      return new sliver_vw.SliverView.new();
+    }
+  };
+  (sliver_vw.SliverView.new = function() {
+    this[carModels] = T$.JSArrayOfCarModel().of([new car_mdl.CarModel.new({id: 1, yearModel: "2022", type: "Sedan", pictureUrl: "https://picsum.photos/200"}), new car_mdl.CarModel.new({id: 2, yearModel: "2023", type: "SUV", pictureUrl: "https://picsum.photos/200"})]);
+    sliver_vw.SliverView.__proto__.new.call(this);
+    ;
+  }).prototype = sliver_vw.SliverView.prototype;
+  dart.addTypeTests(sliver_vw.SliverView);
+  dart.addTypeCaches(sliver_vw.SliverView);
+  dart.setMethodSignature(sliver_vw.SliverView, () => ({
+    __proto__: dart.getMethods(sliver_vw.SliverView.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(sliver_vw.SliverView, I[9]);
+  dart.setFieldSignature(sliver_vw.SliverView, () => ({
+    __proto__: dart.getFields(sliver_vw.SliverView.__proto__),
+    carModels: dart.finalFieldType(core.List$(car_mdl.CarModel))
+  }));
   var _data = dart.privateName(shared_preferences_platform_interface, "_data");
   shared_preferences_platform_interface.InMemorySharedPreferencesStore = class InMemorySharedPreferencesStore extends shared_preferences_platform_interface.SharedPreferencesStorePlatform {
     static ['_#empty#tearOff']() {
@@ -1667,7 +1851,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   }).prototype = types.PreferencesFilter.prototype;
   dart.addTypeTests(types.PreferencesFilter);
   dart.addTypeCaches(types.PreferencesFilter);
-  dart.setLibraryUri(types.PreferencesFilter, I[7]);
+  dart.setLibraryUri(types.PreferencesFilter, I[10]);
   dart.setFieldSignature(types.PreferencesFilter, () => ({
     __proto__: dart.getFields(types.PreferencesFilter.__proto__),
     prefix: dart.fieldType(core.String),
@@ -1693,7 +1877,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   }).prototype = types.GetAllParameters.prototype;
   dart.addTypeTests(types.GetAllParameters);
   dart.addTypeCaches(types.GetAllParameters);
-  dart.setLibraryUri(types.GetAllParameters, I[7]);
+  dart.setLibraryUri(types.GetAllParameters, I[10]);
   dart.setFieldSignature(types.GetAllParameters, () => ({
     __proto__: dart.getFields(types.GetAllParameters.__proto__),
     filter: dart.fieldType(types.PreferencesFilter)
@@ -1718,7 +1902,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   }).prototype = types.ClearParameters.prototype;
   dart.addTypeTests(types.ClearParameters);
   dart.addTypeCaches(types.ClearParameters);
-  dart.setLibraryUri(types.ClearParameters, I[7]);
+  dart.setLibraryUri(types.ClearParameters, I[10]);
   dart.setFieldSignature(types.ClearParameters, () => ({
     __proto__: dart.getFields(types.ClearParameters.__proto__),
     filter: dart.fieldType(types.PreferencesFilter)
@@ -1799,7 +1983,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     getAll: dart.fnType(async.Future$(core.Map$(core.String, core.Object)), []),
     getAllWithPrefix: dart.fnType(async.Future$(core.Map$(core.String, core.Object)), [core.String], {allowList: dart.nullable(core.Set$(core.String))}, {})
   }));
-  dart.setLibraryUri(method_channel_shared_preferences.MethodChannelSharedPreferencesStore, I[8]);
+  dart.setLibraryUri(method_channel_shared_preferences.MethodChannelSharedPreferencesStore, I[11]);
   var MethodChannel__binaryMessenger = dart.privateName(platform_channel, "MethodChannel._binaryMessenger");
   var StandardMethodCodec_messageCodec = dart.privateName(message_codecs, "StandardMethodCodec.messageCodec");
   var MethodChannel_codec = dart.privateName(platform_channel, "MethodChannel.codec");
@@ -1809,19 +1993,63 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
       return C[104] || CT.C104;
     }
   }, false);
+  button_wdg.MyButtons = class MyButtons extends core.Object {
+    static showMyButtons(context, label, txColor, bgColor, $function, opts) {
+      let outlined = opts && 'outlined' in opts ? opts.outlined : null;
+      let gradiented = opts && 'gradiented' in opts ? opts.gradiented : null;
+      let isLoading = opts && 'isLoading' in opts ? opts.isLoading : false;
+      return new material_button.MaterialButton.new({onPressed: $function, hoverColor: colors$0.kTransparent, child: new container.Container.new({alignment: alignment.Alignment.center, padding: new edge_insets.EdgeInsets.all(20 * 0.5), decoration: new box_decoration.BoxDecoration.new({color: outlined ? colors$0.kTransparent : bgColor, gradient: gradiented ? colors$0.kAppGradientPrim : null, borderRadius: new border_radius.BorderRadius.all(new ui.Radius.circular(10)), border: outlined ? box_border.Border.all({color: bgColor, width: 2}) : null}), child: isLoading ? new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T$.JSArrayOfWidget().of([new basic.SizedBox.new({width: 24, height: 24, child: new progress_indicator.CircularProgressIndicator.new({color: colors$0.kAppPrimary})}), new basic.SizedBox.new({width: 10}), new text.Text.new(label, {style: widgets_hlp.getFont(16, {color: txColor})})])}) : new text.Text.new(label, {style: widgets_hlp.getFont(16, {color: txColor})})})});
+    }
+    static primary(context, label, $function) {
+      return button_wdg.MyButtons.showMyButtons(context, label, colors$0.kWhite, colors$0.kAppPrimary, $function, {outlined: false, gradiented: false});
+    }
+    static warning(context, label, $function) {
+      return button_wdg.MyButtons.showMyButtons(context, label, colors$0.kBlack, colors$0.kBgWarning, $function, {outlined: false, gradiented: false});
+    }
+    static danger(context, label, $function) {
+      return button_wdg.MyButtons.showMyButtons(context, label, colors$0.kWhite, colors$0.kRed, $function, {outlined: false, gradiented: false});
+    }
+    static disabled(context, label) {
+      return button_wdg.MyButtons.showMyButtons(context, label, colors$0.kWhite, colors$0.kGrey, dart.fn(() => {
+      }, T$.VoidToNull()), {outlined: false, gradiented: false});
+    }
+    static isLoading(context, label) {
+      return button_wdg.MyButtons.showMyButtons(context, label, colors$0.kWhite, colors$0.kGrey, dart.fn(() => {
+      }, T$.VoidToNull()), {outlined: false, gradiented: false, isLoading: true});
+    }
+    static primaryOutlined(context, label, $function) {
+      return button_wdg.MyButtons.showMyButtons(context, label, colors$0.kBlack, colors$0.kAppPrimary, $function, {outlined: true, gradiented: false});
+    }
+    static dangerOutlined(context, label, $function) {
+      return button_wdg.MyButtons.showMyButtons(context, label, colors$0.kRed, colors$0.kRed, $function, {outlined: true, gradiented: false});
+    }
+    static primaryGradiented(context, label, $function) {
+      return button_wdg.MyButtons.showMyButtons(context, label, colors$0.kBlack, colors$0.kAppPrimary, $function, {outlined: false, gradiented: true});
+    }
+    static ['_#new#tearOff']() {
+      return new button_wdg.MyButtons.new();
+    }
+  };
+  (button_wdg.MyButtons.new = function() {
+    ;
+  }).prototype = button_wdg.MyButtons.prototype;
+  dart.addTypeTests(button_wdg.MyButtons);
+  dart.addTypeCaches(button_wdg.MyButtons);
+  dart.setStaticMethodSignature(button_wdg.MyButtons, () => ['showMyButtons', 'primary', 'warning', 'danger', 'disabled', 'isLoading', 'primaryOutlined', 'dangerOutlined', 'primaryGradiented']);
+  dart.setLibraryUri(button_wdg.MyButtons, I[12]);
   dialog_wdg.MyDialogs = class MyDialogs extends core.Object {
     static showDialogBox(context, opts) {
       let title = opts && 'title' in opts ? opts.title : "Alert";
       let subtitle = opts && 'subtitle' in opts ? opts.subtitle : "Something occured in your Apps";
       let iconColor = opts && 'iconColor' in opts ? opts.iconColor : null;
-      return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new dialog.Dialog.new({backgroundColor: colors$1.kTransparent, child: new container.Container.new({padding: new edge_insets.EdgeInsets.symmetric({vertical: 16}), margin: new edge_insets.EdgeInsets.all(14), decoration: new box_decoration.BoxDecoration.new({color: colors$1.kBlack.withOpacity(0.6), borderRadius: new border_radius.BorderRadius.circular(12)}), child: new basic.Column.new({mainAxisSize: flex.MainAxisSize.min, children: T$.JSArrayOfWidget().of([new icon.Icon.new(icons.Icons.add_alert, {size: 50, color: iconColor}), new basic.SizedBox.new({height: 24}), new text.Text.new(title, {style: widgets_hlp.getFont(16, {color: colors$1.kWhite})}), new basic.SizedBox.new({height: 12}), new text.Text.new(subtitle, {style: widgets_hlp.getFont(12, {color: colors$1.kWhite})})])})})}), T$.BuildContextToDialog())});
+      return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new dialog.Dialog.new({backgroundColor: colors$1.kTransparent, child: new container.Container.new({padding: new edge_insets.EdgeInsets.symmetric({vertical: 16}), margin: new edge_insets.EdgeInsets.all(14), decoration: new box_decoration.BoxDecoration.new({color: colors$1.kBlack.withOpacity(0.6), borderRadius: new border_radius.BorderRadius.circular(12)}), child: new basic.Column.new({mainAxisSize: flex.MainAxisSize.min, children: T$.JSArrayOfWidget().of([new icon.Icon.new(icons.Icons.add_alert, {size: 50, color: iconColor}), new basic.SizedBox.new({height: 24}), new text.Text.new(title, {style: widgets_hlp$.getFont(16, {color: colors$1.kWhite})}), new basic.SizedBox.new({height: 12}), new text.Text.new(subtitle, {style: widgets_hlp$.getFont(12, {color: colors$1.kWhite})})])})})}), T$.BuildContextToDialog())});
     }
     static showAlertDialogBox(context, opts) {
       let title = opts && 'title' in opts ? opts.title : "Alert";
       let subtitle = opts && 'subtitle' in opts ? opts.subtitle : "Something occured in your Apps";
       let iconColor = opts && 'iconColor' in opts ? opts.iconColor : null;
-      return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new dialog.AlertDialog.new({title: new text.Text.new(title, {style: widgets_hlp.getFont(16, {color: colors$1.kBlack})}), content: new text.Text.new(subtitle, {style: widgets_hlp.getFont(12, {color: colors$1.kBlack})}), actions: T$.JSArrayOfWidget().of([new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, children: T$.JSArrayOfWidget().of([new basic.SizedBox.new({width: build_context_ext['BuildContextExtension|get#deviceWidth'](context) * 0.3, child: button_wdg.MyButtons.primary(context, "OK", dart.fn(() => {
-                  }, T$.VoidToNull()))}), new basic.SizedBox.new({width: 5}), new basic.SizedBox.new({width: build_context_ext['BuildContextExtension|get#deviceWidth'](context) * 0.3, child: button_wdg.MyButtons.primaryOutlined(context, "Cancel", dart.fn(() => {
+      return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new dialog.AlertDialog.new({title: new text.Text.new(title, {style: widgets_hlp$.getFont(16, {color: colors$1.kBlack})}), content: new text.Text.new(subtitle, {style: widgets_hlp$.getFont(12, {color: colors$1.kBlack})}), actions: T$.JSArrayOfWidget().of([new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, children: T$.JSArrayOfWidget().of([new basic.SizedBox.new({width: build_context_extension_hlp$['BuildContextExtension|get#deviceWidth'](context) * 0.3, child: button_wdg.MyButtons.primary(context, "OK", dart.fn(() => {
+                  }, T$.VoidToNull()))}), new basic.SizedBox.new({width: 5}), new basic.SizedBox.new({width: build_context_extension_hlp$['BuildContextExtension|get#deviceWidth'](context) * 0.3, child: button_wdg.MyButtons.primaryOutlined(context, "Cancel", dart.fn(() => {
                   }, T$.VoidToNull()))})])})])}), T$.BuildContextToAlertDialog())});
     }
     static loading(context, opts) {
@@ -1844,45 +2072,89 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   dart.addTypeTests(dialog_wdg.MyDialogs);
   dart.addTypeCaches(dialog_wdg.MyDialogs);
   dart.setStaticMethodSignature(dialog_wdg.MyDialogs, () => ['showDialogBox', 'showAlertDialogBox', 'loading', 'alert', 'alert2']);
-  dart.setLibraryUri(dialog_wdg.MyDialogs, I[9]);
-  button_wdg.MyButtons = class MyButtons extends core.Object {
-    static showMyButtons(context, label, txColor, bgColor, $function, opts) {
-      let outlined = opts && 'outlined' in opts ? opts.outlined : null;
-      let gradiented = opts && 'gradiented' in opts ? opts.gradiented : null;
-      return new material_button.MaterialButton.new({onPressed: $function, hoverColor: colors$1.kTransparent, child: new container.Container.new({alignment: alignment.Alignment.center, padding: new edge_insets.EdgeInsets.all(20 * 0.5), decoration: new box_decoration.BoxDecoration.new({color: outlined ? colors$1.kTransparent : bgColor, gradient: gradiented ? colors$1.kAppGradientPrim : null, borderRadius: new border_radius.BorderRadius.all(new ui.Radius.circular(10)), border: outlined ? box_border.Border.all({color: bgColor, width: 2}) : null}), child: new text.Text.new(label, {style: widgets_hlp.getFont(16, {color: txColor})})})});
+  dart.setLibraryUri(dialog_wdg.MyDialogs, I[13]);
+  var controller$ = dart.privateName(icon_textfield_wdg, "IconTextField.controller");
+  var label$ = dart.privateName(icon_textfield_wdg, "IconTextField.label");
+  var hintText$ = dart.privateName(icon_textfield_wdg, "IconTextField.hintText");
+  var isObscure$ = dart.privateName(icon_textfield_wdg, "IconTextField.isObscure");
+  var icon$ = dart.privateName(icon_textfield_wdg, "IconTextField.icon");
+  icon_textfield_wdg.IconTextField = class IconTextField extends framework.StatelessWidget {
+    get controller() {
+      return this[controller$];
     }
-    static primary(context, label, $function) {
-      return button_wdg.MyButtons.showMyButtons(context, label, colors$1.kBlack, colors$1.kAppPrimary, $function, {outlined: false, gradiented: false});
+    set controller(value) {
+      super.controller = value;
     }
-    static warning(context, label, $function) {
-      return button_wdg.MyButtons.showMyButtons(context, label, colors$1.kBlack, colors$1.kBgWarning, $function, {outlined: false, gradiented: false});
+    get label() {
+      return this[label$];
     }
-    static danger(context, label, $function) {
-      return button_wdg.MyButtons.showMyButtons(context, label, colors$1.kWhite, colors$1.kRed, $function, {outlined: false, gradiented: false});
+    set label(value) {
+      super.label = value;
     }
-    static primaryOutlined(context, label, $function) {
-      return button_wdg.MyButtons.showMyButtons(context, label, colors$1.kBlack, colors$1.kAppPrimary, $function, {outlined: true, gradiented: false});
+    get hintText() {
+      return this[hintText$];
     }
-    static dangerOutlined(context, label, $function) {
-      return button_wdg.MyButtons.showMyButtons(context, label, colors$1.kRed, colors$1.kRed, $function, {outlined: true, gradiented: false});
+    set hintText(value) {
+      super.hintText = value;
     }
-    static primaryGradiented(context, label, $function) {
-      return button_wdg.MyButtons.showMyButtons(context, label, colors$1.kBlack, colors$1.kAppPrimary, $function, {outlined: false, gradiented: true});
+    get isObscure() {
+      return this[isObscure$];
     }
-    static ['_#new#tearOff']() {
-      return new button_wdg.MyButtons.new();
+    set isObscure(value) {
+      super.isObscure = value;
+    }
+    get icon() {
+      return this[icon$];
+    }
+    set icon(value) {
+      super.icon = value;
+    }
+    static ['_#new#tearOff'](opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let controller = opts && 'controller' in opts ? opts.controller : null;
+      let hintText = opts && 'hintText' in opts ? opts.hintText : null;
+      let label = opts && 'label' in opts ? opts.label : null;
+      let isObscure = opts && 'isObscure' in opts ? opts.isObscure : null;
+      let icon = opts && 'icon' in opts ? opts.icon : null;
+      return new icon_textfield_wdg.IconTextField.new({key: key, controller: controller, hintText: hintText, label: label, isObscure: isObscure, icon: icon});
+    }
+    build(context) {
+      return new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T$.JSArrayOfWidget().of([new text.Text.new(this.label, {style: widgets_hlp.getFont(16, {color: colors$0.kAppPrimary})}), new basic.SizedBox.new({height: 12}), new container.Container.new({height: 50, padding: new edge_insets.EdgeInsets.symmetric({horizontal: 16}), decoration: new box_decoration.BoxDecoration.new({color: colors$0.kBgPrimary, borderRadius: new border_radius.BorderRadius.circular(12)}), child: new basic.Center.new({child: new basic.Row.new({children: T$.JSArrayOfWidget().of([new icon.Icon.new(this.icon, {size: 17, color: colors$0.kAppSecondary}), new basic.SizedBox.new({width: 16}), new basic.Expanded.new({child: new text_form_field.TextFormField.new({obscureText: this.isObscure, style: widgets_hlp.getFont(14, {color: colors$0.kAppPrimary}), controller: this.controller, decoration: new input_decorator.InputDecoration.collapsed({hintText: "Your Email Address", hintStyle: widgets_hlp.getFont(14, {color: colors$0.kAppSecondary})})})})])})})})])});
     }
   };
-  (button_wdg.MyButtons.new = function() {
+  (icon_textfield_wdg.IconTextField.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let hintText = opts && 'hintText' in opts ? opts.hintText : null;
+    let label = opts && 'label' in opts ? opts.label : null;
+    let isObscure = opts && 'isObscure' in opts ? opts.isObscure : null;
+    let icon = opts && 'icon' in opts ? opts.icon : null;
+    this[controller$] = controller;
+    this[hintText$] = hintText;
+    this[label$] = label;
+    this[isObscure$] = isObscure;
+    this[icon$] = icon;
+    icon_textfield_wdg.IconTextField.__proto__.new.call(this, {key: key});
     ;
-  }).prototype = button_wdg.MyButtons.prototype;
-  dart.addTypeTests(button_wdg.MyButtons);
-  dart.addTypeCaches(button_wdg.MyButtons);
-  dart.setStaticMethodSignature(button_wdg.MyButtons, () => ['showMyButtons', 'primary', 'warning', 'danger', 'primaryOutlined', 'dangerOutlined', 'primaryGradiented']);
-  dart.setLibraryUri(button_wdg.MyButtons, I[10]);
+  }).prototype = icon_textfield_wdg.IconTextField.prototype;
+  dart.addTypeTests(icon_textfield_wdg.IconTextField);
+  dart.addTypeCaches(icon_textfield_wdg.IconTextField);
+  dart.setMethodSignature(icon_textfield_wdg.IconTextField, () => ({
+    __proto__: dart.getMethods(icon_textfield_wdg.IconTextField.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(icon_textfield_wdg.IconTextField, I[14]);
+  dart.setFieldSignature(icon_textfield_wdg.IconTextField, () => ({
+    __proto__: dart.getFields(icon_textfield_wdg.IconTextField.__proto__),
+    controller: dart.finalFieldType(editable_text.TextEditingController),
+    label: dart.finalFieldType(core.String),
+    hintText: dart.finalFieldType(core.String),
+    isObscure: dart.finalFieldType(core.bool),
+    icon: dart.finalFieldType(icon_data.IconData)
+  }));
   snackbar_wdg.MySnackbar = class MySnackbar extends core.Object {
     static showSnackbar(context, title, subtitle, txColor, bgColor, iconColor) {
-      scaffold.ScaffoldMessenger.of(context).showSnackBar(new snack_bar.SnackBar.new({content: new basic.Row.new({children: T$.JSArrayOfWidget().of([new icon.Icon.new(icons.Icons.notification_important, {color: iconColor}), new basic.SizedBox.new({width: 5}), new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.start, crossAxisAlignment: flex.CrossAxisAlignment.start, children: T$.JSArrayOfWidget().of([new text.Text.new(title, {style: widgets_hlp.getFont(14, {color: txColor})}), new text.Text.new(subtitle, {style: widgets_hlp.getFont(12, {color: txColor})})])})])}), backgroundColor: bgColor, duration: new core.Duration.new({seconds: 2})}));
+      scaffold.ScaffoldMessenger.of(context).showSnackBar(new snack_bar.SnackBar.new({content: new basic.Row.new({children: T$.JSArrayOfWidget().of([new icon.Icon.new(icons.Icons.notification_important, {color: iconColor}), new basic.SizedBox.new({width: 5}), new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.start, crossAxisAlignment: flex.CrossAxisAlignment.start, children: T$.JSArrayOfWidget().of([new text.Text.new(title, {style: widgets_hlp$.getFont(14, {color: txColor})}), new text.Text.new(subtitle, {style: widgets_hlp$.getFont(12, {color: txColor})})])})])}), backgroundColor: bgColor, duration: new core.Duration.new({seconds: 2})}));
     }
     static primary(context, title, subtitle) {
       snackbar_wdg.MySnackbar.showSnackbar(framework.BuildContext.as(context), title, subtitle, colors.Colors.white, new ui.Color.new(4278221823), colors.Colors.white);
@@ -1918,48 +2190,657 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   dart.addTypeTests(snackbar_wdg.MySnackbar);
   dart.addTypeCaches(snackbar_wdg.MySnackbar);
   dart.setStaticMethodSignature(snackbar_wdg.MySnackbar, () => ['showSnackbar', 'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']);
-  dart.setLibraryUri(snackbar_wdg.MySnackbar, I[11]);
-  build_context_ext['BuildContextExtension|get#deviceHeight'] = function BuildContextExtension$124get$35deviceHeight($this) {
+  dart.setLibraryUri(snackbar_wdg.MySnackbar, I[15]);
+  var controller$0 = dart.privateName(textfield_wdg, "MyTextFields.controller");
+  var label$0 = dart.privateName(textfield_wdg, "MyTextFields.label");
+  var hintText$0 = dart.privateName(textfield_wdg, "MyTextFields.hintText");
+  var isObscure$0 = dart.privateName(textfield_wdg, "MyTextFields.isObscure");
+  textfield_wdg.MyTextFields = class MyTextFields extends framework.StatelessWidget {
+    get controller() {
+      return this[controller$0];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    get label() {
+      return this[label$0];
+    }
+    set label(value) {
+      super.label = value;
+    }
+    get hintText() {
+      return this[hintText$0];
+    }
+    set hintText(value) {
+      super.hintText = value;
+    }
+    get isObscure() {
+      return this[isObscure$0];
+    }
+    set isObscure(value) {
+      super.isObscure = value;
+    }
+    static ['_#new#tearOff'](opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let controller = opts && 'controller' in opts ? opts.controller : null;
+      let hintText = opts && 'hintText' in opts ? opts.hintText : null;
+      let label = opts && 'label' in opts ? opts.label : null;
+      let isObscure = opts && 'isObscure' in opts ? opts.isObscure : null;
+      return new textfield_wdg.MyTextFields.new({key: key, controller: controller, hintText: hintText, label: label, isObscure: isObscure});
+    }
+    build(context) {
+      return new text_field.TextField.new({controller: this.controller, obscureText: this.isObscure, decoration: new input_decorator.InputDecoration.new({labelText: this.label, hintText: this.hintText, hintStyle: widgets_hlp.getFont(14, {color: colors$0.kWhite}), enabledBorder: new input_border.OutlineInputBorder.new({borderSide: new borders.BorderSide.new({color: colors.Colors.grey.shade200})}), focusedBorder: new input_border.OutlineInputBorder.new({borderSide: new borders.BorderSide.new({color: colors$0.kWhite})}), fillColor: colors.Colors.grey._get(100), filled: true})});
+    }
+  };
+  (textfield_wdg.MyTextFields.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let hintText = opts && 'hintText' in opts ? opts.hintText : null;
+    let label = opts && 'label' in opts ? opts.label : null;
+    let isObscure = opts && 'isObscure' in opts ? opts.isObscure : null;
+    this[controller$0] = controller;
+    this[hintText$0] = hintText;
+    this[label$0] = label;
+    this[isObscure$0] = isObscure;
+    textfield_wdg.MyTextFields.__proto__.new.call(this, {key: key});
+    ;
+  }).prototype = textfield_wdg.MyTextFields.prototype;
+  dart.addTypeTests(textfield_wdg.MyTextFields);
+  dart.addTypeCaches(textfield_wdg.MyTextFields);
+  dart.setMethodSignature(textfield_wdg.MyTextFields, () => ({
+    __proto__: dart.getMethods(textfield_wdg.MyTextFields.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(textfield_wdg.MyTextFields, I[16]);
+  dart.setFieldSignature(textfield_wdg.MyTextFields, () => ({
+    __proto__: dart.getFields(textfield_wdg.MyTextFields.__proto__),
+    controller: dart.finalFieldType(editable_text.TextEditingController),
+    label: dart.finalFieldType(core.String),
+    hintText: dart.finalFieldType(core.String),
+    isObscure: dart.finalFieldType(core.bool)
+  }));
+  button_wdg$.MyButtons = class MyButtons extends core.Object {
+    static showMyButtons(context, label, txColor, bgColor, $function, opts) {
+      let outlined = opts && 'outlined' in opts ? opts.outlined : null;
+      let gradiented = opts && 'gradiented' in opts ? opts.gradiented : null;
+      let isLoading = opts && 'isLoading' in opts ? opts.isLoading : false;
+      return new material_button.MaterialButton.new({onPressed: $function, hoverColor: colors$1.kTransparent, child: new container.Container.new({alignment: alignment.Alignment.center, padding: new edge_insets.EdgeInsets.all(20 * 0.5), decoration: new box_decoration.BoxDecoration.new({color: outlined ? colors$1.kTransparent : bgColor, gradient: gradiented ? colors$1.kAppGradientPrim : null, borderRadius: new border_radius.BorderRadius.all(new ui.Radius.circular(10)), border: outlined ? box_border.Border.all({color: bgColor, width: 2}) : null}), child: isLoading ? new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T$.JSArrayOfWidget().of([new basic.SizedBox.new({width: 24, height: 24, child: new progress_indicator.CircularProgressIndicator.new({color: colors$1.kAppPrimary})}), new basic.SizedBox.new({width: 10}), new text.Text.new(label, {style: widgets_hlp$.getFont(16, {color: txColor})})])}) : new text.Text.new(label, {style: widgets_hlp$.getFont(16, {color: txColor})})})});
+    }
+    static primary(context, label, $function) {
+      return button_wdg$.MyButtons.showMyButtons(context, label, colors$1.kWhite, colors$1.kAppPrimary, $function, {outlined: false, gradiented: false});
+    }
+    static warning(context, label, $function) {
+      return button_wdg$.MyButtons.showMyButtons(context, label, colors$1.kBlack, colors$1.kBgWarning, $function, {outlined: false, gradiented: false});
+    }
+    static danger(context, label, $function) {
+      return button_wdg$.MyButtons.showMyButtons(context, label, colors$1.kWhite, colors$1.kRed, $function, {outlined: false, gradiented: false});
+    }
+    static disabled(context, label) {
+      return button_wdg$.MyButtons.showMyButtons(context, label, colors$1.kWhite, colors$1.kGrey, dart.fn(() => {
+      }, T$.VoidToNull()), {outlined: false, gradiented: false});
+    }
+    static isLoading(context, label) {
+      return button_wdg$.MyButtons.showMyButtons(context, label, colors$1.kWhite, colors$1.kGrey, dart.fn(() => {
+      }, T$.VoidToNull()), {outlined: false, gradiented: false, isLoading: true});
+    }
+    static primaryOutlined(context, label, $function) {
+      return button_wdg$.MyButtons.showMyButtons(context, label, colors$1.kBlack, colors$1.kAppPrimary, $function, {outlined: true, gradiented: false});
+    }
+    static dangerOutlined(context, label, $function) {
+      return button_wdg$.MyButtons.showMyButtons(context, label, colors$1.kRed, colors$1.kRed, $function, {outlined: true, gradiented: false});
+    }
+    static primaryGradiented(context, label, $function) {
+      return button_wdg$.MyButtons.showMyButtons(context, label, colors$1.kBlack, colors$1.kAppPrimary, $function, {outlined: false, gradiented: true});
+    }
+    static ['_#new#tearOff']() {
+      return new button_wdg$.MyButtons.new();
+    }
+  };
+  (button_wdg$.MyButtons.new = function() {
+    ;
+  }).prototype = button_wdg$.MyButtons.prototype;
+  dart.addTypeTests(button_wdg$.MyButtons);
+  dart.addTypeCaches(button_wdg$.MyButtons);
+  dart.setStaticMethodSignature(button_wdg$.MyButtons, () => ['showMyButtons', 'primary', 'warning', 'danger', 'disabled', 'isLoading', 'primaryOutlined', 'dangerOutlined', 'primaryGradiented']);
+  dart.setLibraryUri(button_wdg$.MyButtons, I[17]);
+  dialog_wdg$.MyDialogs = class MyDialogs extends core.Object {
+    static showDialogBox(context, opts) {
+      let title = opts && 'title' in opts ? opts.title : "Alert";
+      let subtitle = opts && 'subtitle' in opts ? opts.subtitle : "Something occured in your Apps";
+      let iconColor = opts && 'iconColor' in opts ? opts.iconColor : null;
+      return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new dialog.Dialog.new({backgroundColor: colors$1.kTransparent, child: new container.Container.new({padding: new edge_insets.EdgeInsets.symmetric({vertical: 16}), margin: new edge_insets.EdgeInsets.all(14), decoration: new box_decoration.BoxDecoration.new({color: colors$1.kBlack.withOpacity(0.6), borderRadius: new border_radius.BorderRadius.circular(12)}), child: new basic.Column.new({mainAxisSize: flex.MainAxisSize.min, children: T$.JSArrayOfWidget().of([new icon.Icon.new(icons.Icons.add_alert, {size: 50, color: iconColor}), new basic.SizedBox.new({height: 24}), new text.Text.new(title, {style: widgets_hlp$.getFont(16, {color: colors$1.kWhite})}), new basic.SizedBox.new({height: 12}), new text.Text.new(subtitle, {style: widgets_hlp$.getFont(12, {color: colors$1.kWhite})})])})})}), T$.BuildContextToDialog())});
+    }
+    static showAlertDialogBox(context, opts) {
+      let title = opts && 'title' in opts ? opts.title : "Alert";
+      let subtitle = opts && 'subtitle' in opts ? opts.subtitle : "Something occured in your Apps";
+      let iconColor = opts && 'iconColor' in opts ? opts.iconColor : null;
+      return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new dialog.AlertDialog.new({title: new text.Text.new(title, {style: widgets_hlp$.getFont(16, {color: colors$1.kBlack})}), content: new text.Text.new(subtitle, {style: widgets_hlp$.getFont(12, {color: colors$1.kBlack})}), actions: T$.JSArrayOfWidget().of([new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, children: T$.JSArrayOfWidget().of([new basic.SizedBox.new({width: build_context_extension_hlp$['BuildContextExtension|get#deviceWidth'](context) * 0.3, child: button_wdg$.MyButtons.primary(context, "OK", dart.fn(() => {
+                  }, T$.VoidToNull()))}), new basic.SizedBox.new({width: 5}), new basic.SizedBox.new({width: build_context_extension_hlp$['BuildContextExtension|get#deviceWidth'](context) * 0.3, child: button_wdg$.MyButtons.primaryOutlined(context, "Cancel", dart.fn(() => {
+                  }, T$.VoidToNull()))})])})])}), T$.BuildContextToAlertDialog())});
+    }
+    static loading(context, opts) {
+      let title = opts && 'title' in opts ? opts.title : "Loading...";
+      return dialog.showDialog(dart.dynamic, {context: context, builder: dart.fn(context => new dialog.AlertDialog.new({content: new basic.Column.new({mainAxisSize: flex.MainAxisSize.min, children: T$.JSArrayOfWidget().of([new progress_indicator.CircularProgressIndicator.new(), new basic.SizedBox.new({height: 10}), new text.Text.new(title)])})}), T$.BuildContextToAlertDialog())});
+    }
+    static alert(context, title, subtitle) {
+      return dialog_wdg$.MyDialogs.showDialogBox(context, {title: title, subtitle: subtitle, iconColor: colors.Colors.orange});
+    }
+    static alert2(context, title, subtitle) {
+      return dialog_wdg$.MyDialogs.showAlertDialogBox(context, {title: title, subtitle: subtitle});
+    }
+    static ['_#new#tearOff']() {
+      return new dialog_wdg$.MyDialogs.new();
+    }
+  };
+  (dialog_wdg$.MyDialogs.new = function() {
+    ;
+  }).prototype = dialog_wdg$.MyDialogs.prototype;
+  dart.addTypeTests(dialog_wdg$.MyDialogs);
+  dart.addTypeCaches(dialog_wdg$.MyDialogs);
+  dart.setStaticMethodSignature(dialog_wdg$.MyDialogs, () => ['showDialogBox', 'showAlertDialogBox', 'loading', 'alert', 'alert2']);
+  dart.setLibraryUri(dialog_wdg$.MyDialogs, I[18]);
+  var controller$1 = dart.privateName(icon_textfield_wdg$, "IconTextField.controller");
+  var label$1 = dart.privateName(icon_textfield_wdg$, "IconTextField.label");
+  var hintText$1 = dart.privateName(icon_textfield_wdg$, "IconTextField.hintText");
+  var isObscure$1 = dart.privateName(icon_textfield_wdg$, "IconTextField.isObscure");
+  var icon$0 = dart.privateName(icon_textfield_wdg$, "IconTextField.icon");
+  icon_textfield_wdg$.IconTextField = class IconTextField extends framework.StatelessWidget {
+    get controller() {
+      return this[controller$1];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    get label() {
+      return this[label$1];
+    }
+    set label(value) {
+      super.label = value;
+    }
+    get hintText() {
+      return this[hintText$1];
+    }
+    set hintText(value) {
+      super.hintText = value;
+    }
+    get isObscure() {
+      return this[isObscure$1];
+    }
+    set isObscure(value) {
+      super.isObscure = value;
+    }
+    get icon() {
+      return this[icon$0];
+    }
+    set icon(value) {
+      super.icon = value;
+    }
+    static ['_#new#tearOff'](opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let controller = opts && 'controller' in opts ? opts.controller : null;
+      let hintText = opts && 'hintText' in opts ? opts.hintText : null;
+      let label = opts && 'label' in opts ? opts.label : null;
+      let isObscure = opts && 'isObscure' in opts ? opts.isObscure : null;
+      let icon = opts && 'icon' in opts ? opts.icon : null;
+      return new icon_textfield_wdg$.IconTextField.new({key: key, controller: controller, hintText: hintText, label: label, isObscure: isObscure, icon: icon});
+    }
+    build(context) {
+      return new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T$.JSArrayOfWidget().of([new text.Text.new(this.label, {style: widgets_hlp$.getFont(16, {color: colors$1.kAppPrimary})}), new basic.SizedBox.new({height: 12}), new container.Container.new({height: 50, padding: new edge_insets.EdgeInsets.symmetric({horizontal: 16}), decoration: new box_decoration.BoxDecoration.new({color: colors$1.kBgPrimary, borderRadius: new border_radius.BorderRadius.circular(12)}), child: new basic.Center.new({child: new basic.Row.new({children: T$.JSArrayOfWidget().of([new icon.Icon.new(this.icon, {size: 17, color: colors$1.kAppSecondary}), new basic.SizedBox.new({width: 16}), new basic.Expanded.new({child: new text_form_field.TextFormField.new({obscureText: this.isObscure, style: widgets_hlp$.getFont(14, {color: colors$1.kAppPrimary}), controller: this.controller, decoration: new input_decorator.InputDecoration.collapsed({hintText: "Your Email Address", hintStyle: widgets_hlp$.getFont(14, {color: colors$1.kAppSecondary})})})})])})})})])});
+    }
+  };
+  (icon_textfield_wdg$.IconTextField.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let hintText = opts && 'hintText' in opts ? opts.hintText : null;
+    let label = opts && 'label' in opts ? opts.label : null;
+    let isObscure = opts && 'isObscure' in opts ? opts.isObscure : null;
+    let icon = opts && 'icon' in opts ? opts.icon : null;
+    this[controller$1] = controller;
+    this[hintText$1] = hintText;
+    this[label$1] = label;
+    this[isObscure$1] = isObscure;
+    this[icon$0] = icon;
+    icon_textfield_wdg$.IconTextField.__proto__.new.call(this, {key: key});
+    ;
+  }).prototype = icon_textfield_wdg$.IconTextField.prototype;
+  dart.addTypeTests(icon_textfield_wdg$.IconTextField);
+  dart.addTypeCaches(icon_textfield_wdg$.IconTextField);
+  dart.setMethodSignature(icon_textfield_wdg$.IconTextField, () => ({
+    __proto__: dart.getMethods(icon_textfield_wdg$.IconTextField.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(icon_textfield_wdg$.IconTextField, I[19]);
+  dart.setFieldSignature(icon_textfield_wdg$.IconTextField, () => ({
+    __proto__: dart.getFields(icon_textfield_wdg$.IconTextField.__proto__),
+    controller: dart.finalFieldType(editable_text.TextEditingController),
+    label: dart.finalFieldType(core.String),
+    hintText: dart.finalFieldType(core.String),
+    isObscure: dart.finalFieldType(core.bool),
+    icon: dart.finalFieldType(icon_data.IconData)
+  }));
+  snackbar_wdg$.MySnackbar = class MySnackbar extends core.Object {
+    static showSnackbar(context, title, subtitle, txColor, bgColor, iconColor) {
+      scaffold.ScaffoldMessenger.of(context).showSnackBar(new snack_bar.SnackBar.new({content: new basic.Row.new({children: T$.JSArrayOfWidget().of([new icon.Icon.new(icons.Icons.notification_important, {color: iconColor}), new basic.SizedBox.new({width: 5}), new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.start, crossAxisAlignment: flex.CrossAxisAlignment.start, children: T$.JSArrayOfWidget().of([new text.Text.new(title, {style: widgets_hlp$.getFont(14, {color: txColor})}), new text.Text.new(subtitle, {style: widgets_hlp$.getFont(12, {color: txColor})})])})])}), backgroundColor: bgColor, duration: new core.Duration.new({seconds: 2})}));
+    }
+    static primary(context, title, subtitle) {
+      snackbar_wdg$.MySnackbar.showSnackbar(framework.BuildContext.as(context), title, subtitle, colors.Colors.white, new ui.Color.new(4278221823), colors.Colors.white);
+    }
+    static secondary(context, title, subtitle) {
+      snackbar_wdg$.MySnackbar.showSnackbar(framework.BuildContext.as(context), title, subtitle, colors.Colors.white, new ui.Color.new(4285298045), colors.Colors.white);
+    }
+    static success(context, title, subtitle) {
+      snackbar_wdg$.MySnackbar.showSnackbar(framework.BuildContext.as(context), title, subtitle, colors.Colors.white, new ui.Color.new(4280854341), colors.Colors.white);
+    }
+    static danger(context, title, subtitle) {
+      snackbar_wdg$.MySnackbar.showSnackbar(framework.BuildContext.as(context), title, subtitle, colors.Colors.white, colors.Colors.red, colors.Colors.white);
+    }
+    static warning(context, title, subtitle) {
+      snackbar_wdg$.MySnackbar.showSnackbar(framework.BuildContext.as(context), title, subtitle, colors.Colors.black, new ui.Color.new(4294951175), colors.Colors.black);
+    }
+    static info(context, title, subtitle) {
+      snackbar_wdg$.MySnackbar.showSnackbar(framework.BuildContext.as(context), title, subtitle, colors.Colors.white, new ui.Color.new(4279739064), colors.Colors.white);
+    }
+    static light(context, title, subtitle) {
+      snackbar_wdg$.MySnackbar.showSnackbar(framework.BuildContext.as(context), title, subtitle, colors.Colors.black, new ui.Color.new(4294507002), colors.Colors.black);
+    }
+    static dark(context, title, subtitle) {
+      snackbar_wdg$.MySnackbar.showSnackbar(framework.BuildContext.as(context), title, subtitle, colors.Colors.white, new ui.Color.new(4281612864), colors.Colors.white);
+    }
+    static ['_#new#tearOff']() {
+      return new snackbar_wdg$.MySnackbar.new();
+    }
+  };
+  (snackbar_wdg$.MySnackbar.new = function() {
+    ;
+  }).prototype = snackbar_wdg$.MySnackbar.prototype;
+  dart.addTypeTests(snackbar_wdg$.MySnackbar);
+  dart.addTypeCaches(snackbar_wdg$.MySnackbar);
+  dart.setStaticMethodSignature(snackbar_wdg$.MySnackbar, () => ['showSnackbar', 'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']);
+  dart.setLibraryUri(snackbar_wdg$.MySnackbar, I[20]);
+  var controller$2 = dart.privateName(textfield_wdg$, "MyTextFields.controller");
+  var label$2 = dart.privateName(textfield_wdg$, "MyTextFields.label");
+  var hintText$2 = dart.privateName(textfield_wdg$, "MyTextFields.hintText");
+  var isObscure$2 = dart.privateName(textfield_wdg$, "MyTextFields.isObscure");
+  textfield_wdg$.MyTextFields = class MyTextFields extends framework.StatelessWidget {
+    get controller() {
+      return this[controller$2];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    get label() {
+      return this[label$2];
+    }
+    set label(value) {
+      super.label = value;
+    }
+    get hintText() {
+      return this[hintText$2];
+    }
+    set hintText(value) {
+      super.hintText = value;
+    }
+    get isObscure() {
+      return this[isObscure$2];
+    }
+    set isObscure(value) {
+      super.isObscure = value;
+    }
+    static ['_#new#tearOff'](opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let controller = opts && 'controller' in opts ? opts.controller : null;
+      let hintText = opts && 'hintText' in opts ? opts.hintText : null;
+      let label = opts && 'label' in opts ? opts.label : null;
+      let isObscure = opts && 'isObscure' in opts ? opts.isObscure : null;
+      return new textfield_wdg$.MyTextFields.new({key: key, controller: controller, hintText: hintText, label: label, isObscure: isObscure});
+    }
+    build(context) {
+      return new text_field.TextField.new({controller: this.controller, obscureText: this.isObscure, decoration: new input_decorator.InputDecoration.new({labelText: this.label, hintText: this.hintText, hintStyle: widgets_hlp$.getFont(14, {color: colors$1.kWhite}), enabledBorder: new input_border.OutlineInputBorder.new({borderSide: new borders.BorderSide.new({color: colors.Colors.grey.shade200})}), focusedBorder: new input_border.OutlineInputBorder.new({borderSide: new borders.BorderSide.new({color: colors$1.kWhite})}), fillColor: colors.Colors.grey._get(100), filled: true})});
+    }
+  };
+  (textfield_wdg$.MyTextFields.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let hintText = opts && 'hintText' in opts ? opts.hintText : null;
+    let label = opts && 'label' in opts ? opts.label : null;
+    let isObscure = opts && 'isObscure' in opts ? opts.isObscure : null;
+    this[controller$2] = controller;
+    this[hintText$2] = hintText;
+    this[label$2] = label;
+    this[isObscure$2] = isObscure;
+    textfield_wdg$.MyTextFields.__proto__.new.call(this, {key: key});
+    ;
+  }).prototype = textfield_wdg$.MyTextFields.prototype;
+  dart.addTypeTests(textfield_wdg$.MyTextFields);
+  dart.addTypeCaches(textfield_wdg$.MyTextFields);
+  dart.setMethodSignature(textfield_wdg$.MyTextFields, () => ({
+    __proto__: dart.getMethods(textfield_wdg$.MyTextFields.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(textfield_wdg$.MyTextFields, I[21]);
+  dart.setFieldSignature(textfield_wdg$.MyTextFields, () => ({
+    __proto__: dart.getFields(textfield_wdg$.MyTextFields.__proto__),
+    controller: dart.finalFieldType(editable_text.TextEditingController),
+    label: dart.finalFieldType(core.String),
+    hintText: dart.finalFieldType(core.String),
+    isObscure: dart.finalFieldType(core.bool)
+  }));
+  build_context_extension_hlp['BuildContextExtension|get#deviceHeight'] = function BuildContextExtension$124get$35deviceHeight($this) {
     return media_query.MediaQuery.of($this).size.height;
   };
-  build_context_ext['BuildContextExtension|get#deviceWidth'] = function BuildContextExtension$124get$35deviceWidth($this) {
+  build_context_extension_hlp['BuildContextExtension|get#deviceWidth'] = function BuildContextExtension$124get$35deviceWidth($this) {
     return media_query.MediaQuery.of($this).size.width;
   };
-  build_context_ext['NavigatorExtension|pop'] = function NavigatorExtension$124pop(T, $this, result = null) {
+  build_context_extension_hlp['NavigatorExtension|pop'] = function NavigatorExtension$124pop(T, $this, result = null) {
     navigator.Navigator.pop(T, $this, result);
   };
-  build_context_ext['NavigatorExtension|get#pop'] = function NavigatorExtension$124get$35pop($this) {
-    return dart.fn((T, result = null) => build_context_ext['NavigatorExtension|pop'](T, $this, result), T$.TNTovoid());
+  build_context_extension_hlp['NavigatorExtension|get#pop'] = function NavigatorExtension$124get$35pop($this) {
+    return dart.fn((T, result = null) => build_context_extension_hlp['NavigatorExtension|pop'](T, $this, result), T$.TNTovoid());
   };
-  build_context_ext['NavigatorExtension|popToRoot'] = function NavigatorExtension$124popToRoot(T, $this) {
+  build_context_extension_hlp['NavigatorExtension|popToRoot'] = function NavigatorExtension$124popToRoot(T, $this) {
     navigator.Navigator.popUntil($this, dart.fn(route => route.isFirst, T$.RouteTobool()));
   };
-  build_context_ext['NavigatorExtension|get#popToRoot'] = function NavigatorExtension$124get$35popToRoot($this) {
-    return dart.fn(T => build_context_ext['NavigatorExtension|popToRoot'](T, $this), T$.VoidTovoid$1());
+  build_context_extension_hlp['NavigatorExtension|get#popToRoot'] = function NavigatorExtension$124get$35popToRoot($this) {
+    return dart.fn(T => build_context_extension_hlp['NavigatorExtension|popToRoot'](T, $this), T$.VoidTovoid$1());
   };
-  build_context_ext['NavigatorExtension|push'] = function NavigatorExtension$124push(T, $this, widget, name = null) {
+  build_context_extension_hlp['NavigatorExtension|push'] = function NavigatorExtension$124push(T, $this, widget, name = null) {
     return async.async(dart.nullable(T), function* NavigatorExtension$124push() {
       return navigator.Navigator.push(T, $this, new (page.MaterialPageRoute$(T)).new({builder: dart.fn(context => widget, T$.BuildContextToWidget()), settings: new navigator.RouteSettings.new({name: name})}));
     });
   };
-  build_context_ext['NavigatorExtension|get#push'] = function NavigatorExtension$124get$35push($this) {
-    return dart.fn((T, widget, name = null) => build_context_ext['NavigatorExtension|push'](T, $this, widget, name), T$.WidgetAndStringNToFutureOfTN());
+  build_context_extension_hlp['NavigatorExtension|get#push'] = function NavigatorExtension$124get$35push($this) {
+    return dart.fn((T, widget, name = null) => build_context_extension_hlp['NavigatorExtension|push'](T, $this, widget, name), T$.WidgetAndStringNToFutureOfTN());
   };
-  build_context_ext['NavigatorExtension|pushReplacement'] = function NavigatorExtension$124pushReplacement(T, TO, $this, widget) {
+  build_context_extension_hlp['NavigatorExtension|pushReplacement'] = function NavigatorExtension$124pushReplacement(T, TO, $this, widget) {
     return async.async(dart.nullable(T), function* NavigatorExtension$124pushReplacement() {
       return navigator.Navigator.pushReplacement(T, TO, $this, new (page.MaterialPageRoute$(T)).new({builder: dart.fn(context => widget, T$.BuildContextToWidget())}));
     });
   };
-  build_context_ext['NavigatorExtension|get#pushReplacement'] = function NavigatorExtension$124get$35pushReplacement($this) {
-    return dart.fn((T, TO, widget) => build_context_ext['NavigatorExtension|pushReplacement'](T, TO, $this, widget), T$.WidgetToFutureOfTN());
+  build_context_extension_hlp['NavigatorExtension|get#pushReplacement'] = function NavigatorExtension$124get$35pushReplacement($this) {
+    return dart.fn((T, TO, widget) => build_context_extension_hlp['NavigatorExtension|pushReplacement'](T, TO, $this, widget), T$.WidgetToFutureOfTN());
   };
-  build_context_ext['NavigatorExtension|pushAndRemoveUntil'] = function NavigatorExtension$124pushAndRemoveUntil(T, $this, widget, predicate) {
+  build_context_extension_hlp['NavigatorExtension|pushAndRemoveUntil'] = function NavigatorExtension$124pushAndRemoveUntil(T, $this, widget, predicate) {
     return async.async(dart.nullable(T), function* NavigatorExtension$124pushAndRemoveUntil() {
       return navigator.Navigator.pushAndRemoveUntil(T, $this, new (page.MaterialPageRoute$(T)).new({builder: dart.fn(context => widget, T$.BuildContextToWidget())}), predicate);
     });
   };
-  build_context_ext['NavigatorExtension|get#pushAndRemoveUntil'] = function NavigatorExtension$124get$35pushAndRemoveUntil($this) {
-    return dart.fn((T, widget, predicate) => build_context_ext['NavigatorExtension|pushAndRemoveUntil'](T, $this, widget, predicate), T$.WidgetAndFnToFutureOfTN());
+  build_context_extension_hlp['NavigatorExtension|get#pushAndRemoveUntil'] = function NavigatorExtension$124get$35pushAndRemoveUntil($this) {
+    return dart.fn((T, widget, predicate) => build_context_extension_hlp['NavigatorExtension|pushAndRemoveUntil'](T, $this, widget, predicate), T$.WidgetAndFnToFutureOfTN());
+  };
+  dialog_hlp.DialogHelper = class DialogHelper extends core.Object {
+    static TemporaryOnly() {
+      new basic.Center.new({child: new progress_indicator.CircularProgressIndicator.new()});
+    }
+    static ['_#new#tearOff']() {
+      return new dialog_hlp.DialogHelper.new();
+    }
+  };
+  (dialog_hlp.DialogHelper.new = function() {
+    ;
+  }).prototype = dialog_hlp.DialogHelper.prototype;
+  dart.addTypeTests(dialog_hlp.DialogHelper);
+  dart.addTypeCaches(dialog_hlp.DialogHelper);
+  dart.setStaticMethodSignature(dialog_hlp.DialogHelper, () => ['TemporaryOnly']);
+  dart.setLibraryUri(dialog_hlp.DialogHelper, I[22]);
+  material_color_hlp.getMaterialColor = function getMaterialColor(color) {
+    let red = color.red;
+    let green = color.green;
+    let blue = color.blue;
+    let alpha = color.alpha;
+    let shades = new (T$.IdentityMapOfint$Color()).from([50, new ui.Color.fromARGB(alpha, red, green, blue), 100, new ui.Color.fromARGB(alpha, red, green, blue), 200, new ui.Color.fromARGB(alpha, red, green, blue), 300, new ui.Color.fromARGB(alpha, red, green, blue), 400, new ui.Color.fromARGB(alpha, red, green, blue), 500, new ui.Color.fromARGB(alpha, red, green, blue), 600, new ui.Color.fromARGB(alpha, red, green, blue), 700, new ui.Color.fromARGB(alpha, red, green, blue), 800, new ui.Color.fromARGB(alpha, red, green, blue), 900, new ui.Color.fromARGB(alpha, red, green, blue)]);
+    return new colors.MaterialColor.new(color.value, shades);
+  };
+  var mobileBody$ = dart.privateName(responsive_hlp, "ResponsiveLayout.mobileBody");
+  var tabletBody$ = dart.privateName(responsive_hlp, "ResponsiveLayout.tabletBody");
+  var desktopBody$ = dart.privateName(responsive_hlp, "ResponsiveLayout.desktopBody");
+  responsive_hlp.ResponsiveLayout = class ResponsiveLayout extends framework.StatelessWidget {
+    get mobileBody() {
+      return this[mobileBody$];
+    }
+    set mobileBody(value) {
+      super.mobileBody = value;
+    }
+    get tabletBody() {
+      return this[tabletBody$];
+    }
+    set tabletBody(value) {
+      super.tabletBody = value;
+    }
+    get desktopBody() {
+      return this[desktopBody$];
+    }
+    set desktopBody(value) {
+      super.desktopBody = value;
+    }
+    static ['_#new#tearOff'](opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let mobileBody = opts && 'mobileBody' in opts ? opts.mobileBody : null;
+      let tabletBody = opts && 'tabletBody' in opts ? opts.tabletBody : null;
+      let desktopBody = opts && 'desktopBody' in opts ? opts.desktopBody : null;
+      return new responsive_hlp.ResponsiveLayout.new({key: key, mobileBody: mobileBody, tabletBody: tabletBody, desktopBody: desktopBody});
+    }
+    build(context) {
+      return new layout_builder.LayoutBuilder.new({builder: dart.fn((context, dimension) => {
+          let t12, t12$;
+          if (dimension.maxWidth < 768) {
+            return this.mobileBody;
+          } else if (dimension.maxWidth >= 768 && dimension.maxWidth < 1440) {
+            t12 = this.tabletBody;
+            return t12 == null ? this.mobileBody : t12;
+          } else {
+            t12$ = this.desktopBody;
+            return t12$ == null ? this.mobileBody : t12$;
+          }
+        }, T$.BuildContextAndBoxConstraintsToWidget())});
+    }
+  };
+  (responsive_hlp.ResponsiveLayout.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let mobileBody = opts && 'mobileBody' in opts ? opts.mobileBody : null;
+    let tabletBody = opts && 'tabletBody' in opts ? opts.tabletBody : null;
+    let desktopBody = opts && 'desktopBody' in opts ? opts.desktopBody : null;
+    this[mobileBody$] = mobileBody;
+    this[tabletBody$] = tabletBody;
+    this[desktopBody$] = desktopBody;
+    responsive_hlp.ResponsiveLayout.__proto__.new.call(this, {key: key});
+    ;
+  }).prototype = responsive_hlp.ResponsiveLayout.prototype;
+  dart.addTypeTests(responsive_hlp.ResponsiveLayout);
+  dart.addTypeCaches(responsive_hlp.ResponsiveLayout);
+  dart.setMethodSignature(responsive_hlp.ResponsiveLayout, () => ({
+    __proto__: dart.getMethods(responsive_hlp.ResponsiveLayout.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(responsive_hlp.ResponsiveLayout, I[23]);
+  dart.setFieldSignature(responsive_hlp.ResponsiveLayout, () => ({
+    __proto__: dart.getFields(responsive_hlp.ResponsiveLayout.__proto__),
+    mobileBody: dart.finalFieldType(framework.Widget),
+    tabletBody: dart.finalFieldType(dart.nullable(framework.Widget)),
+    desktopBody: dart.finalFieldType(dart.nullable(framework.Widget))
+  }));
+  session_hlp.MySession = class MySession extends core.Object {
+    static setLoggedIn(status) {
+      return async.async(core.bool, function* setLoggedIn() {
+        let prefs = (yield shared_preferences.SharedPreferences.getInstance());
+        return prefs.setBool("logged_in", status);
+      });
+    }
+    static getLogedIn() {
+      return async.async(core.bool, function* getLogedIn() {
+        let t12;
+        let prefs = (yield shared_preferences.SharedPreferences.getInstance());
+        t12 = prefs.getBool("logged_in");
+        return t12 == null ? false : t12;
+      });
+    }
+    static setUserId(userId) {
+      return async.async(core.bool, function* setUserId() {
+        let prefs = (yield shared_preferences.SharedPreferences.getInstance());
+        return prefs.setString("user_id", userId);
+      });
+    }
+    static getUserId() {
+      return async.async(core.String, function* getUserId() {
+        let t12;
+        let prefs = (yield shared_preferences.SharedPreferences.getInstance());
+        t12 = prefs.getString("user_id");
+        return t12 == null ? "" : t12;
+      });
+    }
+    static ['_#new#tearOff']() {
+      return new session_hlp.MySession.new();
+    }
+  };
+  (session_hlp.MySession.new = function() {
+    ;
+  }).prototype = session_hlp.MySession.prototype;
+  dart.addTypeTests(session_hlp.MySession);
+  dart.addTypeCaches(session_hlp.MySession);
+  dart.setStaticMethodSignature(session_hlp.MySession, () => ['setLoggedIn', 'getLogedIn', 'setUserId', 'getUserId']);
+  dart.setLibraryUri(session_hlp.MySession, I[24]);
+  var _currentDate = dart.privateName(utils_hlp, "_currentDate");
+  var _currentTime = dart.privateName(utils_hlp, "_currentTime");
+  var _curDateTime = dart.privateName(utils_hlp, "_curDateTime");
+  utils_hlp.MyUtils = class MyUtils extends core.Object {
+    get currentDate() {
+      return this[_currentDate];
+    }
+    get currentTime() {
+      return this[_currentTime];
+    }
+    get curDateTime() {
+      return this[_curDateTime];
+    }
+    getCurrentTime() {
+      let now = new core.DateTime.now();
+      let timeFormatter = new date_format.DateFormat.Hms();
+      let formattedTime = timeFormatter.format(now);
+      return formattedTime;
+    }
+    getCurrentDate() {
+      let now = new core.DateTime.now();
+      let formatter = new date_format.DateFormat.new("dd MMM yyyy");
+      let formattedDate = formatter.format(now);
+      return formattedDate;
+    }
+    getCurrentDateTime(opts) {
+      let t12;
+      let format = opts && 'format' in opts ? opts.format : null;
+      let now = new core.DateTime.now();
+      let fmt = (t12 = format, t12 == null ? "dd MMM yyyy HH:mm" : t12);
+      let formattedDateTime = new date_format.DateFormat.new(fmt).format(now);
+      return formattedDateTime;
+    }
+    getCurrentDateTimeMulti() {
+      let now = new core.DateTime.now();
+      let formattedDateTime = new date_format.DateFormat.new("dd MMM yyyy HH:mm").format(now);
+      let formatter = new date_format.DateFormat.new("dd MMM yyyy");
+      let timeFormatter = new date_format.DateFormat.Hms();
+      let formattedDate = formatter.format(now);
+      let formattedTime = timeFormatter.format(now);
+      this[_currentDate] = formattedDate;
+      this[_currentTime] = formattedTime;
+      core.print("Date and Time: " + formattedDateTime);
+      core.print("Date: " + formattedDate);
+      core.print("Time: " + formattedTime);
+    }
+    static getUnixDate(myDate) {
+      return myDate.millisecondsSinceEpoch / 1000;
+    }
+    static convertUnixDate(myUnixDate, opts) {
+      let dateFormat = opts && 'dateFormat' in opts ? opts.dateFormat : null;
+      if (dateFormat != null) {
+        let df = new date_format.DateFormat.new(dateFormat);
+        let output = df.format(new core.DateTime.fromMillisecondsSinceEpoch(myUnixDate * 1000));
+        return output;
+      } else {
+        let output = new core.DateTime.fromMillisecondsSinceEpoch(myUnixDate * 1000);
+        return output;
+      }
+    }
+    static convertMySqlDate(mySqlDate, dateFormat) {
+      let formattedDateTime = new date_format.DateFormat.new(dateFormat).format(mySqlDate);
+      return formattedDateTime;
+    }
+    static convertToIdr(number, decimalDigit) {
+      let currencyFormatter = number_format.NumberFormat.currency({locale: "id", symbol: "Rp ", decimalDigits: decimalDigit});
+      return currencyFormatter.format(number);
+    }
+    static getDigitOnly(value) {
+      let onlyDigits = core.String.as(dart.dsend(value, 'replaceAll', [core.RegExp.new("[^0-9]"), ""]));
+      return onlyDigits;
+    }
+    static formatCurrency(amount, opts) {
+      let decimalCount = opts && 'decimalCount' in opts ? opts.decimalCount : 0;
+      let formatCurrency = number_format.NumberFormat.simpleCurrency({decimalDigits: decimalCount});
+      return formatCurrency.format(amount);
+    }
+    static convertMySqlTime(strTime) {
+      let parseDt = core.DateTime.parse(strTime);
+      let formattedDateTime = new date_format.DateFormat.new("HH:mm").format(parseDt);
+      return formattedDateTime;
+    }
+    static getCustomFormattedDateTime(givenDateTime, dateFormat) {
+      let docDateTime = core.DateTime.parse(givenDateTime);
+      return new date_format.DateFormat.new(dateFormat).format(docDateTime);
+    }
+    static getDateOnly(dateTime) {
+      let output = new date_format.DateFormat.new("dd").format(dateTime);
+      return output;
+    }
+    static getMonthOnly(dateTime) {
+      let output = new date_format.DateFormat.new("MMM").format(dateTime);
+      return output;
+    }
+    static ['_#new#tearOff']() {
+      return new utils_hlp.MyUtils.new();
+    }
+  };
+  (utils_hlp.MyUtils.new = function() {
+    this[_currentDate] = "1 Jan 2021";
+    this[_currentTime] = "01:30:45";
+    this[_curDateTime] = "2021-06-07 01:30:45";
+    ;
+  }).prototype = utils_hlp.MyUtils.prototype;
+  dart.addTypeTests(utils_hlp.MyUtils);
+  dart.addTypeCaches(utils_hlp.MyUtils);
+  dart.setMethodSignature(utils_hlp.MyUtils, () => ({
+    __proto__: dart.getMethods(utils_hlp.MyUtils.__proto__),
+    getCurrentTime: dart.fnType(core.String, []),
+    getCurrentDate: dart.fnType(core.String, []),
+    getCurrentDateTime: dart.fnType(core.String, [], {format: dart.nullable(core.String)}, {}),
+    getCurrentDateTimeMulti: dart.fnType(dart.void, [])
+  }));
+  dart.setStaticMethodSignature(utils_hlp.MyUtils, () => ['getUnixDate', 'convertUnixDate', 'convertMySqlDate', 'convertToIdr', 'getDigitOnly', 'formatCurrency', 'convertMySqlTime', 'getCustomFormattedDateTime', 'getDateOnly', 'getMonthOnly']);
+  dart.setGetterSignature(utils_hlp.MyUtils, () => ({
+    __proto__: dart.getGetters(utils_hlp.MyUtils.__proto__),
+    currentDate: core.String,
+    currentTime: core.String,
+    curDateTime: core.String
+  }));
+  dart.setLibraryUri(utils_hlp.MyUtils, I[25]);
+  dart.setFieldSignature(utils_hlp.MyUtils, () => ({
+    __proto__: dart.getFields(utils_hlp.MyUtils.__proto__),
+    [_currentDate]: dart.fieldType(core.String),
+    [_currentTime]: dart.fieldType(core.String),
+    [_curDateTime]: dart.fieldType(core.String)
+  }));
+  var JsonEncoder__toEncodable = dart.privateName(convert, "JsonEncoder._toEncodable");
+  var JsonEncoder_indent = dart.privateName(convert, "JsonEncoder.indent");
+  utils_hlp.convertJson = function convertJson(param) {
+    let encoder = C[107] || CT.C107;
+    let object = encoder.convert(param);
+    return object;
+  };
+  widgets_hlp.getFont = function getFont(fontSize, opts) {
+    let t12;
+    let color = opts && 'color' in opts ? opts.color : null;
+    let isBold = opts && 'isBold' in opts ? opts.isBold : false;
+    let fontName = opts && 'fontName' in opts ? opts.fontName : null;
+    return new text_style.TextStyle.new({fontSize: fontSize, color: (t12 = color, t12 == null ? colors$0.kBlack : t12), fontWeight: isBold ? ui.FontWeight.bold : ui.FontWeight.normal, fontFamily: fontName});
+  };
+  widgets_hlp.buildLoading = function buildLoading() {
+    return new basic.Center.new({child: new progress_indicator.CircularProgressIndicator.new()});
   };
   dart.defineLazy(colors$1, {
     /*colors$1.kWhite*/get kWhite() {
@@ -2085,7 +2966,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   }).prototype = themes$.MyThemes.prototype;
   dart.addTypeTests(themes$.MyThemes);
   dart.addTypeCaches(themes$.MyThemes);
-  dart.setLibraryUri(themes$.MyThemes, I[12]);
+  dart.setLibraryUri(themes$.MyThemes, I[26]);
   dart.setStaticFieldSignature(themes$.MyThemes, () => ['lightMode', 'darkMode']);
   dart.defineLazy(themes$.MyThemes, {
     /*themes$.MyThemes.lightMode*/get lightMode() {
@@ -2265,39 +3146,89 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
       return "Please Enter your address";
     }
   }, false);
-  dialog_hlp.DialogHelper = class DialogHelper extends core.Object {
+  build_context_extension_hlp$['BuildContextExtension|get#deviceHeight'] = function BuildContextExtension$124get$35deviceHeight$($this) {
+    return media_query.MediaQuery.of($this).size.height;
+  };
+  build_context_extension_hlp$['BuildContextExtension|get#deviceWidth'] = function BuildContextExtension$124get$35deviceWidth$($this) {
+    return media_query.MediaQuery.of($this).size.width;
+  };
+  build_context_extension_hlp$['NavigatorExtension|pop'] = function NavigatorExtension$124pop$(T, $this, result = null) {
+    navigator.Navigator.pop(T, $this, result);
+  };
+  build_context_extension_hlp$['NavigatorExtension|get#pop'] = function NavigatorExtension$124get$35pop$($this) {
+    return dart.fn((T, result = null) => build_context_extension_hlp$['NavigatorExtension|pop'](T, $this, result), T$.TNTovoid());
+  };
+  build_context_extension_hlp$['NavigatorExtension|popToRoot'] = function NavigatorExtension$124popToRoot$(T, $this) {
+    navigator.Navigator.popUntil($this, dart.fn(route => route.isFirst, T$.RouteTobool()));
+  };
+  build_context_extension_hlp$['NavigatorExtension|get#popToRoot'] = function NavigatorExtension$124get$35popToRoot$($this) {
+    return dart.fn(T => build_context_extension_hlp$['NavigatorExtension|popToRoot'](T, $this), T$.VoidTovoid$1());
+  };
+  build_context_extension_hlp$['NavigatorExtension|push'] = function NavigatorExtension$124push$(T, $this, widget, name = null) {
+    return async.async(dart.nullable(T), function* NavigatorExtension$124push() {
+      return navigator.Navigator.push(T, $this, new (page.MaterialPageRoute$(T)).new({builder: dart.fn(context => widget, T$.BuildContextToWidget()), settings: new navigator.RouteSettings.new({name: name})}));
+    });
+  };
+  build_context_extension_hlp$['NavigatorExtension|get#push'] = function NavigatorExtension$124get$35push$($this) {
+    return dart.fn((T, widget, name = null) => build_context_extension_hlp$['NavigatorExtension|push'](T, $this, widget, name), T$.WidgetAndStringNToFutureOfTN());
+  };
+  build_context_extension_hlp$['NavigatorExtension|pushReplacement'] = function NavigatorExtension$124pushReplacement$(T, TO, $this, widget) {
+    return async.async(dart.nullable(T), function* NavigatorExtension$124pushReplacement() {
+      return navigator.Navigator.pushReplacement(T, TO, $this, new (page.MaterialPageRoute$(T)).new({builder: dart.fn(context => widget, T$.BuildContextToWidget())}));
+    });
+  };
+  build_context_extension_hlp$['NavigatorExtension|get#pushReplacement'] = function NavigatorExtension$124get$35pushReplacement$($this) {
+    return dart.fn((T, TO, widget) => build_context_extension_hlp$['NavigatorExtension|pushReplacement'](T, TO, $this, widget), T$.WidgetToFutureOfTN());
+  };
+  build_context_extension_hlp$['NavigatorExtension|pushAndRemoveUntil'] = function NavigatorExtension$124pushAndRemoveUntil$(T, $this, widget, predicate) {
+    return async.async(dart.nullable(T), function* NavigatorExtension$124pushAndRemoveUntil() {
+      return navigator.Navigator.pushAndRemoveUntil(T, $this, new (page.MaterialPageRoute$(T)).new({builder: dart.fn(context => widget, T$.BuildContextToWidget())}), predicate);
+    });
+  };
+  build_context_extension_hlp$['NavigatorExtension|get#pushAndRemoveUntil'] = function NavigatorExtension$124get$35pushAndRemoveUntil$($this) {
+    return dart.fn((T, widget, predicate) => build_context_extension_hlp$['NavigatorExtension|pushAndRemoveUntil'](T, $this, widget, predicate), T$.WidgetAndFnToFutureOfTN());
+  };
+  dialog_hlp$.DialogHelper = class DialogHelper extends core.Object {
     static TemporaryOnly() {
       new basic.Center.new({child: new progress_indicator.CircularProgressIndicator.new()});
     }
     static ['_#new#tearOff']() {
-      return new dialog_hlp.DialogHelper.new();
+      return new dialog_hlp$.DialogHelper.new();
     }
   };
-  (dialog_hlp.DialogHelper.new = function() {
+  (dialog_hlp$.DialogHelper.new = function() {
     ;
-  }).prototype = dialog_hlp.DialogHelper.prototype;
-  dart.addTypeTests(dialog_hlp.DialogHelper);
-  dart.addTypeCaches(dialog_hlp.DialogHelper);
-  dart.setStaticMethodSignature(dialog_hlp.DialogHelper, () => ['TemporaryOnly']);
-  dart.setLibraryUri(dialog_hlp.DialogHelper, I[13]);
-  var mobileBody$ = dart.privateName(responsive_hlp, "ResponsiveLayout.mobileBody");
-  var tabletBody$ = dart.privateName(responsive_hlp, "ResponsiveLayout.tabletBody");
-  var desktopBody$ = dart.privateName(responsive_hlp, "ResponsiveLayout.desktopBody");
-  responsive_hlp.ResponsiveLayout = class ResponsiveLayout extends framework.StatelessWidget {
+  }).prototype = dialog_hlp$.DialogHelper.prototype;
+  dart.addTypeTests(dialog_hlp$.DialogHelper);
+  dart.addTypeCaches(dialog_hlp$.DialogHelper);
+  dart.setStaticMethodSignature(dialog_hlp$.DialogHelper, () => ['TemporaryOnly']);
+  dart.setLibraryUri(dialog_hlp$.DialogHelper, I[27]);
+  material_color_hlp$.getMaterialColor = function getMaterialColor$(color) {
+    let red = color.red;
+    let green = color.green;
+    let blue = color.blue;
+    let alpha = color.alpha;
+    let shades = new (T$.IdentityMapOfint$Color()).from([50, new ui.Color.fromARGB(alpha, red, green, blue), 100, new ui.Color.fromARGB(alpha, red, green, blue), 200, new ui.Color.fromARGB(alpha, red, green, blue), 300, new ui.Color.fromARGB(alpha, red, green, blue), 400, new ui.Color.fromARGB(alpha, red, green, blue), 500, new ui.Color.fromARGB(alpha, red, green, blue), 600, new ui.Color.fromARGB(alpha, red, green, blue), 700, new ui.Color.fromARGB(alpha, red, green, blue), 800, new ui.Color.fromARGB(alpha, red, green, blue), 900, new ui.Color.fromARGB(alpha, red, green, blue)]);
+    return new colors.MaterialColor.new(color.value, shades);
+  };
+  var mobileBody$0 = dart.privateName(responsive_hlp$, "ResponsiveLayout.mobileBody");
+  var tabletBody$0 = dart.privateName(responsive_hlp$, "ResponsiveLayout.tabletBody");
+  var desktopBody$0 = dart.privateName(responsive_hlp$, "ResponsiveLayout.desktopBody");
+  responsive_hlp$.ResponsiveLayout = class ResponsiveLayout extends framework.StatelessWidget {
     get mobileBody() {
-      return this[mobileBody$];
+      return this[mobileBody$0];
     }
     set mobileBody(value) {
       super.mobileBody = value;
     }
     get tabletBody() {
-      return this[tabletBody$];
+      return this[tabletBody$0];
     }
     set tabletBody(value) {
       super.tabletBody = value;
     }
     get desktopBody() {
-      return this[desktopBody$];
+      return this[desktopBody$0];
     }
     set desktopBody(value) {
       super.desktopBody = value;
@@ -2307,48 +3238,48 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
       let mobileBody = opts && 'mobileBody' in opts ? opts.mobileBody : null;
       let tabletBody = opts && 'tabletBody' in opts ? opts.tabletBody : null;
       let desktopBody = opts && 'desktopBody' in opts ? opts.desktopBody : null;
-      return new responsive_hlp.ResponsiveLayout.new({key: key, mobileBody: mobileBody, tabletBody: tabletBody, desktopBody: desktopBody});
+      return new responsive_hlp$.ResponsiveLayout.new({key: key, mobileBody: mobileBody, tabletBody: tabletBody, desktopBody: desktopBody});
     }
     build(context) {
       return new layout_builder.LayoutBuilder.new({builder: dart.fn((context, dimension) => {
-          let t12, t12$;
+          let t24, t24$;
           if (dimension.maxWidth < 768) {
             return this.mobileBody;
           } else if (dimension.maxWidth >= 768 && dimension.maxWidth < 1440) {
-            t12 = this.tabletBody;
-            return t12 == null ? this.mobileBody : t12;
+            t24 = this.tabletBody;
+            return t24 == null ? this.mobileBody : t24;
           } else {
-            t12$ = this.desktopBody;
-            return t12$ == null ? this.mobileBody : t12$;
+            t24$ = this.desktopBody;
+            return t24$ == null ? this.mobileBody : t24$;
           }
         }, T$.BuildContextAndBoxConstraintsToWidget())});
     }
   };
-  (responsive_hlp.ResponsiveLayout.new = function(opts) {
+  (responsive_hlp$.ResponsiveLayout.new = function(opts) {
     let key = opts && 'key' in opts ? opts.key : null;
     let mobileBody = opts && 'mobileBody' in opts ? opts.mobileBody : null;
     let tabletBody = opts && 'tabletBody' in opts ? opts.tabletBody : null;
     let desktopBody = opts && 'desktopBody' in opts ? opts.desktopBody : null;
-    this[mobileBody$] = mobileBody;
-    this[tabletBody$] = tabletBody;
-    this[desktopBody$] = desktopBody;
-    responsive_hlp.ResponsiveLayout.__proto__.new.call(this, {key: key});
+    this[mobileBody$0] = mobileBody;
+    this[tabletBody$0] = tabletBody;
+    this[desktopBody$0] = desktopBody;
+    responsive_hlp$.ResponsiveLayout.__proto__.new.call(this, {key: key});
     ;
-  }).prototype = responsive_hlp.ResponsiveLayout.prototype;
-  dart.addTypeTests(responsive_hlp.ResponsiveLayout);
-  dart.addTypeCaches(responsive_hlp.ResponsiveLayout);
-  dart.setMethodSignature(responsive_hlp.ResponsiveLayout, () => ({
-    __proto__: dart.getMethods(responsive_hlp.ResponsiveLayout.__proto__),
+  }).prototype = responsive_hlp$.ResponsiveLayout.prototype;
+  dart.addTypeTests(responsive_hlp$.ResponsiveLayout);
+  dart.addTypeCaches(responsive_hlp$.ResponsiveLayout);
+  dart.setMethodSignature(responsive_hlp$.ResponsiveLayout, () => ({
+    __proto__: dart.getMethods(responsive_hlp$.ResponsiveLayout.__proto__),
     build: dart.fnType(framework.Widget, [framework.BuildContext])
   }));
-  dart.setLibraryUri(responsive_hlp.ResponsiveLayout, I[14]);
-  dart.setFieldSignature(responsive_hlp.ResponsiveLayout, () => ({
-    __proto__: dart.getFields(responsive_hlp.ResponsiveLayout.__proto__),
+  dart.setLibraryUri(responsive_hlp$.ResponsiveLayout, I[28]);
+  dart.setFieldSignature(responsive_hlp$.ResponsiveLayout, () => ({
+    __proto__: dart.getFields(responsive_hlp$.ResponsiveLayout.__proto__),
     mobileBody: dart.finalFieldType(framework.Widget),
     tabletBody: dart.finalFieldType(dart.nullable(framework.Widget)),
     desktopBody: dart.finalFieldType(dart.nullable(framework.Widget))
   }));
-  session_hlp.MySession = class MySession extends core.Object {
+  session_hlp$.MySession = class MySession extends core.Object {
     static setLoggedIn(status) {
       return async.async(core.bool, function* setLoggedIn() {
         let prefs = (yield shared_preferences.SharedPreferences.getInstance());
@@ -2357,10 +3288,10 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     }
     static getLogedIn() {
       return async.async(core.bool, function* getLogedIn() {
-        let t12;
+        let t24;
         let prefs = (yield shared_preferences.SharedPreferences.getInstance());
-        t12 = prefs.getBool("logged_in");
-        return t12 == null ? false : t12;
+        t24 = prefs.getBool("logged_in");
+        return t24 == null ? false : t24;
       });
     }
     static setUserId(userId) {
@@ -2371,35 +3302,35 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     }
     static getUserId() {
       return async.async(core.String, function* getUserId() {
-        let t12;
+        let t24;
         let prefs = (yield shared_preferences.SharedPreferences.getInstance());
-        t12 = prefs.getString("user_id");
-        return t12 == null ? "" : t12;
+        t24 = prefs.getString("user_id");
+        return t24 == null ? "" : t24;
       });
     }
     static ['_#new#tearOff']() {
-      return new session_hlp.MySession.new();
+      return new session_hlp$.MySession.new();
     }
   };
-  (session_hlp.MySession.new = function() {
+  (session_hlp$.MySession.new = function() {
     ;
-  }).prototype = session_hlp.MySession.prototype;
-  dart.addTypeTests(session_hlp.MySession);
-  dart.addTypeCaches(session_hlp.MySession);
-  dart.setStaticMethodSignature(session_hlp.MySession, () => ['setLoggedIn', 'getLogedIn', 'setUserId', 'getUserId']);
-  dart.setLibraryUri(session_hlp.MySession, I[15]);
-  var _currentDate = dart.privateName(utils_hlp, "_currentDate");
-  var _currentTime = dart.privateName(utils_hlp, "_currentTime");
-  var _curDateTime = dart.privateName(utils_hlp, "_curDateTime");
-  utils_hlp.MyUtils = class MyUtils extends core.Object {
+  }).prototype = session_hlp$.MySession.prototype;
+  dart.addTypeTests(session_hlp$.MySession);
+  dart.addTypeCaches(session_hlp$.MySession);
+  dart.setStaticMethodSignature(session_hlp$.MySession, () => ['setLoggedIn', 'getLogedIn', 'setUserId', 'getUserId']);
+  dart.setLibraryUri(session_hlp$.MySession, I[29]);
+  var _currentDate$ = dart.privateName(utils_hlp$, "_currentDate");
+  var _currentTime$ = dart.privateName(utils_hlp$, "_currentTime");
+  var _curDateTime$ = dart.privateName(utils_hlp$, "_curDateTime");
+  utils_hlp$.MyUtils = class MyUtils extends core.Object {
     get currentDate() {
-      return this[_currentDate];
+      return this[_currentDate$];
     }
     get currentTime() {
-      return this[_currentTime];
+      return this[_currentTime$];
     }
     get curDateTime() {
-      return this[_curDateTime];
+      return this[_curDateTime$];
     }
     getCurrentTime() {
       let now = new core.DateTime.now();
@@ -2414,10 +3345,10 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
       return formattedDate;
     }
     getCurrentDateTime(opts) {
-      let t12;
+      let t24;
       let format = opts && 'format' in opts ? opts.format : null;
       let now = new core.DateTime.now();
-      let fmt = (t12 = format, t12 == null ? "dd MMM yyyy HH:mm" : t12);
+      let fmt = (t24 = format, t24 == null ? "dd MMM yyyy HH:mm" : t24);
       let formattedDateTime = new date_format.DateFormat.new(fmt).format(now);
       return formattedDateTime;
     }
@@ -2428,8 +3359,8 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
       let timeFormatter = new date_format.DateFormat.Hms();
       let formattedDate = formatter.format(now);
       let formattedTime = timeFormatter.format(now);
-      this[_currentDate] = formattedDate;
-      this[_currentTime] = formattedTime;
+      this[_currentDate$] = formattedDate;
+      this[_currentTime$] = formattedTime;
       core.print("Date and Time: " + formattedDateTime);
       core.print("Date: " + formattedDate);
       core.print("Time: " + formattedTime);
@@ -2483,53 +3414,51 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
       return output;
     }
     static ['_#new#tearOff']() {
-      return new utils_hlp.MyUtils.new();
+      return new utils_hlp$.MyUtils.new();
     }
   };
-  (utils_hlp.MyUtils.new = function() {
-    this[_currentDate] = "1 Jan 2021";
-    this[_currentTime] = "01:30:45";
-    this[_curDateTime] = "2021-06-07 01:30:45";
+  (utils_hlp$.MyUtils.new = function() {
+    this[_currentDate$] = "1 Jan 2021";
+    this[_currentTime$] = "01:30:45";
+    this[_curDateTime$] = "2021-06-07 01:30:45";
     ;
-  }).prototype = utils_hlp.MyUtils.prototype;
-  dart.addTypeTests(utils_hlp.MyUtils);
-  dart.addTypeCaches(utils_hlp.MyUtils);
-  dart.setMethodSignature(utils_hlp.MyUtils, () => ({
-    __proto__: dart.getMethods(utils_hlp.MyUtils.__proto__),
+  }).prototype = utils_hlp$.MyUtils.prototype;
+  dart.addTypeTests(utils_hlp$.MyUtils);
+  dart.addTypeCaches(utils_hlp$.MyUtils);
+  dart.setMethodSignature(utils_hlp$.MyUtils, () => ({
+    __proto__: dart.getMethods(utils_hlp$.MyUtils.__proto__),
     getCurrentTime: dart.fnType(core.String, []),
     getCurrentDate: dart.fnType(core.String, []),
     getCurrentDateTime: dart.fnType(core.String, [], {format: dart.nullable(core.String)}, {}),
     getCurrentDateTimeMulti: dart.fnType(dart.void, [])
   }));
-  dart.setStaticMethodSignature(utils_hlp.MyUtils, () => ['getUnixDate', 'convertUnixDate', 'convertMySqlDate', 'convertToIdr', 'getDigitOnly', 'formatCurrency', 'convertMySqlTime', 'getCustomFormattedDateTime', 'getDateOnly', 'getMonthOnly']);
-  dart.setGetterSignature(utils_hlp.MyUtils, () => ({
-    __proto__: dart.getGetters(utils_hlp.MyUtils.__proto__),
+  dart.setStaticMethodSignature(utils_hlp$.MyUtils, () => ['getUnixDate', 'convertUnixDate', 'convertMySqlDate', 'convertToIdr', 'getDigitOnly', 'formatCurrency', 'convertMySqlTime', 'getCustomFormattedDateTime', 'getDateOnly', 'getMonthOnly']);
+  dart.setGetterSignature(utils_hlp$.MyUtils, () => ({
+    __proto__: dart.getGetters(utils_hlp$.MyUtils.__proto__),
     currentDate: core.String,
     currentTime: core.String,
     curDateTime: core.String
   }));
-  dart.setLibraryUri(utils_hlp.MyUtils, I[16]);
-  dart.setFieldSignature(utils_hlp.MyUtils, () => ({
-    __proto__: dart.getFields(utils_hlp.MyUtils.__proto__),
-    [_currentDate]: dart.fieldType(core.String),
-    [_currentTime]: dart.fieldType(core.String),
-    [_curDateTime]: dart.fieldType(core.String)
+  dart.setLibraryUri(utils_hlp$.MyUtils, I[30]);
+  dart.setFieldSignature(utils_hlp$.MyUtils, () => ({
+    __proto__: dart.getFields(utils_hlp$.MyUtils.__proto__),
+    [_currentDate$]: dart.fieldType(core.String),
+    [_currentTime$]: dart.fieldType(core.String),
+    [_curDateTime$]: dart.fieldType(core.String)
   }));
-  var JsonEncoder__toEncodable = dart.privateName(convert, "JsonEncoder._toEncodable");
-  var JsonEncoder_indent = dart.privateName(convert, "JsonEncoder.indent");
-  utils_hlp.convertJson = function convertJson(param) {
+  utils_hlp$.convertJson = function convertJson$(param) {
     let encoder = C[107] || CT.C107;
     let object = encoder.convert(param);
     return object;
   };
-  widgets_hlp.getFont = function getFont(fontSize, opts) {
-    let t12;
+  widgets_hlp$.getFont = function getFont$(fontSize, opts) {
+    let t24;
     let color = opts && 'color' in opts ? opts.color : null;
     let isBold = opts && 'isBold' in opts ? opts.isBold : false;
     let fontName = opts && 'fontName' in opts ? opts.fontName : null;
-    return new text_style.TextStyle.new({fontSize: fontSize, color: (t12 = color, t12 == null ? colors$1.kBlack : t12), fontWeight: isBold ? ui.FontWeight.bold : ui.FontWeight.normal, fontFamily: fontName});
+    return new text_style.TextStyle.new({fontSize: fontSize, color: (t24 = color, t24 == null ? colors$1.kBlack : t24), fontWeight: isBold ? ui.FontWeight.bold : ui.FontWeight.normal, fontFamily: fontName});
   };
-  widgets_hlp.buildLoading = function buildLoading() {
+  widgets_hlp$.buildLoading = function buildLoading$() {
     return new basic.Center.new({child: new progress_indicator.CircularProgressIndicator.new()});
   };
   var _preferenceCache$ = dart.privateName(shared_preferences, "_preferenceCache");
@@ -2600,13 +3529,13 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
       return this[_preferenceCache$][$containsKey](key);
     }
     getStringList(key) {
-      let t13;
+      let t25;
       let list = T$.ListN().as(this[_preferenceCache$][$_get](key));
       if (list != null && !T$.ListOfString().is(list)) {
         list = list[$cast](core.String)[$toList]();
         this[_preferenceCache$][$_set](key, list);
       }
-      return T$.ListNOfString().as((t13 = list, t13 == null ? null : t13[$toList]()));
+      return T$.ListNOfString().as((t25 = list, t25 == null ? null : t25[$toList]()));
     }
     setBool(key, value) {
       return this[_setValue]("Bool", key, value);
@@ -2694,7 +3623,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
         }
         let preferencesMap = new (T$.IdentityMapOfString$Object()).new();
         for (let key of fromSystem[$keys]) {
-          if (!key[$startsWith](shared_preferences.SharedPreferences._prefix)) dart.assertFailed(null, I[17], 264, 14, "key.startsWith(_prefix)");
+          if (!key[$startsWith](shared_preferences.SharedPreferences._prefix)) dart.assertFailed(null, I[31], 264, 14, "key.startsWith(_prefix)");
           preferencesMap[$_set](key[$substring](shared_preferences.SharedPreferences._prefix.length), dart.nullCheck(fromSystem[$_get](key)));
         }
         return preferencesMap;
@@ -2741,7 +3670,7 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
   }));
   dart.setStaticMethodSignature(shared_preferences.SharedPreferences, () => ['setPrefix', 'resetStatic', 'getInstance', '_getSharedPreferencesMap', 'setMockInitialValues']);
   dart.setStaticGetterSignature(shared_preferences.SharedPreferences, () => ['_store']);
-  dart.setLibraryUri(shared_preferences.SharedPreferences, I[18]);
+  dart.setLibraryUri(shared_preferences.SharedPreferences, I[32]);
   dart.setFieldSignature(shared_preferences.SharedPreferences, () => ({
     __proto__: dart.getFields(shared_preferences.SharedPreferences.__proto__),
     [_preferenceCache$]: dart.finalFieldType(core.Map$(core.String, core.Object))
@@ -2770,85 +3699,117 @@ define('zapp_user_main', ['dart_sdk', 'flutter_sdk'], (function load__zapp_user_
     "file:///zapp/project/lib/main.dart": main,
     "file:///zapp/project/.dart_tool/dartpad/web_plugin_registrant.dart": web_plugin_registrant,
     "file:///zapp/project/lib/configs/x_configs.dart": x_configs,
+    "file:///zapp/project/lib/modules/features/x_features.dart": x_features,
     "file:///zapp/project/lib/modules/home/x_homes.dart": x_homes,
+    "file:///zapp/project/lib/modules/sliver_screen/x_sliver_screens.dart": x_sliver_screens,
     "package:shared_preferences_web/shared_preferences_web.dart": shared_preferences_web,
     "file:///zapp/project/lib/configs/colors.dart": colors$0,
     "file:///zapp/project/lib/configs/keys.dart": keys,
     "file:///zapp/project/lib/configs/styles.dart": styles,
     "file:///zapp/project/lib/configs/themes.dart": themes,
     "file:///zapp/project/lib/configs/variables.dart": variables,
-    "file:///zapp/project/lib/configs/constants.dart": constants,
-    "file:///zapp/project/lib/configs/durations.dart": durations,
-    "file:///zapp/project/lib/configs/sizes.dart": sizes,
+    "file:///zapp/project/lib/modules/features/pages/button_pg.dart": button_pg,
     "file:///zapp/project/lib/modules/home/pages/home_pg.dart": home_pg,
+    "file:///zapp/project/lib/modules/sliver_screen/models/car_mdl.dart": car_mdl,
+    "file:///zapp/project/lib/modules/sliver_screen/views/sliver_vw.dart": sliver_vw,
     "package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart": shared_preferences_platform_interface,
     "package:shared_preferences_platform_interface/types.dart": types,
-    "package:flutter_app/widgets/x_widgets.dart": x_widgets,
+    "file:///zapp/project/lib/widgets/x_widgets.dart": x_widgets,
+    "package:flutter_app/widgets/x_widgets.dart": x_widgets$,
     "package:plugin_platform_interface/plugin_platform_interface.dart": plugin_platform_interface,
     "package:shared_preferences_platform_interface/method_channel_shared_preferences.dart": method_channel_shared_preferences,
-    "package:flutter_app/widgets/dialog_wdg.dart": dialog_wdg,
-    "package:flutter_app/widgets/button_wdg.dart": button_wdg,
-    "package:flutter_app/widgets/snackbar_wdg.dart": snackbar_wdg,
+    "file:///zapp/project/lib/widgets/button_wdg.dart": button_wdg,
+    "file:///zapp/project/lib/widgets/dialog_wdg.dart": dialog_wdg,
+    "file:///zapp/project/lib/widgets/icon_textfield_wdg.dart": icon_textfield_wdg,
+    "file:///zapp/project/lib/widgets/snackbar_wdg.dart": snackbar_wdg,
+    "file:///zapp/project/lib/widgets/textfield_wdg.dart": textfield_wdg,
+    "package:flutter_app/widgets/button_wdg.dart": button_wdg$,
+    "package:flutter_app/widgets/dialog_wdg.dart": dialog_wdg$,
+    "package:flutter_app/widgets/icon_textfield_wdg.dart": icon_textfield_wdg$,
+    "package:flutter_app/widgets/snackbar_wdg.dart": snackbar_wdg$,
+    "package:flutter_app/widgets/textfield_wdg.dart": textfield_wdg$,
+    "file:///zapp/project/lib/helpers/x_helpers.dart": x_helpers,
     "package:flutter_app/configs/x_configs.dart": x_configs$,
-    "package:flutter_app/extensions/build_context_ext.dart": build_context_ext,
-    "package:flutter_app/helpers/x_helpers.dart": x_helpers,
+    "package:flutter_app/helpers/x_helpers.dart": x_helpers$,
+    "file:///zapp/project/lib/helpers/build_context_extension_hlp.dart": build_context_extension_hlp,
+    "file:///zapp/project/lib/helpers/dialog_hlp.dart": dialog_hlp,
+    "file:///zapp/project/lib/helpers/material_color_hlp.dart": material_color_hlp,
+    "file:///zapp/project/lib/helpers/responsive_hlp.dart": responsive_hlp,
+    "file:///zapp/project/lib/helpers/session_hlp.dart": session_hlp,
+    "file:///zapp/project/lib/helpers/utils_hlp.dart": utils_hlp,
+    "file:///zapp/project/lib/helpers/widgets_hlp.dart": widgets_hlp,
     "package:flutter_app/configs/colors.dart": colors$1,
     "package:flutter_app/configs/keys.dart": keys$,
     "package:flutter_app/configs/styles.dart": styles$,
     "package:flutter_app/configs/themes.dart": themes$,
     "package:flutter_app/configs/variables.dart": variables$,
-    "package:flutter_app/configs/constants.dart": constants$,
-    "package:flutter_app/configs/durations.dart": durations$,
-    "package:flutter_app/configs/sizes.dart": sizes$,
-    "package:flutter_app/helpers/dialog_hlp.dart": dialog_hlp,
-    "package:flutter_app/helpers/responsive_hlp.dart": responsive_hlp,
-    "package:flutter_app/helpers/session_hlp.dart": session_hlp,
-    "package:flutter_app/helpers/utils_hlp.dart": utils_hlp,
-    "package:flutter_app/helpers/widgets_hlp.dart": widgets_hlp,
+    "package:flutter_app/helpers/build_context_extension_hlp.dart": build_context_extension_hlp$,
+    "package:flutter_app/helpers/dialog_hlp.dart": dialog_hlp$,
+    "package:flutter_app/helpers/material_color_hlp.dart": material_color_hlp$,
+    "package:flutter_app/helpers/responsive_hlp.dart": responsive_hlp$,
+    "package:flutter_app/helpers/session_hlp.dart": session_hlp$,
+    "package:flutter_app/helpers/utils_hlp.dart": utils_hlp$,
+    "package:flutter_app/helpers/widgets_hlp.dart": widgets_hlp$,
     "package:shared_preferences/shared_preferences.dart": shared_preferences
   }, {
-  }, '{"version":3,"sourceRoot":"","sources":["/zapp/project/.zapp_entry.dart","/zapp/project/lib/main.dart","/zapp/project/.dart_tool/dartpad/web_plugin_registrant.dart","/zapp/pub/.pub_cache/hosted/pub.dev/plugin_platform_interface-2.1.6/lib/plugin_platform_interface.dart","/zapp/pub/.pub_cache/hosted/pub.dev/shared_preferences_platform_interface-2.3.1/lib/shared_preferences_platform_interface.dart","/zapp/pub/.pub_cache/hosted/pub.dev/shared_preferences_web-2.2.1/lib/shared_preferences_web.dart","/zapp/project/lib/configs/colors.dart","/zapp/project/lib/configs/keys.dart","/zapp/project/lib/configs/styles.dart","/zapp/project/lib/configs/themes.dart","/zapp/project/lib/configs/variables.dart","/zapp/project/lib/modules/home/pages/home_pg.dart","/zapp/pub/.pub_cache/hosted/pub.dev/shared_preferences_platform_interface-2.3.1/lib/types.dart","/zapp/pub/.pub_cache/hosted/pub.dev/shared_preferences_platform_interface-2.3.1/lib/method_channel_shared_preferences.dart","/zapp/project/lib/widgets/dialog_wdg.dart","/zapp/project/lib/widgets/button_wdg.dart","/zapp/project/lib/widgets/snackbar_wdg.dart","/zapp/project/lib/extensions/build_context_ext.dart","/zapp/project/lib/helpers/dialog_hlp.dart","/zapp/project/lib/helpers/responsive_hlp.dart","/zapp/project/lib/helpers/session_hlp.dart","/zapp/project/lib/helpers/utils_hlp.dart","/zapp/project/lib/helpers/widgets_hlp.dart","/zapp/pub/.pub_cache/hosted/pub.dev/shared_preferences-2.2.2/lib/shared_preferences.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AA2CI,IA1BF,iCAAgB;AACd,UAAoB,8BAGD;AAF8B,QAA9B,AAAkB,8BAElB,eAF2B;;AAEL,QAAF,CAApB;;AAEnB,UAAO,AAAQ,uBAAY;AAKvB,QAJK,AAAqC,qBAA7B,qCAAuB,uBAAW,QAAC;AAG9C,UAFC,AAAQ,sBAAW,2BAA2B,CAC/C;;;yBAIL,SAAC,GAAG;AACL,UAAO,AAAQ,uBAAY;AAIvB,QAHC,AAAQ,sBAAW,wBAAwB,CAC5C,AAAE,CAAD,eACD,AAAW,UAAD;;4DAGM,yCACb,SAAC,MAAM,QAAQ,MAAM;AAC1B,cAAO,AAAQ,uBAAY;AAC4B,YAAlD,AAAQ,sBAAW,wBAAwB,CAAC,IAAI;;;EAI3D;;AAEiB;AAQd,MAPD,MAAS,gCACC;AACS,UAAf;8CAEe;AACmB,UAAjB;;IAGvB;;;;;;;UCvC4B;AACxB,YAAO,sDACuB,cACrB,wBACS,sCACI,gCAGd;IAEV;;;QAdmB;AAAb,8CAAa,GAAG;;EAAE;;;;;;;;;;AAJH,IAArB;EACF;mECEuC;;AACrB,qBAA4B,KAAhB,eAAe,EAAf,aAAmB;AACA,IAAvB,4DAAa,SAAS;AACZ,IAAlC,AAAU,SAAD;EACX;;;;;kBCyDuC,UAAiB;AACF,MAAlD,oDAAQ,QAAQ,EAAE,KAAK,uBAAsB;IAC/C;uBAM0C,UAAiB;AACN,MAAnD,oDAAQ,QAAQ,EAAE,KAAK,uBAAsB;IAC/C;mBAGoB,UACX;UACO;AAEd,UAAa,wDAAT,QAAQ;AACL,gCAAoB;AACzB,aAAO,AAGN;AAFyB,UAAxB,oBAAoB;AACpB,gBAAO;;AAET,aAAK,iBAAiB;AAE0D,UAD9E,WAAM,4BACF;;AAEN;;AAEF,UAAI,kBAAkB,IAClB,AAAU,AAAe,iEAAC,QAAQ;AACiC,QAArE,WAAM,4BAAe;;AAEvB,UAAe,KAAK,KAAE,AAAe,iEAAC,QAAQ;AAEwB,QADpE,WAAM,4BACF;;IAER;;;QA/DmC;AACJ,IAA7B,AAAe,iEAAC,MAAQ,KAAK;EAC/B;;;;;;;MAW6B,2DAAe;YAAG;;;;;AC/BO;IAAS;wBAIZ;AACjD,WAAK,AAAS,QAAD;AAC+B,QAAxB,mDAAO,QAAQ,EAAE;;AAEjB,MAApB,iFAAY,QAAQ;IACtB;;AAYmB;IAAK;oBAyBY;AAC6B,MAA/D,WAAM,gCAAmB;IAC3B;wBAGiD;AACoB,MAAnE,WAAM,gCAAmB;IAC3B;qBAWoD;AACc,MAAhE,WAAM,gCAAmB;IAC3B;yBAIqB;AACiD,MAApE,WAAM,gCAAmB;IAC3B;;;AA/EmC,0GAAa;;EAAO;;;;;;;;;;;;;;;;;;;MAEnC,2EAAM;YAAG;;MAgBS,8EAAS;YAC3C;;;;;wBCvBgC;AACiC,MAApC,gFAAW;IAC5C;;AAKkB;AAChB,cAAO,0BACL,uCACU;MAGd;;oBAGoC;AAAR;AAC1B,cAAO,0BACH,uCAAwB,yCAA0B,MAAM;MAC9D;;wBAGiD;AAAjB;AACN,qBAAS,AAAW,UAAD;AAKE,QAD7C,AACK,uBADY,AAAO,MAAD,qBAAoB,AAAO,MAAD,uBACX,UAApB,AAAO;AACzB,cAAO;MACT;;;AAGkC;AAChC,cAAO,2BACL,wCACU;MAGd;;qBAGoD;AAAR;AAC1C,cAAO,2BACH,wCAAyB,yCAA0B,MAAM;MAC/D;;yBAIqB;AAD2B;AAEtB,qBAAS,AAAW,UAAD;AACjB,sBAA0B;AACpD,iBAAkB,MACX,wBAAiB,AAAO,MAAD,qBAAoB,AAAO,MAAD;AACK,UAA3D,AAAO,OAAA,QAAC,GAAG,EAAI,mBAA0C,eAAxB,AAAO,AAAY,kCAAC,GAAG;;AAE1D,cAAO,QAAO;MAChB;;WAG2B;AAAR;AACmB,QAA/B,AAAO,AAAa,oCAAO,GAAG;AACnC,cAAO;MACT;;aAG6B,WAAkB,KAAa;AAAvC;AACgC,QAA9C,AAAO,AAAY,kCAAC,GAAG,EAAI,mBAAa,KAAK;AAClD,cAAO;MACT;;uBAGS;UACM;AAEb,YAAY,AAAO,AAAa,AAAK,2CAAM,QAAQ;;AAC/C,cAAA,AAAI,AAAmB,IAApB,cAAY,MAAM,gBAA+B,YAAzB,SAAS,eAAT,OAAW,YAAS,GAAG,IAAvB,cAA4B;;IAC7D;mBAE4B;AAC1B,YAAO,AAAK,qBAAO,KAAK;IAC1B;mBAE2B;AACX,yBAAe,AAAK,oBAAO,YAAY;AAErD,UAAiB,aAAb,YAAY;AAId,cAAO,AAAa,aAAD;;AAGrB,YAAmB,gBAAZ,YAAY;IACrB;;;;;;;;EACF;;;;;;;;;;;;;;;;;MA3FsB,6DAAc;;;;;;;;;;;;;;;;;MCjB9B,eAAM;;;MACN,eAAM;;;MACN,qBAAY;;;MACZ,aAAI;;;MACJ,eAAM;;;MACN,cAAK;;;MACL,gBAAO;;;MACP,cAAK;;;MAGL,oBAAW;;;MACX,wBAAe;;;MACf,yBAAgB;;;MAChB,yBAAgB;;;MAChB,sBAAa;;;MACb,2BAAkB;;;MAGlB,qBAAY;;;MACZ,sBAAa;YAAG,kBAAM;;MACtB,mBAAU;;;MACV,mBAAU;;;MACV,kBAAS;;;MACT,iBAAQ;;;MAIR,mBAAU;;;MACV,qBAAY;;;MACZ,mBAAU;;;MACV,kBAAS;;;MACT,mBAAU;;;MACV,gBAAO;;;MACP,iBAAQ;;;MACR,gBAAO;;;MAGP,yBAAgB;;;MAMhB,yBAAgB;;;;;MC/CT,YAAO;;;;;ACiClB,UAAO,wDACsB,wCAAS,iBACxB,mCAAkB;EAElC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;MA/BM,qBAAc;;;MAQd,iBAAU;;;MAGV,oBAAa;YAAG,yCACV,gBACa,2BACT,6BACN;;MAIJ,yBAAkB;YAAG,0DACE,gDAAoB,cACvC,4CACO,4CACA;;;;;;;;;;ECDjB;;;;;;MAvBe,yBAAS;YAAG,0CACN,+BACD,kCACS,iCACX,iCACU,sDACV,uDACuB,wCAAS,iBACb,mCACnB,iBACU,AAAK,+BAAY;;MAE9B,wBAAQ;YAAG,0CACE,iCACR,iBAAM,yBACG,gCACX,iCACU,sDACV,uDACuB,wCAAS,iBACb,mCACnB,iBACU,AAAK,+BAAY;;;;;MCxBvC,gBAAM;YAAG;;MAGF,kBAAQ;;;MACR,kBAAQ;;;MACR,kBAAQ;;;MACR,kBAAQ;;;MACR,mBAAS;;;MAGT,kBAAQ;;;MAKR,mBAAS;;;MAIT,yBAAe;;;MAItB,sBAAY;;;MACZ,qBAAW;;;MAEX,gCAAsB;;;MACtB,iCAAuB;;;MAEvB,wBAAc;;;MACd,8BAAoB;;;MAGhB,2BAAiB;;;MACrB,4BAAkB;;;MAClB,0BAAgB;;;MAGhB,2BAAiB;YAAG;;MACpB,2BAAiB;YAAG;;MACpB,6BAAmB;YAAG;;MACtB,8BAAoB;YAAG;;MAGvB,2BAAiB;YAAG;;MACpB,uBAAa;YAAG;;MAChB,yBAAe;YAAG;;MAClB,4BAAkB;YAAG;;MACrB,0BAAgB;YAAG;;MACnB,4BAAkB;YAAG;;MACrB,4BAAkB;YAAG;;MACrB,4BAAkB;YAAG;;MACrB,4BAAkB;YAAG;;MACrB,kCAAwB;YAAG;;MAC3B,+BAAqB;YAAG;;MAIjB,kBAAQ;;;MACR,eAAK;;;MACL,gBAAM;;;MAEN,8BAAoB;;;MACpB,4BAAkB;;;MAClB,+BAAqB;;;MACrB,+BAAqB;;;MAErB,2BAAiB;;;MACjB,yBAAe;;;MACf,4BAAkB;;;MAClB,4BAAkB;;;MAElB,mBAAS;;;MAuBT,+BAAqB;YAC9B,iBAAO;;MACE,wBAAc;;;MACd,wBAAc;;;MACd,yBAAe;;;MACf,4BAAkB;;;MAClB,yBAAe;;;MACf,yBAAe;;;MACf,yBAAe;;;MACf,yBAAe;;;MACf,+BAAqB;;;MACrB,2BAAiB;;;;;;;;;;;;;UCpGF;AACpB,iBAAkB,AAAY,0BAAT,OAAO;AAChC,YAAO,oCACG,mCACK,UAEJ,kBAAK,sBAER,+DACG,0DAEE,gCACK,yBACR,+BACW,AAAK,AAAM,IAAP,SAAS,YACH,6BAAQ,OAAO,EAAE,yBAC9B,cAAM,WAAM,iCACpB,gCAAiB,KACP,6BAAQ,OAAO,EAAE,WAAW,cAAM,WAAM,+BAClD,gCAAiB,KACP,6BAAQ,OAAO,EAAE,WAAW,cAAM,WAAM,+BAClD,gCAAiB,KACP,4BAAO,OAAO,EAAE,UAAU,cAAM,WAAM,8BAChD,gCAAiB,KACP,qCACN,OAAO,EAAE,oBAAoB,cAAM,WAAM,wCAC7C,gCAAiB,KACP,oCACN,OAAO,EAAE,mBAAmB,cAAM,WAAM,uCAC5C,gCAAiB,KACP,uCAAkB,OAAO,EAAE,sBAAsB;AAC9B,kBAA3B,WAAM;sCAER,gCAAiB,KACP,6BAAQ,OAAO,EAAE,yBAAyB;AACjB,kBAAjC,WAAM;AAC0C,kBAArC,gCAAQ,OAAO,EAAE,SAAS;sCAEvC,gCAAiB,KACP,4BAAO,OAAO,EAAE,wBAAwB;AACf,kBAAjC,WAAM;AAC8C,kBAAzC,+BAAO,OAAO,EAAE,QAAQ;sCAErC,gCAAiB,KACP,qCAAgB,OAAO,EAAE,eAAe;AAC5B,kBAApB,WAAM;AACmD,kBAA/C,2BAAM,OAAO,EAAE,UAAU;sCAErC,gCAAiB,KACP,qCAAgB,OAAO,EAAE,qBAAqB;AAC5B,kBAA1B,WAAM;AAEiD,kBAD7C,4BACN,OAAO,EAAE,eAAe;sCAE9B,gCAAiB,KACP,uCAAkB,OAAO,EAAE,gBAAgB;AAC9B,kBAArB,WAAM;AACoB,kBAAhB,6BAAQ,OAAO;;IAOvC;;;QAnEgB;AAAhB,oDAAgB,GAAG;;EAAE;;;;;;;;;;;;;;;;;APgHH;AAChB,cAAO,0BACL,uCACU;MAGd;;oBAGoC;AAAR;AAC1B,cAAO,0BACL,uCACU,yCAA0B,MAAM;MAG9C;;wBAGiD;AAAjB;AACN,qBAAS,AAAW,UAAD;AAC3C,YAAI,AAAO,MAAD;AAE6D,UADrE,AAAM,0BAAY,SAAQ,KAAK,MAC3B,AAAI,AAA0B,GAA3B,cAAY,AAAO,MAAD,YAA4B,AAAE,eAAlB,AAAO,MAAD,qBAAqB,GAAG;;AAEA,UAAnE,AAAM,0BAAY,SAAQ,KAAK,MAAM,AAAI,GAAD,cAAY,AAAO,MAAD;;AAE5D,cAAO;MACT;;;AAGkC;AAChC,cAAO,2BACL,wCACU;MAGd;;qBAGoD;AAAR;AAC1C,cAAO,2BACL,wCACU,yCAA0B,MAAM;MAG9C;;yBAIqB;AAD2B;AAEtB,qBAAS,AAAW,UAAD;AACjB,0BAAc,uCAAyB;AAGE,QAFnE,AAAY,WAAD,eAAa,SAAQ,KAAK,MACF,CAA9B,AAAI,GAAD,cAAY,AAAO,MAAD,YACrB,AAAO,MAAD,uBAAuC,AAAE,eAAlB,AAAO,MAAD,qBAAqB,GAAG;AAChE,cAAO,YAAW;MACpB;;WAG2B;AAAR;AACA,QAAjB,AAAM,qBAAO,GAAG;AAChB,cAAO;MACT;;aAG6B,WAAkB,KAAY;AAAtC;AACD,QAAlB,AAAK,mBAAC,GAAG,EAAI,KAAK;AAClB,cAAO;MACT;;;;IA9E+C,cAAkB;AAAjE;;EAAmE;4FAGP;IAChD,cAAE,uCAAyB,IAAI;AAD3C;;EAC4C;;;;;;;;;;;;;;;;;MAGxB,mFAAc;;;;;;;IQrG3B;;;;;;IAIM;;;;;;;;;;;;;QAVG;QACT;IADS;IACT;;EACL;;;;;;;;;;;IAiBgB;;;;;;;;;;;;QAHc;;;EAAQ;;;;;;;;;;IAYtB;;;;;;;;;;;;QAHa;;;EAAQ;;;;;;;;;;;ET+F+B;;;;;;WU3G3C;AAAR;AACjB,cAGE,gBAHM,MAAM,AAAU,oEACtB,UACiB,6CAAC,OAAO,GAAG;MAEhC;;aAG6B,WAAkB,KAAY;AAAtC;AACnB,cAGE,gBAHM,MAAM,AAAU,oEACtB,AAAe,QAAV,SAAS,EACG,6CAAC,OAAO,GAAG,EAAE,SAAS,KAAK;MAEhD;;;AAGkB;AAChB,cAAoD,gBAA5C,MAAM,AAAU,oEAAmB;MAC7C;;oBAIoC;AAAR;AAC1B,cAAO,0BACL,uCACU,yCAA0B,MAAM;MAG9C;;wBAGiD;AAAjB;;AACN,qBAAS,AAAW,UAAD;AAC3C,cAME,gBANM,MAAM,AAAU,oEACtB,uBACiB,6CACf,UAAU,AAAO,MAAD,SAChB,mBAAa,AAAO,MAAD,yBAAC,OAAW;MAGrC;;;AAGkC;;AAChC,cAAO,MAAM,AAAU,sFAAgC;cAAhD,cACa;MACtB;;qBAKS;UACM;AAF6B;AAI1C,cAAO,2BACL,wCACU,yCAA0B,MAAM;MAG9C;;yBAIqB;AAD2B;;AAEtB,qBAAS,AAAW,UAAD;AACvB,oCAAkB,AAAO,MAAD,yBAAC,OAAW;AACxD,eAAO,MAAM,AAAU,sFACjB,wBACiB,6CACf,UAAU,AAAO,MAAD,SAChB,aAAa,eAAe;cAJ7B,eAOa;MACtB;;;;;;;;;EACF;;;;;;;;;;;;;;;;;MArFoB,2CAAS;;;;;yBCDuB;UACtC;UACD;UACQ;AACjB,YAAO,2CACI,OAAO,WACP,QAAC,WAAY,wCACH,8BACV,sCACe,gDAAoB,cACrB,+BAAI,iBACX,6CACH,AAAO,4BAAY,oBACC,wCAAS,cAE/B,oCACsB,iCACjB,yBACR,kBAAW,8BAAiB,WAAW,SAAS,IAChD,gCAAiB,MACjB,kBAAK,KAAK,UAAS,oBAAQ,YAAW,qBACtC,gCAAiB,MACjB,kBAAK,QAAQ,UAAS,oBAAQ,YAAW;IAMrD;8BAIuD;UAC3C;UACD;UACA;AACT,YAAO,2CACI,OAAO,WACP,QAAC,WAAY,mCACb,kBAAK,KAAK,UAAS,oBAAQ,YAAW,8BACpC,kBAAK,QAAQ,UAAS,oBAAQ,YAAW,8BACzC,yBACP,sCACuC,+CAC3B,yBACR,+BACiB,AAAY,2DAApB,OAAO,IAAe,YACZ,6BAAQ,OAAO,EAAE,MAAM;0CAE1C,+BAAgB,KAChB,+BACiB,AAAY,2DAApB,OAAO,IAAe,YACZ,qCAAgB,OAAO,EAAE,UAAU;;IAOlE;mBAI4C;UAChC;AACV,YAAO,2CACM,OAAO,WACP,QAAC,WAAY,qCACP,oCACoB,iCACjB,yBACR,wDACA,gCAAiB,MACjB,kBAAK,KAAK;IAI1B;iBAIiB,SAAgB,OAAc;AAC7C,YAAO,oCAAc,OAAO,UACjB,KAAK,YAAY,QAAQ,aAAoB;IAC1D;kBAIiB,SAAgB,OAAc;AAC7C,YAAO,yCAAmB,OAAO,UAAS,KAAK,YAAY,QAAQ;IACrE;;;;;;;EACF;;;;;;yBC9FiB,SACN,OACD,SACA,SACK;UACG;UACA;AAsCd,YAAO,oDACM,uBACC,8BACL,wCACgB,qCACD,+BAAoB,KAAE,kBAC9B,6CACD,QAAQ,GAAG,wBAAe,OAAlB,AAAyB,YAC9B,UAAU,GAAG,4BAAmB,IAAtB,gBACO,mCAAW,uBAAS,cACvC,QAAQ,GAAU,8BAAW,OAAO,SAAS,MAAK,IAA1C,WACb,kBAAK,KAAK,UAAS,oBAAQ,YAAW,OAAO;IAG1D;mBAGiB,SAAgB,OAAkB;AACjD,YAAO,oCAAc,OAAO,EAAE,KAAK,EAAE,iBAAQ,sBAAa,sBAC5C,mBAAmB;IACnC;mBAGiB,SAAgB,OAAkB;AACjD,YAAO,oCAAc,OAAO,EAAE,KAAK,EAAE,iBAAQ,qBAAY,sBAC3C,mBAAmB;IACnC;kBAGiB,SAAgB,OAAkB;AACjD,YAAO,oCAAc,OAAO,EAAE,KAAK,EAAE,iBAAQ,eAAM,sBACrC,mBAAmB;IACnC;2BAGiB,SAAgB,OAAkB;AACjD,YAAO,oCAAc,OAAO,EAAE,KAAK,EAAE,iBAAQ,sBAAa,sBAC5C,kBAAkB;IAClC;0BAGiB,SAAgB,OAAkB;AACjD,YAAO,oCAAc,OAAO,EAAE,KAAK,EAAE,eAAM,eAAM,sBACnC,kBAAkB;IAClC;6BAGiB,SAAgB,OAAkB;AACjD,YAAO,oCAAc,OAAO,EAAE,KAAK,EAAE,iBAAQ,sBAAa,sBAC5C,mBAAmB;IACnC;;;;;;;EACF;;;;;;wBClGwC,SAAgB,OAAc,UAC1D,SAAe,SAAe;AAwBpC,MApBgB,AAAY,8BAAT,OAAO,eAAe,qCAChC,6BACG,yBACR,kBACQ,4CACC,SAAS,IAElB,+BAAgB,KAChB,yCACuC,kDACE,yCAC7B,yBACR,kBAAK,KAAK,UAAS,oBAAQ,YAAW,OAAO,MAC7C,kBAAK,QAAQ,UAAS,oBAAQ,YAAW,OAAO,+BAKvC,OAAO,YACd,gCAAkB;IAEhC;mBAEe,SAAgB,OAAc;AAE1B,MADjB,+DAAa,OAAO,GAAE,KAAK,EAAE,QAAQ,EAAS,qBAAO,iBAAM,aAChD;IACb;qBAEiB,SAAgB,OAAc;AAE5B,MADjB,+DAAa,OAAO,GAAE,KAAK,EAAE,QAAQ,EAAS,qBAAO,iBAAM,aAChD;IACb;mBAEe,SAAgB,OAAc;AAE1B,MADjB,+DAAa,OAAO,GAAE,KAAK,EAAE,QAAQ,EAAS,qBAAO,iBAAM,aAChD;IACb;kBAEc,SAAgB,OAAc;AAE2B,MADrE,+DACI,OAAO,GAAE,KAAK,EAAE,QAAQ,EAAS,qBAAc,mBAAY;IACjE;mBAEe,SAAgB,OAAc;AAQ1C,MAPD,+DACE,OAAO,GACP,KAAK,EACL,QAAQ,EACD,qBACP,iBAAM,aACC;IAEX;gBAEY,SAAgB,OAAc;AAQvC,MAPD,+DACE,OAAO,GACP,KAAK,EACL,QAAQ,EACD,qBACP,iBAAM,aACC;IAEX;iBAEa,SAAgB,OAAc;AAQxC,MAPD,+DACE,OAAO,GACP,KAAK,EACL,QAAQ,EACD,qBACP,iBAAM,aACC;IAEX;gBAEY,SAAgB,OAAc;AAQvC,MAPD,+DACE,OAAO,GACP,KAAK,EACL,QAAQ,EACD,qBACP,iBAAM,aACC;IAEX;;;;;;;EACF;;;;;;AC5F6B,UAAW,AAAS,AAAK;EAAM;;AAEhC,UAAW,AAAS,AAAK;EAAK;6FAIzB;AACF,IAAjB,kCAAU,MAAM;EAC5B;;AAFK,uBAA0B,wEAA1B,MAAM;EAEX;;AAGoD,IAAxC,oCAAe,QAAC,SAAU,AAAM,KAAD;EAC3C;;AAFK;EAEL;+FAEyC,QAAiB;AAAzB;AAC/B,YAAiB,oCAEf,+CACW,QAAC,WAAY,MAAM,wCAClB,uCAAoB,IAAI;IAGxC;;;AARW,uBAA8B,QAAiB,uEAA/C,MAAM,EAAN,IAAI;EAQf;yHAGW;AADoD;AAE7D,YAAiB,mDAEf,+CAA2B,QAAC,WAAY,MAAM;IAElD;;;AANW,2BACA,iFADA,MAAM;EAMjB;2HAGW,QAA4C;AADR;AAE7C,YAAiB,kDAEf,+CAA2B,QAAC,WAAY,MAAM,gCAC9C,SAAS;IAEb;;;AAPW,uBACA,QAA4C,mFAD5C,MAAM,EAAN,SAAS;EAOpB;;MXtCI,eAAM;;;MACN,eAAM;;;MACN,qBAAY;;;MACZ,aAAI;;;MACJ,eAAM;;;MACN,cAAK;;;MACL,gBAAO;;;MACP,cAAK;;;MAGL,oBAAW;;;MACX,wBAAe;;;MACf,yBAAgB;;;MAChB,yBAAgB;;;MAChB,sBAAa;;;MACb,2BAAkB;;;MAGlB,qBAAY;;;MACZ,sBAAa;YAAG,kBAAM;;MACtB,mBAAU;;;MACV,mBAAU;;;MACV,kBAAS;;;MACT,iBAAQ;;;MAIR,mBAAU;;;MACV,qBAAY;;;MACZ,mBAAU;;;MACV,kBAAS;;;MACT,mBAAU;;;MACV,gBAAO;;;MACP,iBAAQ;;;MACR,gBAAO;;;MAGP,yBAAgB;;;MAMhB,yBAAgB;;;;;MC/CT,aAAO;;;;;ACiClB,UAAO,wDACsB,wCAAS,iBACxB,mCAAkB;EAElC;;MA/BM,sBAAc;;;MAQd,kBAAU;;;MAGV,qBAAa;YAAG,yCACV,gBACa,2BACT,6BACN;;MAIJ,0BAAkB;YAAG,0DACE,gDAAoB,cACvC,6CACO,6CACA;;;;;;;;;;ECDjB;;;;;;MAvBe,0BAAS;YAAG,0CACN,+BACD,kCACS,iCACX,iCACU,sDACV,uDACuB,wCAAS,iBACb,mCACnB,iBACU,AAAK,+BAAY;;MAE9B,yBAAQ;YAAG,0CACE,iCACR,iBAAM,yBACG,gCACX,iCACU,sDACV,uDACuB,wCAAS,iBACb,mCACnB,iBACU,AAAK,+BAAY;;;;MCxBvC,iBAAM;YAAG;;MAGF,mBAAQ;;;MACR,mBAAQ;;;MACR,mBAAQ;;;MACR,mBAAQ;;;MACR,oBAAS;;;MAGT,mBAAQ;;;MAKR,oBAAS;;;MAIT,0BAAe;;;MAItB,uBAAY;;;MACZ,sBAAW;;;MAEX,iCAAsB;;;MACtB,kCAAuB;;;MAEvB,yBAAc;;;MACd,+BAAoB;;;MAGhB,4BAAiB;;;MACrB,6BAAkB;;;MAClB,2BAAgB;;;MAGhB,4BAAiB;YAAG;;MACpB,4BAAiB;YAAG;;MACpB,8BAAmB;YAAG;;MACtB,+BAAoB;YAAG;;MAGvB,4BAAiB;YAAG;;MACpB,wBAAa;YAAG;;MAChB,0BAAe;YAAG;;MAClB,6BAAkB;YAAG;;MACrB,2BAAgB;YAAG;;MACnB,6BAAkB;YAAG;;MACrB,6BAAkB;YAAG;;MACrB,6BAAkB;YAAG;;MACrB,6BAAkB;YAAG;;MACrB,mCAAwB;YAAG;;MAC3B,gCAAqB;YAAG;;MAIjB,mBAAQ;;;MACR,gBAAK;;;MACL,iBAAM;;;MAEN,+BAAoB;;;MACpB,6BAAkB;;;MAClB,gCAAqB;;;MACrB,gCAAqB;;;MAErB,4BAAiB;;;MACjB,0BAAe;;;MACf,6BAAkB;;;MAClB,6BAAkB;;;MAElB,oBAAS;;;MAuBT,gCAAqB;YAC9B,iBAAO;;MACE,yBAAc;;;MACd,yBAAc;;;MACd,0BAAe;;;MACf,6BAAkB;;;MAClB,0BAAe;;;MACf,0BAAe;;;MACf,0BAAe;;;MACf,0BAAe;;;MACf,gCAAqB;;;MACrB,4BAAiB;;;;;;AQnGzB,MAFD,6BACS;IAsBX;;;;;;;EAqBF;;;;;;;;;IC9Ce;;;;;;IACC;;;;;;IACA;;;;;;;;;;;;;UAIY;AACxB,YAAO,gDACI,SAAC,SAAS;;AACjB,cAAG,AAAU,AAAS,SAAV;AACV,kBAAO;gBACH,KAAG,AAAU,AAAS,SAAV,oBAAuC,AAAU,AAAS,SAAV;AAChE,kBAAO;iCAAc;;AAErB,mBAAO;kCAAe;;;IAI9B;;;QAnB6B;QAAmB;QAAiB;QAAiB;IAAlC;IAAiB;IAAiB;AAAgB,mEAAW,GAAG;;EAAC;;;;;;;;;;;;;;;uBCF5E;AAAN;AACL,qBAAQ,MAAwB;AACxD,cAAO,AAAM,MAAD,SAAS,aAAa,MAAM;MAC1C;;;AAE8B;;AACJ,qBAAQ,MAAwB;AACxD,cAAO,AAAM,KAAD,SAAS;cAAR,eAAwB;MACvC;;qBAEqC;AAAR;AACH,qBAAQ,MAAwB;AACxD,cAAO,AAAM,MAAD,WAAW,WAAW,MAAM;MAC1C;;;AAE+B;;AACL,qBAAQ,MAAwB;AACxD,cAAO,AAAM,KAAD,WAAW;cAAV,eAAwB;MACvC;;;;;;;;EACF;;;;;;;;;;ACX4B,YAAK;IAAY;;AACjB,YAAK;IAAY;;AACjB,YAAK;IAAY;;AAKrC,gBAAU;AACV,0BAAoB;AACjB,0BAAgB,AAAc,aAAD,QAAQ,GAAG;AAE/C,YAAO,cAAa;IACtB;;AAKM,gBAAU;AACV,sBAAgB,+BAAW;AACxB,0BAAgB,AAAU,SAAD,QAAQ,GAAG;AAE3C,YAAO,cAAa;IACtB;;;UAImC;AAC7B,gBAAU;AACP,iBAAa,MAAP,MAAM,EAAN,cAAU;AAChB,8BAAoB,AAAgB,+BAAL,GAAG,SAAS,GAAG;AAErD,YAAO,kBAAiB;IAC1B;;AAGM,gBAAU;AACP,8BAAoB,AAAgC,+BAArB,4BAA4B,GAAG;AACjE,sBAAgB,+BAAW;AAC3B,0BAAoB;AACjB,0BAAgB,AAAU,SAAD,QAAQ,GAAG;AACpC,0BAAgB,AAAc,aAAD,QAAQ,GAAG;AAEd,MAA5B,qBAAe,aAAa;AACA,MAA5B,qBAAe,aAAa;AACS,MAA1C,WAAM,AAAmC,oBAAlB,iBAAiB;AACX,MAA7B,WAAM,AAAsB,WAAd,aAAa;AACE,MAA7B,WAAM,AAAsB,WAAd,aAAa;IAC7B;uBAImC;AAEjC,YAAO,AAAO,AAAuB,OAAxB,0BAA0B;IACzC;2BAImC;UAAqB;AAEtD,UAAI,UAAU;AACN,iBAAS,+BAAW,UAAU;AAC7B,qBACH,AAAG,EAAD,QAAY,6CAAoC,AAAW,UAAD,GAAG;AACnE,cAAO,OAAM;;AAGJ,qBAAkB,6CAA2B,AAAW,UAAD,GAAG;AACnE,cAAO,OAAM;;IAEjB;4BAIwC,WAAkB;AACjD,8BAIH,AAAuB,+BAAZ,UAAU,SAAS,SAAS;AAC3C,YAAO,kBAAiB;IAC1B;wBAImC,QAAY;AAChC,8BAAiC,6CACpC,cACA,sBACO,YAAY;AAE7B,YAAO,AAAkB,kBAAD,QAAQ,MAAM;IACxC;wBAIoC;AAC3B,sCAAmB,WAAN,KAAK,iBAAY,gBAAO,WAAW;AAEvD,YAAO,WAAU;IACnB;0BAIiC;UAAa;AACtC,2BACE,0DAA2C,YAAY;AAC/D,YAAO,AAAe,eAAD,QAAQ,MAAM;IACrC;4BAEsC;AAC3B,oBAAmB,oBAAM,OAAO;AAClC,8BAEH,AAAoB,+BAAT,gBAAgB,OAAO;AACtC,YAAO,kBAAiB;IAC1B;sCAEyC,eAAsB;AAE9C,wBAAuB,oBAAM,aAAa;AACzD,YAAO,AAAuB,gCAAZ,UAAU,SAAS,WAAW;IAClD;uBAEmC;AAC7B,mBAAS,AAAiB,+BAAN,aAAa,QAAQ;AAC7C,YAAO,OAAM;IACf;wBAEoC;AAC9B,mBAAS,AAAkB,+BAAP,cAAc,QAAQ;AAC9C,YAAO,OAAM;IACf;;;;;;IA1IO,qBAAe;IACf,qBAAe;IACf,qBAAe;;EA0IxB;;;;;;;;;;;;;;;;;;;;;;;;;;+CAG8B;AACR;AACJ,iBAAS,AAAQ,OAAD,SAAS,KAAK;AAC5C,UAAO,OAAM;EACf;yCClJuB;;QACb;QAAY;QAAwB;AAC9C,UAAW,yCACC,QAAQ,UACL,MAAN,KAAK,EAAL,cAAS,oCACJ,MAAM,GAAc,qBAAkB,oBAAhC,cACN,QAAQ;EAExB;;AAKE,UAAO,8BACE;EAEX;;;;;;;;ACIM,YAA+B;IAAQ;qBAsBd;UAAsB;AACjD,UAAI;AAC8D,QAAhE,WAAM,wBAAW;;AAEH,MAAhB,+CAAU,MAAM;AACY,MAA5B,6DAAwB;AACF,MAAtB,kDAAa,SAAS;IACxB;;AAKmB,MAAjB,kDAAa;AACO,MAApB,+CAAU;AACmB,MAA7B,6DAAwB;AACP,MAAjB,kDAAa;IACf;;AAM4C;AAC1C,YAAI,AAAW;AACsB,0BAC/B;AACkB,UAAtB,kDAAa,SAAS;AACtB;AAC4B,kCACtB,MAAM;AAC6C,YAAvD,AAAU,SAAD,UAA4B,4CAAE,cAAc;;gBAC9C;AAAP;AAG0B,cAA1B,AAAU,SAAD,eAAe,CAAC;AACO,sCAAoB,AAAU,SAAD;AAC5C,cAAjB,kDAAa;AACb,oBAAO,kBAAiB;;;;;AAG5B,cAAiB,AAAE,gBAAZ;MACT;;;AAayB,6CAAiB,AAAiB;IAAK;QAG7C;AAAQ,YAAA,AAAgB,gCAAC,GAAG;IAAC;YAI3B;AAAQ,YAAsB,eAAtB,AAAgB,+BAAC,GAAG;IAAU;WAIxC;AAAQ,YAAsB,cAAtB,AAAgB,+BAAC,GAAG;IAAS;cAI/B;AAAQ,YAAsB,iBAAtB,AAAgB,+BAAC,GAAG;IAAY;cAIxC;AAAQ,YAAsB,iBAAtB,AAAgB,+BAAC,GAAG;IAAY;gBAGzC;AAAQ,YAAA,AAAiB,uCAAY,GAAG;IAAC;kBAI9B;;AAClB,iBAA6B,cAAtB,AAAgB,+BAAC,GAAG;AAC1C,UAAI,IAAI,aAAiB,qBAAL,IAAI;AACa,QAAnC,OAAO,AAAK,AAAe,IAAhB;AACiB,QAA5B,AAAgB,+BAAC,GAAG,EAAI,IAAI;;AAG9B,YAAsB,8BAAf,IAAI,gBAAJ,OAAM;IACf;YAG4B,KAAU;AAAU,6BAAU,QAAQ,GAAG,EAAE,KAAK;IAAC;WAGlD,KAAS;AAAU,6BAAU,OAAO,GAAG,EAAE,KAAK;IAAC;cAK5C,KAAY;AACtC,6BAAU,UAAU,GAAG,EAAE,KAAK;IAAC;cAUL,KAAY;AACtC,6BAAU,UAAU,GAAG,EAAE,KAAK;IAAC;kBAGD,KAAkB;AAChD,6BAAU,cAAc,GAAG,EAAE,KAAK;IAAC;WAGZ;AACZ,wBAAgB,AAAY,+CAAJ,GAAG;AACZ,MAA5B,AAAiB,iCAAO,GAAG;AAC3B,YAAO,AAAO,oDAAO,WAAW;IAClC;gBAE8B,WAAkB,KAAY;AAChB,MAA5B,6CAAa,KAAK,EAAE;AACrB,wBAAgB,AAAY,+CAAJ,GAAG;AACxC,UAAU,qBAAN,KAAK;AAE+B,QAAtC,AAAgB,+BAAC,GAAG,EAAI,AAAM,KAAD;;AAEA,QAA7B,AAAgB,+BAAC,GAAG,EAAI,KAAK;;AAE/B,YAAO,AAAO,sDAAS,SAAS,EAAE,WAAW,EAAE,KAAK;IACtD;;AAKmB;AAAY;MAAI;;;AAIT,MAAxB,AAAiB;AACjB,UAAI;AACF;AACE,gBAAO,AAAO,iEACZ,uCACU,yCACE,yDACG;;cAIV;AAAP;AAEA,gBAAM,2BAAF,CAAC;AAID,cAHF,WAAM,gCAAmB;;AAKlB,cAAP;;;;;;AAIN,YAAO,AAAO;IAChB;;AAMmB;AACS,2BACtB,MAAwB;AACJ,QAAxB,AAAiB;AACmB,QAApC,AAAiB,iCAAO,WAAW;MACrC;;;AAE2D;AAC/B,yBAA6B;AACvD,YAAI;AACF;AAUG,YATD,AAAW,UAAD,UACR,MAAM,AAAO,iEACX,wCACU,yCACE,yDACG;;gBAKZ;AAAP;AAEA,kBAAM,2BAAF,CAAC;AAID,gBAHF,WAAM,gCAAmB;;AAKlB,gBAAP;;;;;;AAIoC,UAAxC,AAAW,UAAD,UAAQ,MAAM,AAAO;;AAGjC,YAAI,AAAQ;AACV,gBAAO,WAAU;;AAGO,6BAAiC;AAC3D,iBAAkB,MAAO,AAAW,WAAD;AACjC,eAAO,AAAI,GAAD,cAAY;AAC0C,UAAhE,AAAc,cAAA,QAAC,AAAI,GAAD,aAAW,AAAQ,sDAA0B,eAAf,AAAU,UAAA,QAAC,GAAG;;AAEhE,cAAO,eAAc;MACvB;;gCAMqD;AACzB,sBACtB,AAAO,MAAD,iCAAqB,SAAQ,KAAY;AAC1C,qBAAS,GAAG;AACnB,aAAK,AAAI,GAAD,cAAY;AACK,UAAvB,SAAW,AAAY,+CAAJ,GAAG;;AAExB,cAAO,uCAAyB,MAAM,EAAE,KAAK;;AAGO,MADvB,gFACI,kFAAS,SAAS;AACpC,MAAjB,kDAAa;IACf;;;IA9QyB;;EAAiB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;MAE5B,4CAAO;YAAG;;;MAEZ,0DAAqB;YAAG;;;MAEhB,+CAAU;;;;MAEO,+CAAU","file":"main.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["/zapp/project/.zapp_entry.dart","/zapp/project/lib/main.dart","/zapp/project/.dart_tool/dartpad/web_plugin_registrant.dart","/zapp/pub/.pub_cache/hosted/pub.dev/plugin_platform_interface-2.1.6/lib/plugin_platform_interface.dart","/zapp/pub/.pub_cache/hosted/pub.dev/shared_preferences_platform_interface-2.3.1/lib/shared_preferences_platform_interface.dart","/zapp/pub/.pub_cache/hosted/pub.dev/shared_preferences_web-2.2.1/lib/shared_preferences_web.dart","/zapp/project/lib/configs/colors.dart","/zapp/project/lib/configs/keys.dart","/zapp/project/lib/configs/styles.dart","/zapp/project/lib/configs/themes.dart","/zapp/project/lib/configs/variables.dart","/zapp/project/lib/modules/features/pages/button_pg.dart","/zapp/project/lib/modules/home/pages/home_pg.dart","/zapp/project/lib/modules/sliver_screen/models/car_mdl.dart","/zapp/project/lib/modules/sliver_screen/views/sliver_vw.dart","/zapp/pub/.pub_cache/hosted/pub.dev/shared_preferences_platform_interface-2.3.1/lib/types.dart","/zapp/pub/.pub_cache/hosted/pub.dev/shared_preferences_platform_interface-2.3.1/lib/method_channel_shared_preferences.dart","/zapp/project/lib/widgets/button_wdg.dart","/zapp/project/lib/widgets/dialog_wdg.dart","/zapp/project/lib/widgets/icon_textfield_wdg.dart","/zapp/project/lib/widgets/snackbar_wdg.dart","/zapp/project/lib/widgets/textfield_wdg.dart","/zapp/project/lib/helpers/build_context_extension_hlp.dart","/zapp/project/lib/helpers/dialog_hlp.dart","/zapp/project/lib/helpers/material_color_hlp.dart","/zapp/project/lib/helpers/responsive_hlp.dart","/zapp/project/lib/helpers/session_hlp.dart","/zapp/project/lib/helpers/utils_hlp.dart","/zapp/project/lib/helpers/widgets_hlp.dart","/zapp/pub/.pub_cache/hosted/pub.dev/shared_preferences-2.2.2/lib/shared_preferences.dart"],"names":[],"mappings":"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","file":"main.js"}');
   // Exports:
   return {
     zapp__project__$46zapp_entry: $46zapp_entry,
     zapp__project__lib__main: main,
     zapp__project__$46dart_tool__dartpad__web_plugin_registrant: web_plugin_registrant,
     zapp__project__lib__configs__x_configs: x_configs,
+    zapp__project__lib__modules__features__x_features: x_features,
     zapp__project__lib__modules__home__x_homes: x_homes,
+    zapp__project__lib__modules__sliver_screen__x_sliver_screens: x_sliver_screens,
     shared_preferences_web: shared_preferences_web,
     zapp__project__lib__configs__colors: colors$0,
     zapp__project__lib__configs__keys: keys,
     zapp__project__lib__configs__styles: styles,
     zapp__project__lib__configs__themes: themes,
     zapp__project__lib__configs__variables: variables,
-    zapp__project__lib__configs__constants: constants,
-    zapp__project__lib__configs__durations: durations,
-    zapp__project__lib__configs__sizes: sizes,
+    zapp__project__lib__modules__features__pages__button_pg: button_pg,
     zapp__project__lib__modules__home__pages__home_pg: home_pg,
+    zapp__project__lib__modules__sliver_screen__models__car_mdl: car_mdl,
+    zapp__project__lib__modules__sliver_screen__views__sliver_vw: sliver_vw,
     shared_preferences_platform_interface: shared_preferences_platform_interface,
     types: types,
-    widgets__x_widgets: x_widgets,
+    zapp__project__lib__widgets__x_widgets: x_widgets,
+    widgets__x_widgets: x_widgets$,
     plugin_platform_interface: plugin_platform_interface,
     method_channel_shared_preferences: method_channel_shared_preferences,
-    widgets__dialog_wdg: dialog_wdg,
-    widgets__button_wdg: button_wdg,
-    widgets__snackbar_wdg: snackbar_wdg,
+    zapp__project__lib__widgets__button_wdg: button_wdg,
+    zapp__project__lib__widgets__dialog_wdg: dialog_wdg,
+    zapp__project__lib__widgets__icon_textfield_wdg: icon_textfield_wdg,
+    zapp__project__lib__widgets__snackbar_wdg: snackbar_wdg,
+    zapp__project__lib__widgets__textfield_wdg: textfield_wdg,
+    widgets__button_wdg: button_wdg$,
+    widgets__dialog_wdg: dialog_wdg$,
+    widgets__icon_textfield_wdg: icon_textfield_wdg$,
+    widgets__snackbar_wdg: snackbar_wdg$,
+    widgets__textfield_wdg: textfield_wdg$,
+    zapp__project__lib__helpers__x_helpers: x_helpers,
     configs__x_configs: x_configs$,
-    extensions__build_context_ext: build_context_ext,
-    helpers__x_helpers: x_helpers,
+    helpers__x_helpers: x_helpers$,
+    zapp__project__lib__helpers__build_context_extension_hlp: build_context_extension_hlp,
+    zapp__project__lib__helpers__dialog_hlp: dialog_hlp,
+    zapp__project__lib__helpers__material_color_hlp: material_color_hlp,
+    zapp__project__lib__helpers__responsive_hlp: responsive_hlp,
+    zapp__project__lib__helpers__session_hlp: session_hlp,
+    zapp__project__lib__helpers__utils_hlp: utils_hlp,
+    zapp__project__lib__helpers__widgets_hlp: widgets_hlp,
     configs__colors: colors$1,
     configs__keys: keys$,
     configs__styles: styles$,
     configs__themes: themes$,
     configs__variables: variables$,
-    configs__constants: constants$,
-    configs__durations: durations$,
-    configs__sizes: sizes$,
-    helpers__dialog_hlp: dialog_hlp,
-    helpers__responsive_hlp: responsive_hlp,
-    helpers__session_hlp: session_hlp,
-    helpers__utils_hlp: utils_hlp,
-    helpers__widgets_hlp: widgets_hlp,
+    helpers__build_context_extension_hlp: build_context_extension_hlp$,
+    helpers__dialog_hlp: dialog_hlp$,
+    helpers__material_color_hlp: material_color_hlp$,
+    helpers__responsive_hlp: responsive_hlp$,
+    helpers__session_hlp: session_hlp$,
+    helpers__utils_hlp: utils_hlp$,
+    helpers__widgets_hlp: widgets_hlp$,
     shared_preferences: shared_preferences
   };
 }));

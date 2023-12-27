@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_app/widgets/x_widgets.dart';
+import '../../../widgets/x_widgets.dart';
 
-class HomePage extends StatelessWidget {
-  HomePage({super.key});
+class ButtonPage extends StatelessWidget {
+  const ButtonPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +11,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        // backgroundColor: kTransparent,
-        title: Text('Home Page'),
+        centerTitle: true,
+        title: Text('Button Page'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -21,12 +21,8 @@ class HomePage extends StatelessWidget {
             children: [
               SizedBox(
                   width: size.width * 0.5,
-                  child:
-                      MyButtons.primary(context, 'Primary with SizedBox', () {
-                    print('Primary');
-                    Navigator.pushNamed(context, '/button');
-                    ;
-                  })),
+                  child: MyButtons.primary(context, 'Primary with SizedBox',
+                      () => print('Primary'))),
               SizedBox(height: 5),
               MyButtons.primary(context, 'Primary', () => print('Primary')),
               SizedBox(height: 5),
@@ -34,15 +30,9 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 5),
               MyButtons.danger(context, 'Danger', () => print('Danger')),
               SizedBox(height: 5),
-              MyButtons.disabled(
-                context,
-                'Disabled',
-              ),
+              MyButtons.disabled(context, 'Disabled',),
               SizedBox(height: 5),
-              MyButtons.isLoading(
-                context,
-                'Loading...',
-              ),
+              MyButtons.isLoading(context, 'Loading...',),
               SizedBox(height: 5),
               MyButtons.primaryOutlined(
                   context, 'Primary Outlined', () => print('Primary Outlined')),
