@@ -4,8 +4,11 @@ import 'x_configs.dart';
 
 class MyThemes {
   static final lightMode = ThemeData(
-      primarySwatch: kGreen,
-      primaryColor: kAppPrimary,
+      primaryColor: ThemeData.light().scaffoldBackgroundColor,
+      colorScheme: ColorScheme.light().copyWith(
+        primary: kPrimary,
+        secondary: kSecondary
+      ),
       brightness: Brightness.light,
       fontFamily: 'Poppins',
       inputDecorationTheme: InputDecorationTheme(
@@ -16,8 +19,7 @@ class MyThemes {
           fillColor: Colors.grey.withOpacity(0.1)));
 
   static final darkMode = ThemeData(
-      primarySwatch: Colors.red,
-      primaryColor: Color(0xFFf07167),
+      primaryColor: ThemeData.light().scaffoldBackgroundColor,
       brightness: Brightness.dark,
       fontFamily: 'Poppins',
       inputDecorationTheme: InputDecorationTheme(

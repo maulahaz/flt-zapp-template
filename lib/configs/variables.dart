@@ -7,7 +7,7 @@ final dbName = 'dbName.db';
 const String APP_NAME = 'KAMSYA';
 const String APP_DESC = 'POS Kambingnya Abu Rasya'; //'MHzPOS for Abu Rasya';
 const String TAG_LINE = 'InshaAllah Barokah'; //'Simple but usefull for anyone';
-const String WA_ADMIN = '971562681844';
+const String WA_ADMIN = '08123456789';
 const String APP_VERSI = '2.2111.6';
 
 //--SERVICES:

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_app/widgets/x_widgets.dart';
 
+import '../../../configs/x_configs.dart';
+
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
@@ -11,7 +13,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        // backgroundColor: kTransparent,
+        backgroundColor: kSecondary,
         title: Text('Home Page'),
       ),
       body: SingleChildScrollView(
