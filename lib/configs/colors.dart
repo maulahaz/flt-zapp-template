@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 //--App Colors:
 // --------------------------------------------------
-const kPrimary = Color.fromARGB(255, 192, 179, 194);
+const kPrimary = Color.fromARGB(255, 236, 252, 179);
 const kSecondary = Color.fromARGB(255, 75, 128, 103);
 const kSuccess = Color(0xFF28A745);
 const kDanger = Color(0xFFDC3545);
