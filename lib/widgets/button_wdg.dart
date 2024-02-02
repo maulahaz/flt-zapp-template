@@ -14,40 +14,6 @@ class MyButtons {
     required bool gradiented,
     bool isLoading = false,
   }) {
-    //--USING ELEVATED BUTTON v.1:
-    //----------------------------------------------------------------
-    // return ElevatedButton(
-    //   onPressed: function,
-    //   child: Text(label, style: getFont(16, color: kBlack)),
-    //   style: ElevatedButton.styleFrom(
-    //     backgroundColor: outlined ? kTransparent : color,
-    //     side: outlined ? BorderSide(width:2, color:color) : null,
-    //     shape: RoundedRectangleBorder(
-    //       borderRadius: BorderRadius.circular(12),
-    //     ),
-    //   ),
-    // );
-
-    //--USING ELEVATED BUTTON v.2:
-    //----------------------------------------------------------------
-    // return ElevatedButton(
-    //   onPressed: function,
-    //   style: ElevatedButton.styleFrom(
-    //     padding: const EdgeInsets.all(0.0),
-    //     elevation: 5,
-    //   ),
-    //   child: Container(
-    //     padding: EdgeInsets.all(10),
-    //     constraints: BoxConstraints(minWidth: 88.0),
-    //     decoration: BoxDecoration(
-    //         color: outlined ? kTransparent : color,
-    //         gradient: gradiented ? kAppGradientPrim : null,
-    //         borderRadius: BorderRadius.all(Radius.circular(10)),
-    //         border: outlined ? Border.all(color: color, width: 2) : null),
-    //     child: Text(label, style: getFont(16, color: kBlack)),
-    //   ),
-    // );
-
     //--USING MATERIAL BUTTON (will take all Width):
     //----------------------------------------------------------------
     return MaterialButton(
@@ -124,3 +90,43 @@ class MyButtons {
         outlined: false, gradiented: true);
   }
 }
+
+//---------------------------------------------------------------
+class MyButtons2 {
+  static Widget showMyButtons(
+    BuildContext context,
+    String label,
+    Color txColor,
+    Color bgColor,
+    Function() function, {
+    required bool outlined,
+    required bool gradiented,
+    bool isLoading = false,
+  }) {
+    return ElevatedButton(
+      onPressed: function,
+      // child: Text(label, style: getFont(16, color: kBlack)),
+      child: Text(label),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: outlined ? kTransparent : bgColor,
+        // side: outlined ? BorderSide(width: 2, color: bgColor) : null,
+        // shape: RoundedRectangleBorder(
+        //   borderRadius: BorderRadius.circular(10),
+        // ),
+      ),
+    );
+  }
+
+  static Widget primary(
+      BuildContext context, String label, Function() function) {
+    return showMyButtons(context, label, kWhite, kBSPrimary, function,
+        outlined: false, gradiented: false);
+  }
+
+  static Widget danger(
+      BuildContext context, String label, Function() function) {
+    return showMyButtons(context, label, kWhite, kBSDanger, function,
+        outlined: false, gradiented: false);
+  }
+}
+

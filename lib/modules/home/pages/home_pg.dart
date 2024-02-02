@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/helpers/x_helpers.dart';
 
 import 'package:flutter_app/widgets/x_widgets.dart';
+import '../../../configs/x_configs.dart';
 import '../../features/x_features.dart';
 
 class HomePage extends StatelessWidget {
@@ -22,6 +23,34 @@ class HomePage extends StatelessWidget {
               MyButtons.primary(context, 'Buttons', () => context.push(ButtonPage())),
               SizedBox(height: 5),
               MyButtons.primary(context, 'Form Inputs', () => context.push(FormInputPage())),
+              SizedBox(height: 5),
+              //--Elevated Button:
+              ElevatedButton(
+                onPressed: (){},
+                child: Text('ElevatedButton'),
+              ),
+              SizedBox(height: 5),
+              //--ConstrainedBox:
+              ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxHeight:100,
+                  maxWidth: 100
+                ),
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  color: kYellow,
+                  child: Text('Text in ConstrainedBox')),
+              ),
+              SizedBox(height: 5),
+              //--MaterialButton:
+              MaterialButton(
+                onPressed: (){},
+                child: Text('MaterialButton'),
+              ),
+              //--MaterialButton2:
+              MyButtons2.primary(context,'ElevatedButton Primary-2',(){}),
+              SizedBox(height: 5),
+              MyButtons2.danger(context,'ElevatedButton Danger-2',(){}),
             ],
           ),
         ),

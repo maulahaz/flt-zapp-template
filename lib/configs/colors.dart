@@ -34,10 +34,10 @@ const kAppSecondaryLight = Color(0xffc8dd);
 
 //--Bootstrap Color Standards: (Primary, Secondary,Success,Danger,Warnig,Info,Light,Dark)
 // --------------------------------------------------
-// const kBSPrimary = Color(0xFF007BFF);
+const kBSPrimary = Color(0xFF007BFF);
 // const kBSSecondary = Color(0xFF6C757D);
 // const kBSSuccess = Color(0xFF28A745);
-// const kBSDanger = Color(0xFFDC3545);
+const kBSDanger = Color(0xFFDC3545);
 // const kBSWarning = Color(0xFFFFC107);
 // const kBSInfo = Color(0xFF17A2B8);
 // const kBSLight = Color(0xFFF8F9FA);

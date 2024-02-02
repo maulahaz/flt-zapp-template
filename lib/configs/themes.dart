@@ -15,7 +15,7 @@ class MyThemes {
           fillColor: Colors.grey.withOpacity(0.1)));
 
   static final darkMode = ThemeData(
-      colorScheme: ThemeData().colorScheme.copyWith(primary: kGrey),
+      colorScheme: ThemeData().colorScheme.copyWith(primary: kYellow),
       fontFamily: 'Poppins',
       inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(

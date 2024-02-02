@@ -17,9 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // themeMode: ThemeMode.system,
-      // theme: MyThemes.lightMode,
-      theme: MyThemes.darkMode,
-      darkTheme: MyThemes.darkMode,
+      theme: MyThemes.lightMode,
+      // theme: MyThemes.darkMode,
+      // darkTheme: MyThemes.darkMode,
       // home: SliverView(),
       routes: {
         '/': (context) => HomePage(),
