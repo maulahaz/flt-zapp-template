@@ -4,6 +4,7 @@ import 'configs/x_configs.dart';
 import 'modules/features/x_features.dart';
 import 'modules/home/x_homes.dart';
 import 'modules/sliver_screen/x_sliver_screens.dart';
+import 'pages/examples/form_input_pg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,9 +18,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // themeMode: ThemeMode.system,
-      // theme: MyThemes.lightMode,
-      theme: MyThemes.darkMode,
-      darkTheme: MyThemes.darkMode,
+      theme: MyThemes.lightMode,
+      // theme: MyThemes.darkMode,
+      // darkTheme: MyThemes.darkMode,
       // home: SliverView(),
       routes: {
         '/': (context) => HomePage(),
