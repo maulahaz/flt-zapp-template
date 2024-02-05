@@ -31,14 +31,14 @@ class FormInput {
           keyboardType: keyboardType,
           decoration: InputDecoration(
             suffixIcon: suffixIcon,
-            border: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(5.0)),
-              borderSide: BorderSide(color: Colors.grey),
-            ),
-            enabledBorder: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(5.0)),
-              borderSide: BorderSide(color: Colors.grey),
-            ),
+            // border: const OutlineInputBorder(
+            //   borderRadius: BorderRadius.all(Radius.circular(5.0)),
+            //   borderSide: BorderSide(color: Colors.grey),
+            // ),
+            // enabledBorder: const OutlineInputBorder(
+            //   borderRadius: BorderRadius.all(Radius.circular(5.0)),
+            //   borderSide: BorderSide(color: Colors.grey),
+            // ),
             hintText: label,
           ),
         ),
@@ -46,6 +46,7 @@ class FormInput {
     );
   }
 
+  //--Form Text Input
   static Widget text(
     BuildContext context,
     TextEditingController controller,
@@ -58,6 +59,25 @@ class FormInput {
       label:label,
       showLabel:true,
       obscureText:false,
+      keyboardType:TextInputType.text,
+      suffixIcon:SizedBox.shrink(),
+      onChanged:onChanged ?? null,
+    );
+  }
+
+  //--Form Text Password
+  static Widget password(
+    BuildContext context,
+    TextEditingController controller,
+    String label,
+    Function(String value)? onChanged,
+  ) {
+    return showFormInput(
+      context,
+      controller: controller,
+      label:label,
+      showLabel:true,
+      obscureText:true,
       keyboardType:TextInputType.text,
       suffixIcon:SizedBox.shrink(),
       onChanged:onChanged ?? null,

@@ -24,7 +24,7 @@ class MyButtons {
         padding: EdgeInsets.all(kDefaultPadding * 0.5),
         decoration: BoxDecoration(
             color: outlined ? kTransparent : bgColor,
-            gradient: gradiented ? kAppGradientPrim : null,
+            gradient: gradiented ? kGradientPrimary : null,
             borderRadius: BorderRadius.all(Radius.circular(10)),
             border: outlined ? Border.all(color: bgColor, width: 2) : null),
         child: isLoading
@@ -34,7 +34,7 @@ class MyButtons {
                   SizedBox(
                       width: 24,
                       height: 24,
-                      child: CircularProgressIndicator(color: kAppPrimary)),
+                      child: CircularProgressIndicator(color: kPrimary)),
                   SizedBox(width: 10),
                   Text(label, style: getFont(16, color: txColor)),
                 ],
@@ -46,7 +46,7 @@ class MyButtons {
 
   static Widget primary(
       BuildContext context, String label, Function() function) {
-    return showMyButtons(context, label, kWhite, kAppPrimary, function,
+    return showMyButtons(context, label, kWhite, kInfo, function,
         outlined: false, gradiented: false);
   }
 
@@ -74,7 +74,7 @@ class MyButtons {
 
   static Widget primaryOutlined(
       BuildContext context, String label, Function() function) {
-    return showMyButtons(context, label, kBlack, kAppPrimary, function,
+    return showMyButtons(context, label, kBlack, kInfo, function,
         outlined: true, gradiented: false);
   }
 
@@ -86,7 +86,7 @@ class MyButtons {
 
   static Widget primaryGradiented(
       BuildContext context, String label, Function() function) {
-    return showMyButtons(context, label, kBlack, kAppPrimary, function,
+    return showMyButtons(context, label, kBlack, kInfo, function,
         outlined: false, gradiented: true);
   }
 }

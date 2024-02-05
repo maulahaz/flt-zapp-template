@@ -24,7 +24,7 @@ class IconTextField extends StatelessWidget {
       children: [
         Text(
           label,
-          style: getFont(16, color: kAppPrimary),
+          style: getFont(16, color: kInfo),
         ),
         SizedBox(
           height: 12,
@@ -41,18 +41,18 @@ class IconTextField extends StatelessWidget {
           child: Center(
             child: Row(
               children: [
-                Icon(icon, size: 17, color: kAppSecondary),
+                Icon(icon, size: 17, color: kBlack),
                 SizedBox(
                   width: 16,
                 ),
                 Expanded(
                   child: TextFormField(
                     obscureText: isObscure,
-                    style: getFont(14, color: kAppPrimary),
+                    style: getFont(14, color: kInfo),
                     controller: controller,
                     decoration: InputDecoration.collapsed(
                       hintText: 'Your Email Address',
-                      hintStyle: getFont(14, color: kAppSecondary),
+                      hintStyle: getFont(14, color: kBlack),
                     ),
                   ),
                 ),
