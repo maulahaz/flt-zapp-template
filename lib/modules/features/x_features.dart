@@ -9,5 +9,5 @@
 
 //--PAGES AND PARTS
 export 'pages/button_pg.dart';
-export 'pages/form_input_pg.dart';
+// export 'pages/form_input_pg.dart';
 // export 'pages/parts/modules_part.dart';

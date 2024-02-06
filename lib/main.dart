@@ -4,6 +4,7 @@ import 'configs/x_configs.dart';
 import 'modules/features/x_features.dart';
 import 'modules/home/x_homes.dart';
 import 'modules/sliver_screen/x_sliver_screens.dart';
+import 'pages/examples/form_input_pg.dart';
 
 void main() {
   runApp(const MyApp());
